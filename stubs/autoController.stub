@@ -14,4 +14,14 @@ class $MODEL_NAME$Controller extends Controller
     public $model = $MODEL_NAME$::class;
     public $permissionItem = "$TABLE_NAME$";
     public $validtionItem = [];
+
+    public function store(Request $request)
+    {
+        parent::store($request);
+    }
+
+    public function update(Request $request)
+    {
+        parent::update($request);
+    }
 }

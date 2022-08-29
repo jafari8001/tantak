@@ -1,14 +1,22 @@
-# Trucking Server
+# Base Project Code
 
-## comand
+## Initializing commands
 
 ```
+composer install
 php artisan migrate
 php artisan db:seed
-php artisan migrate:fresh
-php artisan migrate:refresh --seed
-php artisan make:seeder TableSeeder
-php artisan make:migration create__table
+```
 
-sudo apt install php8.1-gd
+## Advanced commands
+
+This command will create :
+- model with relative name filled with `$columns` and `insert` and `updateItem` functions
+- controller with relative name and permissions and connected to the model
+hint : 
+    - module : Directory name which you would like your model create in => app/Models/<module>/<your model>
+                and yout controller create in => app/Http/Controllers/<module>/<your controller>
+    - migration : relative path to your desired migration file 
+```
+php artisan auto:crud --module=<module name> --migration=<relative migration path>
 ```

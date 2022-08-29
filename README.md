@@ -10,12 +10,13 @@ php artisan db:seed
 
 ## Advanced commands
 
+### Auto model and controller maker
 This command will create :
 - model with relative name filled with `$columns` and `insert` and `updateItem` functions
 - controller with relative name and permissions and connected to the model
 hint : 
-    - module : Directory name which you would like your model create in => app/Models/<module>/<your model>
-                and yout controller create in => app/Http/Controllers/<module>/<your controller>
+    - module : Directory name which you would like your model create in => app/Models/`module`/your-model
+                and yout controller create in => app/Http/Controllers/`module`/your-controller
     - migration : relative path to your desired migration file 
 ```
 php artisan auto:crud --module=<module name> --migration=<relative migration path>

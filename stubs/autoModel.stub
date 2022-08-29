@@ -1,0 +1,41 @@
+<?php
+
+namespace App\Models\$MODULE_NAME$;
+
+use App\Models\BaseModel;
+
+
+class $MODEL_NAME$ extends BaseModel
+{
+
+    public static $columns = [
+        "id" => "$TABLE_NAME$.id",
+        $COLUMNS$
+        "created_at" => "$TABLE_NAME$.created_at",
+        "created_by" => "$TABLE_NAME$.created_by",
+        "updated_at" => "$TABLE_NAME$.updated_at"
+    ];
+
+    public static function insert($request)
+    {
+        $model = new $MODEL_NAME$();
+
+        $model->sort = $request->sort;
+        $INSERT_AND_UPDATE$
+
+        $model->save();
+        return $model;
+    }
+
+    public static function updateItem($request)
+    {
+        $model = $MODEL_NAME$::find($request->id);
+
+        $model->sort = $request->sort;
+        $INSERT_AND_UPDATE$
+
+        $model->save();
+        return $model;
+    }
+
+}

@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Http\Controllers\$MODULE_NAME$;
+
+use App\Models\$MODULE_NAME$\$MODEL_NAME$;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+
+class $MODEL_NAME$Controller extends Controller
+{
+    public $default_show = true;
+    public $default_search = true;
+    public $model = $MODEL_NAME$::class;
+    public $permissionItem = "$TABLE_NAME$";
+    public $validtionItem = [];
+}

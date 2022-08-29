@@ -17,11 +17,11 @@ class $MODEL_NAME$Controller extends Controller
 
     public function store(Request $request)
     {
-        parent::store($request);
+        return parent::store($request);
     }
 
     public function update(Request $request)
     {
-        parent::update($request);
+        return parent::update($request);
     }
 }

@@ -22,7 +22,7 @@ class Controller extends BaseController
     public $default_destroy = true;
     use AuthorizesRequests, ValidatesRequests;
 
-    public function errorr($exception)
+    public function error($exception)
     {
         return $this->response(500, [], [], __('http.500'));
     }

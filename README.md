@@ -15,15 +15,14 @@ sudo apt install php8.1-gd
 
 ## Todo
 
-```
-0. Update `Exceptions\Handler.php` and `Middlewares\LogRequest.php` files with last changes
-1. Handle joins and preventing to overwrite search method most of the times
-2. Utilize update method not to set as `null` where field is not passed
-3. Auto add crud routes to `api.php` file
-4. Create a command to create services
-5. Add swagger to project
-6. Auto create swagger annotations for crud apis
-7. Auto update ActionTableSeeder actions
-8. Auto create new actions and role-actions in database (sql output)
 
-```
+- &check; Update `Exceptions\Handler.php` and `Middlewares\LogRequest.php` files with last changes
+- &cross; Handle joins and preventing to overwrite search method most of the times
+- &cross; Utilize update method not to set as `null` where field is not passed
+- &cross; Auto add crud routes to `api.php` file
+- &cross; Create a command to create services
+- &cross; Add `swagger` to project
+- &cross; Auto create swagger annotations for crud apis
+- &cross; Auto update `ActionTableSeeder` actions
+- &cross; Auto create new actions and role-actions in database (sql output)
+

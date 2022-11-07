@@ -9,7 +9,7 @@ class LogRequest
 {
     public function handle($request, Closure $next)
     {
-        if ($request->header('User-Agent-Client') == null && $request->header('user-agent-client') == null) {
+        if ($request->header('user-agent-client') == null && $request->header('user-agent-client') == null) {
             //            throw new AuthException();
         }
         $code = RequestLog::insert($request);
@@ -20,7 +20,7 @@ class LogRequest
     public function terminate($request, $response)
     {
         if($request->get("log_id")!=null){
-            RequestLog::updateItem($response, $request->get("log_id"));
+            RequestLog::updateItem($request, $response);
         }
     }
 }

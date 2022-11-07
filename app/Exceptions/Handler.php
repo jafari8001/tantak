@@ -2,7 +2,9 @@
 
 namespace App\Exceptions;
 
+use Exception;
 use App\Models\Core\ExceptionLog;
+use Illuminate\Http\Exceptions\ThrottleRequestsException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -24,6 +26,9 @@ class Handler extends ExceptionHandler
             }
             return responseSend(401, [], "", $message);
         }
+        if ($exception instanceof ThrottleRequestsException) {
+            return responseSend(403, [], "", __('http.throttle'));
+        }
         if ($exception instanceof PermissionException) {
             return responseSend(403, [], "", __('http.403'));
         }
@@ -37,6 +42,7 @@ class Handler extends ExceptionHandler
             return responseSend(404, [], "", __('http.404'));
         }
         if (env('APP_DEBUG')) {
+            $this->insertException($exception, $request);
             return responseSend(500, [
                 $exception->getMessage(),
                 $exception->getFile(),
@@ -69,7 +75,7 @@ class Handler extends ExceptionHandler
         try {
             $agent = 'Other';
             if ($request) {
-                $agent = $request->header('User-Agent-Client');
+                $agent = $request->header('user-agent-client');
             }
             ExceptionLog::insert($exception, $this->isHttpException($exception), $agent);
         } catch (\Exception $ex) {

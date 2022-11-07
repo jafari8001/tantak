@@ -56,7 +56,7 @@ class ExceptionLog extends BaseModel
             $exceptionLog->save();
 
             if ($exceptionLog->status == 'No http status error' || $exceptionLog->status == "500") {
-                $message = "#باربری" . PHP_EOL . PHP_EOL .
+                $message = "#بیس کد" . PHP_EOL . PHP_EOL .
                     "⛔⏰️ خطا " . PHP_EOL .
                     "متن خطا: " . $exceptionLog->message . PHP_EOL .
                     "فایل: " . $exceptionLog->file . PHP_EOL .

@@ -22,9 +22,8 @@ hint :
 php artisan auto:crud --module=<module name> --migration=<relative migration path>
 ```
 
+
 ## Todo
-
-
 - &check; Update `Exceptions\Handler.php` and `Middlewares\LogRequest.php` files with last changes
 - &cross; Handle joins and preventing to overwrite search method most of the times
 - &cross; Utilize update method not to set as `null` where field is not passed

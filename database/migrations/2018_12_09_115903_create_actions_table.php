@@ -13,7 +13,7 @@ class CreateActionsTable extends Migration
 
             $table->string('name');
             $table->string('alias');
-            $table->uuid('parent');
+            $table->uuid('parent')->nullable();
             $table->enum('type', ['web', 'app']);
             $table->string('icon')->default('_empty_');
             $table->boolean('is_menu')->default(false);

@@ -6,7 +6,7 @@ use App\Models\BaseModel;
 
 class Action extends BaseModel
 {
-    protected $fillable = ['name', 'alias', 'parent_id'];
+    protected $fillable = ['id','name', 'alias', 'parent'];
 
     public static function insert($item)
     {

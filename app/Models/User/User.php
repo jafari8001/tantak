@@ -258,6 +258,18 @@ class User extends BaseModel  implements AuthenticatableContract
         return $text;
     }
 
+    public static function isAdmin($user_id = null)
+    {
+        if(!$user_id){
+            $user_id = auth()->user()->id;
+        }
+
+        return User::where('id',$user_id)
+            ->whereHas('roles',function($query){
+                $query->where('roles.id',env('ROLE_ADMIN_ID'));
+            })->exists();
+    }
+
     public static function destroy($id, $is_admin = true)
     {
         $model = User::find($id);

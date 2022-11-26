@@ -9,8 +9,26 @@ use \App\Models\User\AuthToken;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 
+
+/**
+ * @group Auth
+ * 
+ * Authentication and Registration
+ * 
+ * You can Login ny otp or by simple username and password
+ * You can create user or regsiter by otp
+ * You can get user info
+ * Tou can logout
+ */
 class AuthController extends Controller
 {
+    /**
+     * Send OTP code to user
+     * 
+     * @unauthenticated
+     * 
+     * @bodyParam username string required usally user phone is his/her username. Example: 09111111111
+     */
     public function sendOtp(Request $request)
     {
         $this->validator($request, ["username"]);
@@ -20,6 +38,14 @@ class AuthController extends Controller
         return $this->response(200);
     }
 
+    /**
+     * Send OTP code to user
+     * 
+     * @unauthenticated
+     * 
+     * @bodyParam username string required usally user phone is his/her username. Example: 09111111111
+     * @bodyParam code string required code send by sms/email to user. Example: 1214
+     */
     public function otpLogin(Request $request)
     {
         $this->validator($request, ["username", "code"]);
@@ -99,5 +125,10 @@ class AuthController extends Controller
         $user->transports;
         $user->country_division;
         return $user;
+    }
+
+    public function uiBasedAuthentication(Request $request)
+    {
+        return view('auth\login');
     }
 }

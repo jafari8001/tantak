@@ -6,6 +6,7 @@ use App\Models\User\User;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use App\Models\User\AuthToken;
 
 class UsersTableSeeder extends Seeder
 {
@@ -37,5 +38,17 @@ class UsersTableSeeder extends Seeder
             $model->save();
             User::find($model->id)->roles()->sync($item['role']);
         }
+
+        /*
+        * create static token for scribe generator
+        */
+        $model = new AuthToken();
+        $model->ip = '';
+        $model->auth_token = env('SCRIBE_TOKEN');
+        $model->created_by = env('USER_ADMIN_ID');
+        $model->user_agent = '';
+        $model->user_agent_client = '';
+        $model->expired_token_at = '2100-01-01';
+        $model->save();
     }
 }

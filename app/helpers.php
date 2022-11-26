@@ -263,8 +263,7 @@ function getRealIP($request = null)
     $ip = '';
     if ($request != null) {
         $ip = $request->ip();
-    }
-    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+    } else if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
         $ip = $_SERVER['HTTP_CLIENT_IP'];
     } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
         $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];

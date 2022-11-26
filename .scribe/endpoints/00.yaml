@@ -1,20 +1,35 @@
-name: Endpoints
-description: ''
+name: Auth
+description: |-
+
+  Authentication and Registration
+
+  You can Login ny otp or by simple username and password
+  You can create user or regsiter by otp
+  You can get user info
+  Tou can logout
 endpoints:
   -
     httpMethods:
       - POST
     uri: api/v1/auth/login
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: Auth
+      groupDescription: |-
+
+        Authentication and Registration
+
+        You can Login ny otp or by simple username and password
+        You can create user or regsiter by otp
+        You can get user info
+        Tou can logout
       subgroup: ''
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -27,17 +42,20 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"status":412,"error":"","message":"\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0627\u0631\u0633\u0627\u0644\u06cc \u0646\u0627\u0642\u0635 \u06cc\u0627 \u0627\u0634\u062a\u0628\u0627\u0647 \u0627\u0633\u062a","data":[],"patch":[],"date":"2022-11-24T08:29:36.469233Z"}'
+        content: '{"status":412,"error":"","message":"\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0627\u0631\u0633\u0627\u0644\u06cc \u0646\u0627\u0642\u0635 \u06cc\u0627 \u0627\u0634\u062a\u0628\u0627\u0647 \u0627\u0633\u062a","data":[],"patch":[],"date":"2022-11-26T09:54:27.401307Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '56'
+          x-ratelimit-remaining: '59'
           access-control-allow-origin: '*'
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
     controller: null
     method: null
     route: null
@@ -47,11 +65,18 @@ endpoints:
       - POST
     uri: api/v1/auth/otp/send
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: Auth
+      groupDescription: |-
+
+        Authentication and Registration
+
+        You can Login ny otp or by simple username and password
+        You can create user or regsiter by otp
+        You can get user info
+        Tou can logout
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Send OTP code to user'
       description: ''
       authenticated: false
       custom: []
@@ -62,18 +87,26 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      username:
+        name: username
+        description: 'usally user phone is his/her username.'
+        required: true
+        example: '09111111111'
+        type: string
+        custom: []
+    cleanBodyParameters:
+      username: '09111111111'
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"status":412,"error":"","message":"\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0627\u0631\u0633\u0627\u0644\u06cc \u0646\u0627\u0642\u0635 \u06cc\u0627 \u0627\u0634\u062a\u0628\u0627\u0647 \u0627\u0633\u062a","data":[],"patch":[],"date":"2022-11-24T08:29:36.485047Z"}'
+        content: '{"status":500,"error":"","message":"SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block (SQL: insert into \"otp_codes\" (\"ip\", \"code\", \"username\", \"id\", \"updated_at\", \"created_at\") values (127.0.0.1, 1377, 09111111111, 82cc3cb0-cf73-47fa-bc74-e24976ca06ab, 2022-11-26 13:24:27, 2022-11-26 13:24:27))","data":["SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block (SQL: insert into \"otp_codes\" (\"ip\", \"code\", \"username\", \"id\", \"updated_at\", \"created_at\") values (127.0.0.1, 1377, 09111111111, 82cc3cb0-cf73-47fa-bc74-e24976ca06ab, 2022-11-26 13:24:27, 2022-11-26 13:24:27))","\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Connection.php",759,"25P02"],"patch":[],"date":"2022-11-26T09:54:27.426865Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '55'
+          x-ratelimit-remaining: '58'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -88,11 +121,18 @@ endpoints:
       - POST
     uri: api/v1/auth/otp/login
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: Auth
+      groupDescription: |-
+
+        Authentication and Registration
+
+        You can Login ny otp or by simple username and password
+        You can create user or regsiter by otp
+        You can get user info
+        Tou can logout
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Send OTP code to user'
       description: ''
       authenticated: false
       custom: []
@@ -103,59 +143,34 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":412,"error":"","message":"\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0627\u0631\u0633\u0627\u0644\u06cc \u0646\u0627\u0642\u0635 \u06cc\u0627 \u0627\u0634\u062a\u0628\u0627\u0647 \u0627\u0633\u062a","data":[],"patch":[],"date":"2022-11-24T08:29:36.489392Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '54'
-          access-control-allow-origin: '*'
-        description: null
+    bodyParameters:
+      username:
+        name: username
+        description: 'usally user phone is his/her username.'
+        required: true
+        example: '09111111111'
+        type: string
         custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/country_division
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+      code:
+        name: code
+        description: 'code send by sms/email to user.'
+        required: true
+        example: '1214'
+        type: string
+        custom: []
+    cleanBodyParameters:
+      username: '09111111111'
+      code: '1214'
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"status":200,"error":"","message":"","data":{"model":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost\/api\/v1\/country_division?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost\/api\/v1\/country_division?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/v1\/country_division?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost\/api\/v1\/country_division","per_page":20,"prev_page_url":null,"to":null,"total":0}},"patch":[],"date":"2022-11-24T08:29:36.510830Z"}'
+        content: '{"status":500,"error":"","message":"\u06a9\u062f \u062a\u0627\u06cc\u06cc\u062f \u0645\u0646\u0642\u0636\u06cc \u0634\u062f\u0647 \u06cc\u0627 \u0646\u0627\u0645\u0639\u062a\u0628\u0631 \u0627\u0633\u062a","data":["\u06a9\u062f \u062a\u0627\u06cc\u06cc\u062f \u0645\u0646\u0642\u0636\u06cc \u0634\u062f\u0647 \u06cc\u0627 \u0646\u0627\u0645\u0639\u062a\u0628\u0631 \u0627\u0633\u062a","\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/app\/Models\/User\/OtpCode.php",39,0],"patch":[],"date":"2022-11-26T09:54:27.434678Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '53'
+          x-ratelimit-remaining: '57'
           access-control-allow-origin: '*'
         description: null
         custom: []
@@ -170,15 +185,23 @@ endpoints:
       - POST
     uri: api/v1/auth/user
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: Auth
+      groupDescription: |-
+
+        Authentication and Registration
+
+        You can Login ny otp or by simple username and password
+        You can create user or regsiter by otp
+        You can get user info
+        Tou can logout
       subgroup: ''
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -191,17 +214,20 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.516249Z"}'
+        content: '{"status":200,"error":"","message":"","data":{"user":{"id":"56194f1c-1398-44f0-87cd-c34d2356eeaf","username":"09111111111","birth_date":null,"description":null,"last_name":"\u0633\u0627\u0645\u0627\u0646\u0647","first_name":"\u0645\u062f\u06cc\u0631","national_code":null,"country_division_id":null,"avatar":"upload\/baseUpload\/default.jpg","person_type":"real","status":"active","created_at":"2022-11-26T08:58:24.000000Z","updated_at":"2022-11-26T08:58:24.000000Z","deleted_at":null,"sort":9999,"created_by":"56194f1c-1398-44f0-87cd-c34d2356eeaf","roles":[{"name":"\u0645\u062f\u06cc\u0631 \u0633\u0627\u06cc\u062a","id":"791d1b02-3610-4177-9051-eb7ae6b72def","actions":[{"alias":"user\/index"},{"alias":"user\/insert"},{"alias":"user\/update"},{"alias":"user\/delete"},{"alias":"user\/root"},{"alias":"role\/index"},{"alias":"role\/insert"},{"alias":"role\/update"},{"alias":"role\/delete"},{"alias":"role\/assign"},{"alias":"role\/root"},{"alias":"upload\/index"},{"alias":"upload\/insert"},{"alias":"upload\/update"},{"alias":"upload\/delete"},{"alias":"upload\/root"},{"alias":"exception_log\/index"},{"alias":"exception_log\/insert"},{"alias":"exception_log\/update"},{"alias":"exception_log\/delete"},{"alias":"exception_log\/root"},{"alias":"request_log\/index"},{"alias":"request_log\/insert"},{"alias":"request_log\/update"},{"alias":"request_log\/delete"},{"alias":"request_log\/root"},{"alias":"settings\/index"},{"alias":"settings\/insert"},{"alias":"settings\/update"},{"alias":"settings\/delete"},{"alias":"settings\/root"}]}]}},"patch":[],"date":"2022-11-26T09:54:27.483050Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '52'
+          x-ratelimit-remaining: '55'
           access-control-allow-origin: '*'
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
     controller: null
     method: null
     route: null
@@ -211,15 +237,23 @@ endpoints:
       - POST
     uri: api/v1/auth/logout
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: Auth
+      groupDescription: |-
+
+        Authentication and Registration
+
+        You can Login ny otp or by simple username and password
+        You can create user or regsiter by otp
+        You can get user info
+        Tou can logout
       subgroup: ''
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -232,17 +266,20 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.520438Z"}'
+        content: '{"status":200,"error":"","message":"","data":[],"patch":[],"date":"2022-11-26T09:54:27.510613Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '51'
+          x-ratelimit-remaining: '59'
           access-control-allow-origin: '*'
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
     controller: null
     method: null
     route: null
@@ -252,15 +289,23 @@ endpoints:
       - POST
     uri: api/v1/auth/refresh
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: Auth
+      groupDescription: |-
+
+        Authentication and Registration
+
+        You can Login ny otp or by simple username and password
+        You can create user or regsiter by otp
+        You can get user info
+        Tou can logout
       subgroup: ''
       subgroupDescription: ''
       title: ''
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -273,919 +318,20 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.526786Z"}'
+        content: '{"status":200,"error":"","message":"","data":{"Authorization":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9fnr0odDr4k.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gR0sxHtBd5rwdvuA6.WoxXJFMdxU5vsrldPwiYUQwU5202211d5xOgY42JifdMRd2601FWyZ0jSAttyvmOTrbjgA7KXe4iiMNuf2rCT11275YviXu5WUJr7RBKvj77SwDefv6sosrPSs4dO9OCu0mfsJeYbr8FeA5z","user":{"id":"56194f1c-1398-44f0-87cd-c34d2356eeaf","username":"09111111111","birth_date":null,"description":null,"last_name":"\u0633\u0627\u0645\u0627\u0646\u0647","first_name":"\u0645\u062f\u06cc\u0631","national_code":null,"country_division_id":null,"avatar":"upload\/baseUpload\/default.jpg","person_type":"real","status":"active","created_at":"2022-11-26T08:58:24.000000Z","updated_at":"2022-11-26T08:58:24.000000Z","deleted_at":null,"sort":9999,"created_by":"56194f1c-1398-44f0-87cd-c34d2356eeaf","roles":[{"name":"\u0645\u062f\u06cc\u0631 \u0633\u0627\u06cc\u062a","id":"791d1b02-3610-4177-9051-eb7ae6b72def","actions":[{"alias":"user\/index"},{"alias":"user\/insert"},{"alias":"user\/update"},{"alias":"user\/delete"},{"alias":"user\/root"},{"alias":"role\/index"},{"alias":"role\/insert"},{"alias":"role\/update"},{"alias":"role\/delete"},{"alias":"role\/assign"},{"alias":"role\/root"},{"alias":"upload\/index"},{"alias":"upload\/insert"},{"alias":"upload\/update"},{"alias":"upload\/delete"},{"alias":"upload\/root"},{"alias":"exception_log\/index"},{"alias":"exception_log\/insert"},{"alias":"exception_log\/update"},{"alias":"exception_log\/delete"},{"alias":"exception_log\/root"},{"alias":"request_log\/index"},{"alias":"request_log\/insert"},{"alias":"request_log\/update"},{"alias":"request_log\/delete"},{"alias":"request_log\/root"},{"alias":"settings\/index"},{"alias":"settings\/insert"},{"alias":"settings\/update"},{"alias":"settings\/delete"},{"alias":"settings\/root"}]}]}},"patch":[],"date":"2022-11-26T09:54:27.537002Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '50'
+          x-ratelimit-remaining: '58'
           access-control-allow-origin: '*'
         description: null
         custom: []
     responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/request-log
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.536758Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '49'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/exception-log
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.546574Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '48'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/user
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.552081Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '47'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/user/show
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.558723Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '46'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/user/insert
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.573828Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '45'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/user/update
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.578963Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '44'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/user/delete
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.585730Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '43'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/user/profile
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.591900Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '42'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/user/searchByRole
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.597183Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '41'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/user/check-username
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.601095Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '40'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/role
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.605530Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '39'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/auth_token
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.614966Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '38'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/upload/insert
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.621274Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '37'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/upload/list
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.624806Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '36'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/country_division/show
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.628546Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '35'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/country_division/insert
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.631849Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '34'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/country_division/update
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.635821Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '33'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/country_division/delete
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.639218Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '32'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/setting
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.642842Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '31'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/setting/insert
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.646367Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '30'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/setting/update
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.649428Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '29'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/setting/delete
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":401,"error":"","message":"\u0646\u06cc\u0627\u0632 \u0628\u0647 \u0648\u0631\u0648\u062f \u0645\u062c\u062f\u062f","data":[],"patch":[],"date":"2022-11-24T08:29:36.654552Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '28'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
     controller: null
     method: null
     route: null

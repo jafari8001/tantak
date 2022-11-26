@@ -84,12 +84,10 @@ class AuthToken extends BaseModel
 
     public static function checkToken($request, $token)
     {
-        return AuthToken::where([
-            ["auth_token", '=', $token],
-            ["user_agent", '=', $request->header('User-Agent')],
-            ["user_agent_client", '=', $request->header('User-Agent-Client')],
-            ['expired_token_at', '>', date('Y-m-d')]
-        ])
+        return AuthToken::where("auth_token", '=', $token)
+            ->whereIn("user_agent",[$request->header('User-Agent'),''])   
+            ->whereIn("user_agent_client",[$request->header('User-Agent-Client'),''])
+            ->where("expired_token_at", ">", date('Y-m-d'))
             ->orderBy("created_at", 'DESC')
             ->first();
     }

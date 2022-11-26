@@ -6,15 +6,8 @@ use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\User\RoleController;
 use App\Http\Controllers\Core\UploadController;
 use App\Http\Controllers\User\AuthTokenController;
-use App\Http\Controllers\Blog\BlogPostController;
-use App\Http\Controllers\Blog\BlogCategoryController;
-use App\Http\Controllers\Setting\KeywordController;
-use App\Http\Controllers\Setting\CommentController;
 use App\Http\Controllers\Setting\SettingController;
-use App\Http\Controllers\Product\ProductController;
-use App\Http\Controllers\Product\ProductCategoryController;
-use App\Http\Controllers\Product\ProductMediaController;
-use App\Http\Controllers\Product\ProductDescriptionController;
+use App\Http\Controllers\Setting\CountryDivisionController;
 use App\Http\Controllers\Core\RequestLogController;
 use App\Http\Controllers\Core\ExceptionLogController;
 

@@ -2,19 +2,20 @@
 
 namespace App\Http\Middleware;
 
-use App\Exceptions\OtherException;
 use Closure;
 use App\Models\User\User;
-use Illuminate\Support\Facades\Auth;
 
 class DocsLogin
 {
     public function handle($request, Closure $next)
     {
-        if(auth()->check() && User::isAdmin(auth()->user()->id)){
+        if(
+            $request->session()->has('user_id') && 
+            User::isAdmin($request->session()->get('user_id'))
+        ){
             return $next($request);
         }else{
-            return redirect('auth\login');
+            return redirect('docs/login');
         }
     }
 }

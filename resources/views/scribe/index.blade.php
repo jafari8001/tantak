@@ -175,7 +175,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: November 26, 2022</li>
+        <li>Last updated: November 27, 2022</li>
     </ul>
 </div>
 
@@ -191,7 +191,7 @@
 You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>Authenticate requests to this API's endpoints by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi"</code></strong>.</p>
+<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can refresh your token at url : <code>auth/refresh</code> or login at url : <code>auth/login</code></p>
 
@@ -262,7 +262,7 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;اطلاعات ارسالی ناقص یا اشتباه است&quot;,
     &quot;data&quot;: [],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.401307Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.119187Z&quot;
 }</code>
  </pre>
     </span>
@@ -402,15 +402,15 @@ access-control-allow-origin: *
 <code class="language-json" style="max-height: 300px;">{
     &quot;status&quot;: 500,
     &quot;error&quot;: &quot;&quot;,
-    &quot;message&quot;: &quot;SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block (SQL: insert into \&quot;otp_codes\&quot; (\&quot;ip\&quot;, \&quot;code\&quot;, \&quot;username\&quot;, \&quot;id\&quot;, \&quot;updated_at\&quot;, \&quot;created_at\&quot;) values (127.0.0.1, 1377, 09111111111, 82cc3cb0-cf73-47fa-bc74-e24976ca06ab, 2022-11-26 13:24:27, 2022-11-26 13:24:27))&quot;,
+    &quot;message&quot;: &quot;SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block (SQL: insert into \&quot;otp_codes\&quot; (\&quot;ip\&quot;, \&quot;code\&quot;, \&quot;username\&quot;, \&quot;id\&quot;, \&quot;updated_at\&quot;, \&quot;created_at\&quot;) values (127.0.0.1, 2273, 09111111111, e88cb014-d233-4d70-b26f-643267ef7747, 2022-11-27 09:02:23, 2022-11-27 09:02:23))&quot;,
     &quot;data&quot;: [
-        &quot;SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block (SQL: insert into \&quot;otp_codes\&quot; (\&quot;ip\&quot;, \&quot;code\&quot;, \&quot;username\&quot;, \&quot;id\&quot;, \&quot;updated_at\&quot;, \&quot;created_at\&quot;) values (127.0.0.1, 1377, 09111111111, 82cc3cb0-cf73-47fa-bc74-e24976ca06ab, 2022-11-26 13:24:27, 2022-11-26 13:24:27))&quot;,
+        &quot;SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block (SQL: insert into \&quot;otp_codes\&quot; (\&quot;ip\&quot;, \&quot;code\&quot;, \&quot;username\&quot;, \&quot;id\&quot;, \&quot;updated_at\&quot;, \&quot;created_at\&quot;) values (127.0.0.1, 2273, 09111111111, e88cb014-d233-4d70-b26f-643267ef7747, 2022-11-27 09:02:23, 2022-11-27 09:02:23))&quot;,
         &quot;/home/sina/workfiles/php/laravel/Test/apm-base-laravel/vendor/laravel/framework/src/Illuminate/Database/Connection.php&quot;,
         759,
         &quot;25P02&quot;
     ],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.426865Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.223786Z&quot;
 }</code>
  </pre>
     </span>
@@ -561,7 +561,7 @@ access-control-allow-origin: *
         0
     ],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.434678Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.234420Z&quot;
 }</code>
  </pre>
     </span>
@@ -830,7 +830,7 @@ access-control-allow-origin: *
         }
     },
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.483050Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.294572Z&quot;
 }</code>
  </pre>
     </span>
@@ -967,7 +967,7 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;&quot;,
     &quot;data&quot;: [],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.510613Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.316067Z&quot;
 }</code>
  </pre>
     </span>
@@ -1103,7 +1103,7 @@ access-control-allow-origin: *
     &quot;error&quot;: &quot;&quot;,
     &quot;message&quot;: &quot;&quot;,
     &quot;data&quot;: {
-        &quot;Authorization&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9fnr0odDr4k.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gR0sxHtBd5rwdvuA6.WoxXJFMdxU5vsrldPwiYUQwU5202211d5xOgY42JifdMRd2601FWyZ0jSAttyvmOTrbjgA7KXe4iiMNuf2rCT11275YviXu5WUJr7RBKvj77SwDefv6sosrPSs4dO9OCu0mfsJeYbr8FeA5z&quot;,
+        &quot;Authorization&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ99rP9D7gaOe.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRjRn0GiHDsnx2v6Q.qyIqjgQLA4dE37jP3c6ynBmX72022114bQejUm2eV2Eglr27091bKal2wxqWecqJyqyregzfOWMkxgfRCegDQ1123r2ls2R2VjK0fcS61vhCwxfEu5jdrrnxKgrJfDQvss6v5wriv1FQfgj7&quot;,
         &quot;user&quot;: {
             &quot;id&quot;: &quot;56194f1c-1398-44f0-87cd-c34d2356eeaf&quot;,
             &quot;username&quot;: &quot;09111111111&quot;,
@@ -1225,7 +1225,7 @@ access-control-allow-origin: *
         }
     },
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.537002Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.329789Z&quot;
 }</code>
  </pre>
     </span>
@@ -1398,7 +1398,7 @@ access-control-allow-origin: *
         }
     },
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.453435Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.254939Z&quot;
 }</code>
  </pre>
     </span>
@@ -1538,7 +1538,7 @@ access-control-allow-origin: *
             &quot;current_page&quot;: 1,
             &quot;data&quot;: [
                 {
-                    &quot;id&quot;: &quot;9c638d3b-e346-48c7-b2aa-b6fa337080cc&quot;,
+                    &quot;id&quot;: &quot;3296f06a-4a83-49c5-8c7f-c619776075da&quot;,
                     &quot;ip&quot;: &quot;127.0.0.1&quot;,
                     &quot;ulr&quot;: &quot;/api/v1/request-log&quot;,
                     &quot;status&quot;: &quot;200&quot;,
@@ -1546,7 +1546,7 @@ access-control-allow-origin: *
                     &quot;user_agent&quot;: &quot;Symfony&quot;,
                     &quot;end_status&quot;: null,
                     &quot;user_agent_client&quot;: &quot;Other&quot;,
-                    &quot;created_at&quot;: &quot;2022-11-26T09:54:27.000000Z&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-27T05:32:23.000000Z&quot;,
                     &quot;sort&quot;: 9999,
                     &quot;token&quot;: null,
                     &quot;request&quot;: null,
@@ -1557,191 +1557,362 @@ access-control-allow-origin: *
                     &quot;user_last_name&quot;: &quot;سامانه&quot;
                 },
                 {
-                    &quot;id&quot;: &quot;b8be5458-6fa6-42f7-bee3-7db91cf38ac9&quot;,
+                    &quot;id&quot;: &quot;1c23d7c8-302a-4cad-971f-64bf16148c41&quot;,
                     &quot;ip&quot;: &quot;127.0.0.1&quot;,
-                    &quot;ulr&quot;: &quot;/home&quot;,
+                    &quot;ulr&quot;: &quot;/docs&quot;,
                     &quot;status&quot;: &quot;200&quot;,
                     &quot;method&quot;: &quot;GET&quot;,
                     &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
                     &quot;end_status&quot;: &quot;500&quot;,
                     &quot;user_agent_client&quot;: &quot;Other&quot;,
-                    &quot;created_at&quot;: &quot;2022-11-26T09:34:20.000000Z&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:39:42.000000Z&quot;,
                     &quot;sort&quot;: 9999,
                     &quot;token&quot;: null,
                     &quot;request&quot;: &quot;&quot;,
-                    &quot;response&quot;: &quot;{\&quot;status\&quot;:500,\&quot;error\&quot;:\&quot;\&quot;,\&quot;message\&quot;:\&quot;\&quot;,\&quot;data\&quot;:[\&quot;\&quot;,\&quot;\\/home\\/sina\\/workfiles\\/php\\/laravel\\/Test\\/apm-base-laravel\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Routing\\/AbstractRouteCollection.php\&quot;,44,0],\&quot;patch\&quot;:[],\&quot;date\&quot;:\&quot;2022-11-26T09:34:20.998807Z\&quot;}&quot;,
-                    &quot;message&quot;: &quot;&quot;,
+                    &quot;response&quot;: &quot;{\&quot;status\&quot;:500,\&quot;error\&quot;:\&quot;\&quot;,\&quot;message\&quot;:\&quot;Attempt to read property \\\&quot;id\\\&quot; on null\&quot;,\&quot;data\&quot;:[\&quot;Attempt to read property \\\&quot;id\\\&quot; on null\&quot;,\&quot;\\/home\\/sina\\/workfiles\\/php\\/laravel\\/Test\\/apm-base-laravel\\/app\\/Http\\/Middleware\\/DocsLogin.php\&quot;,15,0],\&quot;patch\&quot;:[],\&quot;date\&quot;:\&quot;2022-11-26T10:39:42.643836Z\&quot;}&quot;,
+                    &quot;message&quot;: &quot;Attempt to read property \&quot;id\&quot; on null&quot;,
                     &quot;user_username&quot;: null,
                     &quot;user_first_name&quot;: null,
                     &quot;user_last_name&quot;: null
                 },
                 {
-                    &quot;id&quot;: &quot;2f51b384-c195-482e-90b7-3959a585f485&quot;,
+                    &quot;id&quot;: &quot;aae52899-d0b0-4987-a425-fff32dcebf8b&quot;,
                     &quot;ip&quot;: &quot;127.0.0.1&quot;,
-                    &quot;ulr&quot;: &quot;/api/v1/user/show&quot;,
+                    &quot;ulr&quot;: &quot;/docs&quot;,
                     &quot;status&quot;: &quot;200&quot;,
-                    &quot;method&quot;: &quot;POST&quot;,
+                    &quot;method&quot;: &quot;GET&quot;,
                     &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
-                    &quot;end_status&quot;: &quot;412&quot;,
+                    &quot;end_status&quot;: &quot;&quot;,
                     &quot;user_agent_client&quot;: &quot;Other&quot;,
-                    &quot;created_at&quot;: &quot;2022-11-26T09:27:02.000000Z&quot;,
-                    &quot;sort&quot;: 9999,
-                    &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi&quot;,
-                    &quot;request&quot;: &quot;{}&quot;,
-                    &quot;response&quot;: &quot;{\&quot;status\&quot;:412,\&quot;error\&quot;:\&quot;\&quot;,\&quot;message\&quot;:\&quot;\\u0627\\u0637\\u0644\\u0627\\u0639\\u0627\\u062a \\u0627\\u0631\\u0633\\u0627\\u0644\\u06cc \\u0646\\u0627\\u0642\\u0635 \\u06cc\\u0627 \\u0627\\u0634\\u062a\\u0628\\u0627\\u0647 \\u0627\\u0633\\u062a\&quot;,\&quot;data\&quot;:[],\&quot;patch\&quot;:[],\&quot;date\&quot;:\&quot;2022-11-26T09:27:02.515977Z\&quot;}&quot;,
-                    &quot;message&quot;: &quot;اطلاعات ارسالی ناقص یا اشتباه است&quot;,
-                    &quot;user_username&quot;: &quot;09111111111&quot;,
-                    &quot;user_first_name&quot;: &quot;مدیر&quot;,
-                    &quot;user_last_name&quot;: &quot;سامانه&quot;
-                },
-                {
-                    &quot;id&quot;: &quot;247de1de-46cb-489f-839c-986a3eec13a5&quot;,
-                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
-                    &quot;ulr&quot;: &quot;/api/v1/user&quot;,
-                    &quot;status&quot;: &quot;200&quot;,
-                    &quot;method&quot;: &quot;POST&quot;,
-                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
-                    &quot;end_status&quot;: &quot;200&quot;,
-                    &quot;user_agent_client&quot;: &quot;Other&quot;,
-                    &quot;created_at&quot;: &quot;2022-11-26T09:26:45.000000Z&quot;,
-                    &quot;sort&quot;: 9999,
-                    &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi&quot;,
-                    &quot;request&quot;: null,
-                    &quot;response&quot;: null,
-                    &quot;message&quot;: &quot;&quot;,
-                    &quot;user_username&quot;: &quot;09111111111&quot;,
-                    &quot;user_first_name&quot;: &quot;مدیر&quot;,
-                    &quot;user_last_name&quot;: &quot;سامانه&quot;
-                },
-                {
-                    &quot;id&quot;: &quot;aca59b95-1363-4fc3-9fe4-38e823fcafdc&quot;,
-                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
-                    &quot;ulr&quot;: &quot;/api/v1/user&quot;,
-                    &quot;status&quot;: &quot;200&quot;,
-                    &quot;method&quot;: &quot;POST&quot;,
-                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
-                    &quot;end_status&quot;: &quot;401&quot;,
-                    &quot;user_agent_client&quot;: &quot;Other&quot;,
-                    &quot;created_at&quot;: &quot;2022-11-26T09:18:23.000000Z&quot;,
-                    &quot;sort&quot;: 9999,
-                    &quot;token&quot;: &quot;{YOUR_TOKEN}&quot;,
-                    &quot;request&quot;: &quot;{}&quot;,
-                    &quot;response&quot;: &quot;{\&quot;status\&quot;:401,\&quot;error\&quot;:\&quot;\&quot;,\&quot;message\&quot;:\&quot;\\u0646\\u06cc\\u0627\\u0632 \\u0628\\u0647 \\u0648\\u0631\\u0648\\u062f \\u0645\\u062c\\u062f\\u062f\&quot;,\&quot;data\&quot;:[],\&quot;patch\&quot;:[],\&quot;date\&quot;:\&quot;2022-11-26T09:18:23.832096Z\&quot;}&quot;,
-                    &quot;message&quot;: &quot;نیاز به ورود مجدد&quot;,
-                    &quot;user_username&quot;: null,
-                    &quot;user_first_name&quot;: null,
-                    &quot;user_last_name&quot;: null
-                },
-                {
-                    &quot;id&quot;: &quot;b91dd750-3b77-44ce-84c8-a716ef356ff5&quot;,
-                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
-                    &quot;ulr&quot;: &quot;/api/v1/auth/user&quot;,
-                    &quot;status&quot;: &quot;200&quot;,
-                    &quot;method&quot;: &quot;POST&quot;,
-                    &quot;user_agent&quot;: &quot;PostmanRuntime/7.28.4&quot;,
-                    &quot;end_status&quot;: &quot;200&quot;,
-                    &quot;user_agent_client&quot;: &quot;Other&quot;,
-                    &quot;created_at&quot;: &quot;2022-11-26T09:16:57.000000Z&quot;,
-                    &quot;sort&quot;: 9999,
-                    &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi&quot;,
-                    &quot;request&quot;: null,
-                    &quot;response&quot;: null,
-                    &quot;message&quot;: &quot;&quot;,
-                    &quot;user_username&quot;: &quot;09111111111&quot;,
-                    &quot;user_first_name&quot;: &quot;مدیر&quot;,
-                    &quot;user_last_name&quot;: &quot;سامانه&quot;
-                },
-                {
-                    &quot;id&quot;: &quot;e3dc5c6a-3916-4104-9e7e-0cc93b085fac&quot;,
-                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
-                    &quot;ulr&quot;: &quot;/api/v1/auth/user&quot;,
-                    &quot;status&quot;: &quot;200&quot;,
-                    &quot;method&quot;: &quot;POST&quot;,
-                    &quot;user_agent&quot;: &quot;PostmanRuntime/7.28.4&quot;,
-                    &quot;end_status&quot;: &quot;401&quot;,
-                    &quot;user_agent_client&quot;: &quot;Other&quot;,
-                    &quot;created_at&quot;: &quot;2022-11-26T09:15:14.000000Z&quot;,
-                    &quot;sort&quot;: 9999,
-                    &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi&quot;,
-                    &quot;request&quot;: &quot;&quot;,
-                    &quot;response&quot;: &quot;{\&quot;status\&quot;:401,\&quot;error\&quot;:\&quot;\&quot;,\&quot;message\&quot;:\&quot;\\u0646\\u06cc\\u0627\\u0632 \\u0628\\u0647 \\u0648\\u0631\\u0648\\u062f \\u0645\\u062c\\u062f\\u062f\&quot;,\&quot;data\&quot;:[],\&quot;patch\&quot;:[],\&quot;date\&quot;:\&quot;2022-11-26T09:15:14.852482Z\&quot;}&quot;,
-                    &quot;message&quot;: &quot;نیاز به ورود مجدد&quot;,
-                    &quot;user_username&quot;: null,
-                    &quot;user_first_name&quot;: null,
-                    &quot;user_last_name&quot;: null
-                },
-                {
-                    &quot;id&quot;: &quot;defee43d-daf3-437c-b529-984127ba2e2e&quot;,
-                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
-                    &quot;ulr&quot;: &quot;/api/v1/auth/user&quot;,
-                    &quot;status&quot;: &quot;200&quot;,
-                    &quot;method&quot;: &quot;POST&quot;,
-                    &quot;user_agent&quot;: &quot;PostmanRuntime/7.28.4&quot;,
-                    &quot;end_status&quot;: &quot;401&quot;,
-                    &quot;user_agent_client&quot;: &quot;Other&quot;,
-                    &quot;created_at&quot;: &quot;2022-11-26T09:13:39.000000Z&quot;,
-                    &quot;sort&quot;: 9999,
-                    &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi&quot;,
-                    &quot;request&quot;: &quot;&quot;,
-                    &quot;response&quot;: &quot;{\&quot;status\&quot;:401,\&quot;error\&quot;:\&quot;\&quot;,\&quot;message\&quot;:\&quot;\\u0646\\u06cc\\u0627\\u0632 \\u0628\\u0647 \\u0648\\u0631\\u0648\\u062f \\u0645\\u062c\\u062f\\u062f\&quot;,\&quot;data\&quot;:[],\&quot;patch\&quot;:[],\&quot;date\&quot;:\&quot;2022-11-26T09:13:39.652317Z\&quot;}&quot;,
-                    &quot;message&quot;: &quot;نیاز به ورود مجدد&quot;,
-                    &quot;user_username&quot;: null,
-                    &quot;user_first_name&quot;: null,
-                    &quot;user_last_name&quot;: null
-                },
-                {
-                    &quot;id&quot;: &quot;4f59ca35-ddc9-4bed-b510-783fe4eb1a9a&quot;,
-                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
-                    &quot;ulr&quot;: &quot;/api/v1/auth/user&quot;,
-                    &quot;status&quot;: &quot;200&quot;,
-                    &quot;method&quot;: &quot;POST&quot;,
-                    &quot;user_agent&quot;: &quot;PostmanRuntime/7.28.4&quot;,
-                    &quot;end_status&quot;: &quot;401&quot;,
-                    &quot;user_agent_client&quot;: &quot;Other&quot;,
-                    &quot;created_at&quot;: &quot;2022-11-26T09:13:38.000000Z&quot;,
-                    &quot;sort&quot;: 9999,
-                    &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi&quot;,
-                    &quot;request&quot;: &quot;&quot;,
-                    &quot;response&quot;: &quot;{\&quot;status\&quot;:401,\&quot;error\&quot;:\&quot;\&quot;,\&quot;message\&quot;:\&quot;\\u0646\\u06cc\\u0627\\u0632 \\u0628\\u0647 \\u0648\\u0631\\u0648\\u062f \\u0645\\u062c\\u062f\\u062f\&quot;,\&quot;data\&quot;:[],\&quot;patch\&quot;:[],\&quot;date\&quot;:\&quot;2022-11-26T09:13:38.078965Z\&quot;}&quot;,
-                    &quot;message&quot;: &quot;نیاز به ورود مجدد&quot;,
-                    &quot;user_username&quot;: null,
-                    &quot;user_first_name&quot;: null,
-                    &quot;user_last_name&quot;: null
-                },
-                {
-                    &quot;id&quot;: &quot;df6d47a0-deca-4fcc-bc71-4e2508a28ca6&quot;,
-                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
-                    &quot;ulr&quot;: &quot;/api/v1/auth/otp/send&quot;,
-                    &quot;status&quot;: &quot;200&quot;,
-                    &quot;method&quot;: &quot;POST&quot;,
-                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
-                    &quot;end_status&quot;: &quot;200&quot;,
-                    &quot;user_agent_client&quot;: &quot;Other&quot;,
-                    &quot;created_at&quot;: &quot;2022-11-26T09:04:13.000000Z&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:39:28.000000Z&quot;,
                     &quot;sort&quot;: 9999,
                     &quot;token&quot;: null,
-                    &quot;request&quot;: null,
-                    &quot;response&quot;: null,
+                    &quot;request&quot;: &quot;&quot;,
+                    &quot;response&quot;: &quot;&quot;,
                     &quot;message&quot;: &quot;&quot;,
                     &quot;user_username&quot;: null,
                     &quot;user_first_name&quot;: null,
                     &quot;user_last_name&quot;: null
                 },
                 {
-                    &quot;id&quot;: &quot;3fe38801-13d7-4877-b173-a01484196e9a&quot;,
+                    &quot;id&quot;: &quot;4c248fdf-2e46-4d35-8732-c5db571fe428&quot;,
                     &quot;ip&quot;: &quot;127.0.0.1&quot;,
-                    &quot;ulr&quot;: &quot;/api/v1/auth/user&quot;,
+                    &quot;ulr&quot;: &quot;/docs/check&quot;,
                     &quot;status&quot;: &quot;200&quot;,
                     &quot;method&quot;: &quot;POST&quot;,
-                    &quot;user_agent&quot;: &quot;PostmanRuntime/7.28.4&quot;,
-                    &quot;end_status&quot;: &quot;401&quot;,
+                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
+                    &quot;end_status&quot;: &quot;&quot;,
                     &quot;user_agent_client&quot;: &quot;Other&quot;,
-                    &quot;created_at&quot;: &quot;2022-11-26T09:01:34.000000Z&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:39:28.000000Z&quot;,
                     &quot;sort&quot;: 9999,
-                    &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi&quot;,
+                    &quot;token&quot;: null,
+                    &quot;request&quot;: &quot;_token=I126yaDO98LeLPdPlBBFf4EnQQrWt9hkBEbDJQgi&amp;username=09111111111&amp;password=123456&quot;,
+                    &quot;response&quot;: &quot;&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n    &lt;head&gt;\n        &lt;meta charset=\&quot;UTF-8\&quot; /&gt;\n        &lt;meta http-equiv=\&quot;refresh\&quot; content=\&quot;0;url=&#039;http://localhost:8000/docs&#039;\&quot; /&gt;\n\n        &lt;title&gt;Redirecting to http://localhost:8000/docs&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        Redirecting to &lt;a href=\&quot;http://localhost:8000/docs\&quot;&gt;http://localhost:8000/docs&lt;/a&gt;.\n    &lt;/body&gt;\n&lt;/html&gt;&quot;,
+                    &quot;message&quot;: &quot;&quot;,
+                    &quot;user_username&quot;: &quot;09111111111&quot;,
+                    &quot;user_first_name&quot;: &quot;مدیر&quot;,
+                    &quot;user_last_name&quot;: &quot;سامانه&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;d8ad548c-2629-46c7-9169-f1c6cd21bd51&quot;,
+                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
+                    &quot;ulr&quot;: &quot;/docs&quot;,
+                    &quot;status&quot;: &quot;200&quot;,
+                    &quot;method&quot;: &quot;GET&quot;,
+                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
+                    &quot;end_status&quot;: &quot;&quot;,
+                    &quot;user_agent_client&quot;: &quot;Other&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:37:29.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;token&quot;: null,
                     &quot;request&quot;: &quot;&quot;,
-                    &quot;response&quot;: &quot;{\&quot;status\&quot;:401,\&quot;error\&quot;:\&quot;\&quot;,\&quot;message\&quot;:\&quot;\\u0646\\u06cc\\u0627\\u0632 \\u0628\\u0647 \\u0648\\u0631\\u0648\\u062f \\u0645\\u062c\\u062f\\u062f\&quot;,\&quot;data\&quot;:[],\&quot;patch\&quot;:[],\&quot;date\&quot;:\&quot;2022-11-26T09:01:34.712501Z\&quot;}&quot;,
-                    &quot;message&quot;: &quot;نیاز به ورود مجدد&quot;,
+                    &quot;response&quot;: &quot;&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n    &lt;head&gt;\n        &lt;meta charset=\&quot;UTF-8\&quot; /&gt;\n        &lt;meta http-equiv=\&quot;refresh\&quot; content=\&quot;0;url=&#039;http://localhost:8000/docs/login&#039;\&quot; /&gt;\n\n        &lt;title&gt;Redirecting to http://localhost:8000/docs/login&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        Redirecting to &lt;a href=\&quot;http://localhost:8000/docs/login\&quot;&gt;http://localhost:8000/docs/login&lt;/a&gt;.\n    &lt;/body&gt;\n&lt;/html&gt;&quot;,
+                    &quot;message&quot;: &quot;&quot;,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;5a978862-517e-4c2e-ab36-4c005e27dcd0&quot;,
+                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
+                    &quot;ulr&quot;: &quot;/docs/login&quot;,
+                    &quot;status&quot;: &quot;200&quot;,
+                    &quot;method&quot;: &quot;GET&quot;,
+                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
+                    &quot;end_status&quot;: &quot;&quot;,
+                    &quot;user_agent_client&quot;: &quot;Other&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:37:29.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;token&quot;: null,
+                    &quot;request&quot;: &quot;&quot;,
+                    &quot;response&quot;: &quot;&lt;html&gt;\n    &lt;head&gt;\n        &lt;title&gt;Docs login&lt;/title&gt;\n        &lt;link href=\&quot;http://localhost:8000/vendor/auth/login.css\&quot; rel=\&quot;stylesheet\&quot;&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;div class=\&quot;wrapper fadeInDown\&quot;&gt;\n          &lt;div id=\&quot;formContent\&quot;&gt;\n            &lt;!-- Tabs Titles --&gt;\n            &lt;h2 class=\&quot;active\&quot;&gt; Sign In &lt;/h2&gt;       \n        \n            &lt;!-- Login Form --&gt;\n            &lt;form action=\&quot;/docs/check\&quot; method=\&quot;POST\&quot;&gt;\n                &lt;input type=\&quot;hidden\&quot; name=\&quot;_token\&quot; value=\&quot;I126yaDO98LeLPdPlBBFf4EnQQrWt9hkBEbDJQgi\&quot;&gt;                &lt;input type=\&quot;text\&quot; id=\&quot;login\&quot; class=\&quot;fadeIn second\&quot; name=\&quot;username\&quot; placeholder=\&quot;user name\&quot;&gt;\n                &lt;input type=\&quot;text\&quot; id=\&quot;password\&quot; class=\&quot;fadeIn third\&quot; name=\&quot;password\&quot; placeholder=\&quot;password\&quot;&gt;\n                &lt;input type=\&quot;submit\&quot; class=\&quot;fadeIn fourth\&quot; value=\&quot;Log In\&quot;&gt;\n            &lt;/form&gt;\n        \n            &lt;!-- Message --&gt;\n                    \n          &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/body&gt;\n&lt;/html&gt;\n\n&quot;,
+                    &quot;message&quot;: &quot;&quot;,
+                    &quot;user_username&quot;: &quot;09111111111&quot;,
+                    &quot;user_first_name&quot;: &quot;مدیر&quot;,
+                    &quot;user_last_name&quot;: &quot;سامانه&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;1d7fdca1-7eb6-4b43-a4a5-7e9f393fd046&quot;,
+                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
+                    &quot;ulr&quot;: &quot;/docs/check&quot;,
+                    &quot;status&quot;: &quot;200&quot;,
+                    &quot;method&quot;: &quot;POST&quot;,
+                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
+                    &quot;end_status&quot;: &quot;&quot;,
+                    &quot;user_agent_client&quot;: &quot;Other&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:37:28.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;token&quot;: null,
+                    &quot;request&quot;: &quot;_token=I126yaDO98LeLPdPlBBFf4EnQQrWt9hkBEbDJQgi&amp;username=09111111111&amp;password=123456&quot;,
+                    &quot;response&quot;: &quot;&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n    &lt;head&gt;\n        &lt;meta charset=\&quot;UTF-8\&quot; /&gt;\n        &lt;meta http-equiv=\&quot;refresh\&quot; content=\&quot;0;url=&#039;http://localhost:8000/docs&#039;\&quot; /&gt;\n\n        &lt;title&gt;Redirecting to http://localhost:8000/docs&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        Redirecting to &lt;a href=\&quot;http://localhost:8000/docs\&quot;&gt;http://localhost:8000/docs&lt;/a&gt;.\n    &lt;/body&gt;\n&lt;/html&gt;&quot;,
+                    &quot;message&quot;: &quot;&quot;,
+                    &quot;user_username&quot;: &quot;09111111111&quot;,
+                    &quot;user_first_name&quot;: &quot;مدیر&quot;,
+                    &quot;user_last_name&quot;: &quot;سامانه&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;e7f4ce76-63b3-4c79-a906-52cd42cad839&quot;,
+                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
+                    &quot;ulr&quot;: &quot;/docs/check&quot;,
+                    &quot;status&quot;: &quot;200&quot;,
+                    &quot;method&quot;: &quot;POST&quot;,
+                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
+                    &quot;end_status&quot;: &quot;&quot;,
+                    &quot;user_agent_client&quot;: &quot;Other&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:37:02.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;token&quot;: null,
+                    &quot;request&quot;: &quot;_token=I126yaDO98LeLPdPlBBFf4EnQQrWt9hkBEbDJQgi&amp;username=09111111111&amp;password=123456&quot;,
+                    &quot;response&quot;: &quot;&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n    &lt;head&gt;\n        &lt;meta charset=\&quot;UTF-8\&quot; /&gt;\n        &lt;meta http-equiv=\&quot;refresh\&quot; content=\&quot;0;url=&#039;http://localhost:8000/docs&#039;\&quot; /&gt;\n\n        &lt;title&gt;Redirecting to http://localhost:8000/docs&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        Redirecting to &lt;a href=\&quot;http://localhost:8000/docs\&quot;&gt;http://localhost:8000/docs&lt;/a&gt;.\n    &lt;/body&gt;\n&lt;/html&gt;&quot;,
+                    &quot;message&quot;: &quot;&quot;,
+                    &quot;user_username&quot;: &quot;09111111111&quot;,
+                    &quot;user_first_name&quot;: &quot;مدیر&quot;,
+                    &quot;user_last_name&quot;: &quot;سامانه&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;86b41b0b-0bed-4b30-af92-a4379d2d2f37&quot;,
+                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
+                    &quot;ulr&quot;: &quot;/docs/login&quot;,
+                    &quot;status&quot;: &quot;200&quot;,
+                    &quot;method&quot;: &quot;GET&quot;,
+                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
+                    &quot;end_status&quot;: &quot;&quot;,
+                    &quot;user_agent_client&quot;: &quot;Other&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:37:02.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;token&quot;: null,
+                    &quot;request&quot;: &quot;&quot;,
+                    &quot;response&quot;: &quot;&lt;html&gt;\n    &lt;head&gt;\n        &lt;title&gt;Docs login&lt;/title&gt;\n        &lt;link href=\&quot;http://localhost:8000/vendor/auth/login.css\&quot; rel=\&quot;stylesheet\&quot;&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;div class=\&quot;wrapper fadeInDown\&quot;&gt;\n          &lt;div id=\&quot;formContent\&quot;&gt;\n            &lt;!-- Tabs Titles --&gt;\n            &lt;h2 class=\&quot;active\&quot;&gt; Sign In &lt;/h2&gt;       \n        \n            &lt;!-- Login Form --&gt;\n            &lt;form action=\&quot;/docs/check\&quot; method=\&quot;POST\&quot;&gt;\n                &lt;input type=\&quot;hidden\&quot; name=\&quot;_token\&quot; value=\&quot;I126yaDO98LeLPdPlBBFf4EnQQrWt9hkBEbDJQgi\&quot;&gt;                &lt;input type=\&quot;text\&quot; id=\&quot;login\&quot; class=\&quot;fadeIn second\&quot; name=\&quot;username\&quot; placeholder=\&quot;user name\&quot;&gt;\n                &lt;input type=\&quot;text\&quot; id=\&quot;password\&quot; class=\&quot;fadeIn third\&quot; name=\&quot;password\&quot; placeholder=\&quot;password\&quot;&gt;\n                &lt;input type=\&quot;submit\&quot; class=\&quot;fadeIn fourth\&quot; value=\&quot;Log In\&quot;&gt;\n            &lt;/form&gt;\n        \n            &lt;!-- Message --&gt;\n                    \n          &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/body&gt;\n&lt;/html&gt;\n\n&quot;,
+                    &quot;message&quot;: &quot;&quot;,
+                    &quot;user_username&quot;: &quot;09111111111&quot;,
+                    &quot;user_first_name&quot;: &quot;مدیر&quot;,
+                    &quot;user_last_name&quot;: &quot;سامانه&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;0f2c43d2-3446-40dd-b13f-5bb7248264f2&quot;,
+                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
+                    &quot;ulr&quot;: &quot;/docs&quot;,
+                    &quot;status&quot;: &quot;200&quot;,
+                    &quot;method&quot;: &quot;GET&quot;,
+                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
+                    &quot;end_status&quot;: &quot;&quot;,
+                    &quot;user_agent_client&quot;: &quot;Other&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:37:02.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;token&quot;: null,
+                    &quot;request&quot;: &quot;&quot;,
+                    &quot;response&quot;: &quot;&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n    &lt;head&gt;\n        &lt;meta charset=\&quot;UTF-8\&quot; /&gt;\n        &lt;meta http-equiv=\&quot;refresh\&quot; content=\&quot;0;url=&#039;http://localhost:8000/docs/login&#039;\&quot; /&gt;\n\n        &lt;title&gt;Redirecting to http://localhost:8000/docs/login&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        Redirecting to &lt;a href=\&quot;http://localhost:8000/docs/login\&quot;&gt;http://localhost:8000/docs/login&lt;/a&gt;.\n    &lt;/body&gt;\n&lt;/html&gt;&quot;,
+                    &quot;message&quot;: &quot;&quot;,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;49d15692-5cee-4773-acfa-99bd7a19d9e7&quot;,
+                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
+                    &quot;ulr&quot;: &quot;/docs/login&quot;,
+                    &quot;status&quot;: &quot;200&quot;,
+                    &quot;method&quot;: &quot;GET&quot;,
+                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
+                    &quot;end_status&quot;: &quot;&quot;,
+                    &quot;user_agent_client&quot;: &quot;Other&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:35:04.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;token&quot;: null,
+                    &quot;request&quot;: &quot;&quot;,
+                    &quot;response&quot;: &quot;&lt;html&gt;\n    &lt;head&gt;\n        &lt;title&gt;Docs login&lt;/title&gt;\n        &lt;link href=\&quot;http://localhost:8000/vendor/auth/login.css\&quot; rel=\&quot;stylesheet\&quot;&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;div class=\&quot;wrapper fadeInDown\&quot;&gt;\n          &lt;div id=\&quot;formContent\&quot;&gt;\n            &lt;!-- Tabs Titles --&gt;\n            &lt;h2 class=\&quot;active\&quot;&gt; Sign In &lt;/h2&gt;       \n        \n            &lt;!-- Login Form --&gt;\n            &lt;form action=\&quot;/docs/check\&quot; method=\&quot;POST\&quot;&gt;\n                &lt;input type=\&quot;hidden\&quot; name=\&quot;_token\&quot; value=\&quot;I126yaDO98LeLPdPlBBFf4EnQQrWt9hkBEbDJQgi\&quot;&gt;                &lt;input type=\&quot;text\&quot; id=\&quot;login\&quot; class=\&quot;fadeIn second\&quot; name=\&quot;username\&quot; placeholder=\&quot;user name\&quot;&gt;\n                &lt;input type=\&quot;text\&quot; id=\&quot;password\&quot; class=\&quot;fadeIn third\&quot; name=\&quot;password\&quot; placeholder=\&quot;password\&quot;&gt;\n                &lt;input type=\&quot;submit\&quot; class=\&quot;fadeIn fourth\&quot; value=\&quot;Log In\&quot;&gt;\n            &lt;/form&gt;\n        \n            &lt;!-- Message --&gt;\n                    \n          &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/body&gt;\n&lt;/html&gt;\n\n&quot;,
+                    &quot;message&quot;: &quot;&quot;,
+                    &quot;user_username&quot;: &quot;09111111111&quot;,
+                    &quot;user_first_name&quot;: &quot;مدیر&quot;,
+                    &quot;user_last_name&quot;: &quot;سامانه&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;416aae47-fbdf-473d-99c4-fc3b8fd37940&quot;,
+                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
+                    &quot;ulr&quot;: &quot;/docs&quot;,
+                    &quot;status&quot;: &quot;200&quot;,
+                    &quot;method&quot;: &quot;GET&quot;,
+                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
+                    &quot;end_status&quot;: &quot;&quot;,
+                    &quot;user_agent_client&quot;: &quot;Other&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:35:04.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;token&quot;: null,
+                    &quot;request&quot;: &quot;&quot;,
+                    &quot;response&quot;: &quot;&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n    &lt;head&gt;\n        &lt;meta charset=\&quot;UTF-8\&quot; /&gt;\n        &lt;meta http-equiv=\&quot;refresh\&quot; content=\&quot;0;url=&#039;http://localhost:8000/docs/login&#039;\&quot; /&gt;\n\n        &lt;title&gt;Redirecting to http://localhost:8000/docs/login&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        Redirecting to &lt;a href=\&quot;http://localhost:8000/docs/login\&quot;&gt;http://localhost:8000/docs/login&lt;/a&gt;.\n    &lt;/body&gt;\n&lt;/html&gt;&quot;,
+                    &quot;message&quot;: &quot;&quot;,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;1ac41774-f9e9-4974-9782-8d1fada71079&quot;,
+                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
+                    &quot;ulr&quot;: &quot;/docs/check&quot;,
+                    &quot;status&quot;: &quot;200&quot;,
+                    &quot;method&quot;: &quot;POST&quot;,
+                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
+                    &quot;end_status&quot;: &quot;&quot;,
+                    &quot;user_agent_client&quot;: &quot;Other&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:35:04.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;token&quot;: null,
+                    &quot;request&quot;: &quot;_token=I126yaDO98LeLPdPlBBFf4EnQQrWt9hkBEbDJQgi&amp;username=09111111111&amp;password=123456&quot;,
+                    &quot;response&quot;: &quot;&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n    &lt;head&gt;\n        &lt;meta charset=\&quot;UTF-8\&quot; /&gt;\n        &lt;meta http-equiv=\&quot;refresh\&quot; content=\&quot;0;url=&#039;http://localhost:8000/docs&#039;\&quot; /&gt;\n\n        &lt;title&gt;Redirecting to http://localhost:8000/docs&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        Redirecting to &lt;a href=\&quot;http://localhost:8000/docs\&quot;&gt;http://localhost:8000/docs&lt;/a&gt;.\n    &lt;/body&gt;\n&lt;/html&gt;&quot;,
+                    &quot;message&quot;: &quot;&quot;,
+                    &quot;user_username&quot;: &quot;09111111111&quot;,
+                    &quot;user_first_name&quot;: &quot;مدیر&quot;,
+                    &quot;user_last_name&quot;: &quot;سامانه&quot;
+                },
+                {
+                    &quot;id&quot;: &quot;e0af12f1-b4a3-44a1-a5b2-5a7869b3aae7&quot;,
+                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
+                    &quot;ulr&quot;: &quot;/docs/login&quot;,
+                    &quot;status&quot;: &quot;200&quot;,
+                    &quot;method&quot;: &quot;GET&quot;,
+                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
+                    &quot;end_status&quot;: &quot;&quot;,
+                    &quot;user_agent_client&quot;: &quot;Other&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:34:47.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;token&quot;: null,
+                    &quot;request&quot;: &quot;&quot;,
+                    &quot;response&quot;: &quot;&lt;html&gt;\n    &lt;head&gt;\n        &lt;title&gt;Docs login&lt;/title&gt;\n        &lt;link href=\&quot;http://localhost:8000/vendor/auth/login.css\&quot; rel=\&quot;stylesheet\&quot;&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;div class=\&quot;wrapper fadeInDown\&quot;&gt;\n          &lt;div id=\&quot;formContent\&quot;&gt;\n            &lt;!-- Tabs Titles --&gt;\n            &lt;h2 class=\&quot;active\&quot;&gt; Sign In &lt;/h2&gt;       \n        \n            &lt;!-- Login Form --&gt;\n            &lt;form action=\&quot;/docs/check\&quot; method=\&quot;POST\&quot;&gt;\n                &lt;input type=\&quot;hidden\&quot; name=\&quot;_token\&quot; value=\&quot;I126yaDO98LeLPdPlBBFf4EnQQrWt9hkBEbDJQgi\&quot;&gt;                &lt;input type=\&quot;text\&quot; id=\&quot;login\&quot; class=\&quot;fadeIn second\&quot; name=\&quot;username\&quot; placeholder=\&quot;user name\&quot;&gt;\n                &lt;input type=\&quot;text\&quot; id=\&quot;password\&quot; class=\&quot;fadeIn third\&quot; name=\&quot;password\&quot; placeholder=\&quot;password\&quot;&gt;\n                &lt;input type=\&quot;submit\&quot; class=\&quot;fadeIn fourth\&quot; value=\&quot;Log In\&quot;&gt;\n            &lt;/form&gt;\n        \n            &lt;!-- Message --&gt;\n                    \n          &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/body&gt;\n&lt;/html&gt;\n\n&quot;,
+                    &quot;message&quot;: &quot;&quot;,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;d26c0330-58bd-4032-9ea5-a18f045ca39d&quot;,
+                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
+                    &quot;ulr&quot;: &quot;/docs/check&quot;,
+                    &quot;status&quot;: &quot;200&quot;,
+                    &quot;method&quot;: &quot;POST&quot;,
+                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
+                    &quot;end_status&quot;: &quot;500&quot;,
+                    &quot;user_agent_client&quot;: &quot;Other&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:34:22.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;token&quot;: null,
+                    &quot;request&quot;: &quot;username=09111111111&amp;password=123456&quot;,
+                    &quot;response&quot;: &quot;{\&quot;status\&quot;:500,\&quot;error\&quot;:\&quot;\&quot;,\&quot;message\&quot;:\&quot;CSRF token mismatch.\&quot;,\&quot;data\&quot;:[\&quot;CSRF token mismatch.\&quot;,\&quot;\\/home\\/sina\\/workfiles\\/php\\/laravel\\/Test\\/apm-base-laravel\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Foundation\\/Http\\/Middleware\\/VerifyCsrfToken.php\&quot;,85,0],\&quot;patch\&quot;:[],\&quot;date\&quot;:\&quot;2022-11-26T10:34:22.377671Z\&quot;}&quot;,
+                    &quot;message&quot;: &quot;CSRF token mismatch.&quot;,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;639bae76-dc98-4569-ad48-350bb7636a83&quot;,
+                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
+                    &quot;ulr&quot;: &quot;/docs/login&quot;,
+                    &quot;status&quot;: &quot;200&quot;,
+                    &quot;method&quot;: &quot;GET&quot;,
+                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
+                    &quot;end_status&quot;: &quot;&quot;,
+                    &quot;user_agent_client&quot;: &quot;Other&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:34:19.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;token&quot;: null,
+                    &quot;request&quot;: &quot;&quot;,
+                    &quot;response&quot;: &quot;&lt;html&gt;\n    &lt;head&gt;\n        &lt;title&gt;Docs login&lt;/title&gt;\n        &lt;link href=\&quot;http://localhost:8000/vendor/auth/login.css\&quot; rel=\&quot;stylesheet\&quot;&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;div class=\&quot;wrapper fadeInDown\&quot;&gt;\n          &lt;div id=\&quot;formContent\&quot;&gt;\n            &lt;!-- Tabs Titles --&gt;\n            &lt;h2 class=\&quot;active\&quot;&gt; Sign In &lt;/h2&gt;       \n        \n            &lt;!-- Login Form --&gt;\n            &lt;form action=\&quot;/docs/check\&quot; method=\&quot;POST\&quot;&gt;\n              &lt;input type=\&quot;text\&quot; id=\&quot;login\&quot; class=\&quot;fadeIn second\&quot; name=\&quot;username\&quot; placeholder=\&quot;user name\&quot;&gt;\n              &lt;input type=\&quot;text\&quot; id=\&quot;password\&quot; class=\&quot;fadeIn third\&quot; name=\&quot;password\&quot; placeholder=\&quot;password\&quot;&gt;\n              &lt;input type=\&quot;submit\&quot; class=\&quot;fadeIn fourth\&quot; value=\&quot;Log In\&quot;&gt;\n            &lt;/form&gt;\n        \n            &lt;!-- Message --&gt;\n                    \n          &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/body&gt;\n&lt;/html&gt;\n\n&quot;,
+                    &quot;message&quot;: &quot;&quot;,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;0a79c004-abe8-4184-9bbf-6dd16305496e&quot;,
+                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
+                    &quot;ulr&quot;: &quot;/docs/login&quot;,
+                    &quot;status&quot;: &quot;200&quot;,
+                    &quot;method&quot;: &quot;GET&quot;,
+                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
+                    &quot;end_status&quot;: &quot;&quot;,
+                    &quot;user_agent_client&quot;: &quot;Other&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:34:18.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;token&quot;: null,
+                    &quot;request&quot;: &quot;&quot;,
+                    &quot;response&quot;: &quot;&lt;html&gt;\n    &lt;head&gt;\n        &lt;title&gt;Docs login&lt;/title&gt;\n        &lt;link href=\&quot;http://localhost:8000/vendor/auth/login.css\&quot; rel=\&quot;stylesheet\&quot;&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;div class=\&quot;wrapper fadeInDown\&quot;&gt;\n          &lt;div id=\&quot;formContent\&quot;&gt;\n            &lt;!-- Tabs Titles --&gt;\n            &lt;h2 class=\&quot;active\&quot;&gt; Sign In &lt;/h2&gt;       \n        \n            &lt;!-- Login Form --&gt;\n            &lt;form action=\&quot;/docs/check\&quot; method=\&quot;POST\&quot;&gt;\n              &lt;input type=\&quot;text\&quot; id=\&quot;login\&quot; class=\&quot;fadeIn second\&quot; name=\&quot;username\&quot; placeholder=\&quot;user name\&quot;&gt;\n              &lt;input type=\&quot;text\&quot; id=\&quot;password\&quot; class=\&quot;fadeIn third\&quot; name=\&quot;password\&quot; placeholder=\&quot;password\&quot;&gt;\n              &lt;input type=\&quot;submit\&quot; class=\&quot;fadeIn fourth\&quot; value=\&quot;Log In\&quot;&gt;\n            &lt;/form&gt;\n        \n            &lt;!-- Message --&gt;\n                    \n          &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/body&gt;\n&lt;/html&gt;\n\n&quot;,
+                    &quot;message&quot;: &quot;&quot;,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;839f27a1-56bc-4a90-b1f1-01ea20ad3096&quot;,
+                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
+                    &quot;ulr&quot;: &quot;/docs/login&quot;,
+                    &quot;status&quot;: &quot;200&quot;,
+                    &quot;method&quot;: &quot;POST&quot;,
+                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
+                    &quot;end_status&quot;: &quot;500&quot;,
+                    &quot;user_agent_client&quot;: &quot;Other&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:33:46.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;token&quot;: null,
+                    &quot;request&quot;: &quot;username=09111111111&amp;password=123456&quot;,
+                    &quot;response&quot;: &quot;{\&quot;status\&quot;:500,\&quot;error\&quot;:\&quot;\&quot;,\&quot;message\&quot;:\&quot;The POST method is not supported for this route. Supported methods: GET, HEAD.\&quot;,\&quot;data\&quot;:[\&quot;The POST method is not supported for this route. Supported methods: GET, HEAD.\&quot;,\&quot;\\/home\\/sina\\/workfiles\\/php\\/laravel\\/Test\\/apm-base-laravel\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Routing\\/AbstractRouteCollection.php\&quot;,118,0],\&quot;patch\&quot;:[],\&quot;date\&quot;:\&quot;2022-11-26T10:33:46.289363Z\&quot;}&quot;,
+                    &quot;message&quot;: &quot;The POST method is not supported for this route. Supported methods: GET, HEAD.&quot;,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;a9fa9bc8-d419-498a-809a-a54c6ca93c5b&quot;,
+                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
+                    &quot;ulr&quot;: &quot;/docs/login&quot;,
+                    &quot;status&quot;: &quot;200&quot;,
+                    &quot;method&quot;: &quot;GET&quot;,
+                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
+                    &quot;end_status&quot;: &quot;&quot;,
+                    &quot;user_agent_client&quot;: &quot;Other&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:33:43.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;token&quot;: null,
+                    &quot;request&quot;: &quot;&quot;,
+                    &quot;response&quot;: &quot;&lt;html&gt;\n    &lt;head&gt;\n        &lt;title&gt;Docs login&lt;/title&gt;\n        &lt;link href=\&quot;http://localhost:8000/vendor/auth/login.css\&quot; rel=\&quot;stylesheet\&quot;&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;div class=\&quot;wrapper fadeInDown\&quot;&gt;\n          &lt;div id=\&quot;formContent\&quot;&gt;\n            &lt;!-- Tabs Titles --&gt;\n            &lt;h2 class=\&quot;active\&quot;&gt; Sign In &lt;/h2&gt;       \n        \n            &lt;!-- Login Form --&gt;\n            &lt;form action=\&quot;/docs/login\&quot; method=\&quot;POST\&quot;&gt;\n              &lt;input type=\&quot;text\&quot; id=\&quot;login\&quot; class=\&quot;fadeIn second\&quot; name=\&quot;username\&quot; placeholder=\&quot;user name\&quot;&gt;\n              &lt;input type=\&quot;text\&quot; id=\&quot;password\&quot; class=\&quot;fadeIn third\&quot; name=\&quot;password\&quot; placeholder=\&quot;password\&quot;&gt;\n              &lt;input type=\&quot;submit\&quot; class=\&quot;fadeIn fourth\&quot; value=\&quot;Log In\&quot;&gt;\n            &lt;/form&gt;\n        \n            &lt;!-- Message --&gt;\n                    \n          &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/body&gt;\n&lt;/html&gt;\n\n&quot;,
+                    &quot;message&quot;: &quot;&quot;,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;84321e5e-e1bb-48c6-a470-5c516b61c290&quot;,
+                    &quot;ip&quot;: &quot;127.0.0.1&quot;,
+                    &quot;ulr&quot;: &quot;/auth/login&quot;,
+                    &quot;status&quot;: &quot;200&quot;,
+                    &quot;method&quot;: &quot;POST&quot;,
+                    &quot;user_agent&quot;: &quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko/20100101 Firefox/107.0&quot;,
+                    &quot;end_status&quot;: &quot;500&quot;,
+                    &quot;user_agent_client&quot;: &quot;Other&quot;,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:33:24.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;token&quot;: null,
+                    &quot;request&quot;: &quot;username=09111111111&amp;password=123456&quot;,
+                    &quot;response&quot;: &quot;{\&quot;status\&quot;:500,\&quot;error\&quot;:\&quot;\&quot;,\&quot;message\&quot;:\&quot;\&quot;,\&quot;data\&quot;:[\&quot;\&quot;,\&quot;\\/home\\/sina\\/workfiles\\/php\\/laravel\\/Test\\/apm-base-laravel\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Routing\\/AbstractRouteCollection.php\&quot;,44,0],\&quot;patch\&quot;:[],\&quot;date\&quot;:\&quot;2022-11-26T10:33:24.114574Z\&quot;}&quot;,
+                    &quot;message&quot;: &quot;&quot;,
                     &quot;user_username&quot;: null,
                     &quot;user_first_name&quot;: null,
                     &quot;user_last_name&quot;: null
@@ -1749,8 +1920,8 @@ access-control-allow-origin: *
             ],
             &quot;first_page_url&quot;: &quot;http://localhost:8000/api/v1/request-log?page=1&quot;,
             &quot;from&quot;: 1,
-            &quot;last_page&quot;: 1,
-            &quot;last_page_url&quot;: &quot;http://localhost:8000/api/v1/request-log?page=1&quot;,
+            &quot;last_page&quot;: 3,
+            &quot;last_page_url&quot;: &quot;http://localhost:8000/api/v1/request-log?page=3&quot;,
             &quot;links&quot;: [
                 {
                     &quot;url&quot;: null,
@@ -1763,21 +1934,31 @@ access-control-allow-origin: *
                     &quot;active&quot;: true
                 },
                 {
-                    &quot;url&quot;: null,
+                    &quot;url&quot;: &quot;http://localhost:8000/api/v1/request-log?page=2&quot;,
+                    &quot;label&quot;: &quot;2&quot;,
+                    &quot;active&quot;: false
+                },
+                {
+                    &quot;url&quot;: &quot;http://localhost:8000/api/v1/request-log?page=3&quot;,
+                    &quot;label&quot;: &quot;3&quot;,
+                    &quot;active&quot;: false
+                },
+                {
+                    &quot;url&quot;: &quot;http://localhost:8000/api/v1/request-log?page=2&quot;,
                     &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                     &quot;active&quot;: false
                 }
             ],
-            &quot;next_page_url&quot;: null,
+            &quot;next_page_url&quot;: &quot;http://localhost:8000/api/v1/request-log?page=2&quot;,
             &quot;path&quot;: &quot;http://localhost:8000/api/v1/request-log&quot;,
             &quot;per_page&quot;: 20,
             &quot;prev_page_url&quot;: null,
-            &quot;to&quot;: 11,
-            &quot;total&quot;: 11
+            &quot;to&quot;: 20,
+            &quot;total&quot;: 49
         }
     },
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.567360Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.354634Z&quot;
 }</code>
  </pre>
     </span>
@@ -1917,6 +2098,202 @@ access-control-allow-origin: *
             &quot;current_page&quot;: 1,
             &quot;data&quot;: [
                 {
+                    &quot;id&quot;: &quot;554d2355-bc3f-40e3-b52c-059b6fcbc73a&quot;,
+                    &quot;line&quot;: &quot;15&quot;,
+                    &quot;code&quot;: &quot;0&quot;,
+                    &quot;file&quot;: &quot;/home/sina/workfiles/php/laravel/Test/apm-base-laravel/app/Http/Middleware/DocsLogin.php&quot;,
+                    &quot;message&quot;: &quot;\&quot;Attempt to read property \\\&quot;id\\\&quot; on null\&quot;&quot;,
+                    &quot;status&quot;: &quot;No http status error&quot;,
+                    &quot;user_agent_client&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:39:42.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;65dd69f8-6b46-43f3-8ec5-a592d13ced5f&quot;,
+                    &quot;line&quot;: &quot;85&quot;,
+                    &quot;code&quot;: &quot;0&quot;,
+                    &quot;file&quot;: &quot;/home/sina/workfiles/php/laravel/Test/apm-base-laravel/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php&quot;,
+                    &quot;message&quot;: &quot;\&quot;CSRF token mismatch.\&quot;&quot;,
+                    &quot;status&quot;: &quot;No http status error&quot;,
+                    &quot;user_agent_client&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:34:22.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;53c236b1-0e3d-4752-9320-3b203fce68cc&quot;,
+                    &quot;line&quot;: &quot;118&quot;,
+                    &quot;code&quot;: &quot;0&quot;,
+                    &quot;file&quot;: &quot;/home/sina/workfiles/php/laravel/Test/apm-base-laravel/vendor/laravel/framework/src/Illuminate/Routing/AbstractRouteCollection.php&quot;,
+                    &quot;message&quot;: &quot;\&quot;The POST method is not supported for this route. Supported methods: GET, HEAD.\&quot;&quot;,
+                    &quot;status&quot;: &quot;405&quot;,
+                    &quot;user_agent_client&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:33:46.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;d0cefb21-75b3-4abb-99ae-7f16ebba4bcd&quot;,
+                    &quot;line&quot;: &quot;44&quot;,
+                    &quot;code&quot;: &quot;0&quot;,
+                    &quot;file&quot;: &quot;/home/sina/workfiles/php/laravel/Test/apm-base-laravel/vendor/laravel/framework/src/Illuminate/Routing/AbstractRouteCollection.php&quot;,
+                    &quot;message&quot;: &quot;\&quot;\&quot;&quot;,
+                    &quot;status&quot;: &quot;404&quot;,
+                    &quot;user_agent_client&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:33:24.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;3cde66e2-21f4-456d-8dfc-2ebc22170f76&quot;,
+                    &quot;line&quot;: &quot;44&quot;,
+                    &quot;code&quot;: &quot;0&quot;,
+                    &quot;file&quot;: &quot;/home/sina/workfiles/php/laravel/Test/apm-base-laravel/vendor/laravel/framework/src/Illuminate/Routing/AbstractRouteCollection.php&quot;,
+                    &quot;message&quot;: &quot;\&quot;\&quot;&quot;,
+                    &quot;status&quot;: &quot;404&quot;,
+                    &quot;user_agent_client&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:32:44.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;3d092fef-6154-4831-8bf9-9069bb128c2f&quot;,
+                    &quot;line&quot;: &quot;21&quot;,
+                    &quot;code&quot;: &quot;0&quot;,
+                    &quot;file&quot;: &quot;/home/sina/workfiles/php/laravel/Test/apm-base-laravel/storage/framework/views/b83142a24bb9763dd32713aa271f11853bfda54e.php&quot;,
+                    &quot;message&quot;: &quot;\&quot;Undefined variable $message (View: \\/home\\/sina\\/workfiles\\/php\\/laravel\\/Test\\/apm-base-laravel\\/resources\\/views\\/auth\\/login.blade.php)\&quot;&quot;,
+                    &quot;status&quot;: &quot;No http status error&quot;,
+                    &quot;user_agent_client&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:23:45.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;91bd3a7a-cbce-4e2b-babf-c9b3b61b8914&quot;,
+                    &quot;line&quot;: &quot;21&quot;,
+                    &quot;code&quot;: &quot;0&quot;,
+                    &quot;file&quot;: &quot;/home/sina/workfiles/php/laravel/Test/apm-base-laravel/storage/framework/views/b83142a24bb9763dd32713aa271f11853bfda54e.php&quot;,
+                    &quot;message&quot;: &quot;\&quot;Undefined variable $message (View: \\/home\\/sina\\/workfiles\\/php\\/laravel\\/Test\\/apm-base-laravel\\/resources\\/views\\/auth\\/login.blade.php)\&quot;&quot;,
+                    &quot;status&quot;: &quot;No http status error&quot;,
+                    &quot;user_agent_client&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:23:43.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;835e5540-6250-41a9-8ae9-69195af7b9b9&quot;,
+                    &quot;line&quot;: &quot;44&quot;,
+                    &quot;code&quot;: &quot;0&quot;,
+                    &quot;file&quot;: &quot;/home/sina/workfiles/php/laravel/Test/apm-base-laravel/vendor/laravel/framework/src/Illuminate/Routing/AbstractRouteCollection.php&quot;,
+                    &quot;message&quot;: &quot;\&quot;\&quot;&quot;,
+                    &quot;status&quot;: &quot;404&quot;,
+                    &quot;user_agent_client&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:23:18.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;3789c9e3-ae4b-4ebf-a193-f831724e2262&quot;,
+                    &quot;line&quot;: &quot;877&quot;,
+                    &quot;code&quot;: &quot;0&quot;,
+                    &quot;file&quot;: &quot;/home/sina/workfiles/php/laravel/Test/apm-base-laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php&quot;,
+                    &quot;message&quot;: &quot;\&quot;Target class [App\\\\Http\\\\Controllers\\\\DocsController] does not exist.\&quot;&quot;,
+                    &quot;status&quot;: &quot;No http status error&quot;,
+                    &quot;user_agent_client&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:22:08.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;09c4cdf2-356d-4767-b53d-c484e982eeea&quot;,
+                    &quot;line&quot;: &quot;44&quot;,
+                    &quot;code&quot;: &quot;0&quot;,
+                    &quot;file&quot;: &quot;/home/sina/workfiles/php/laravel/Test/apm-base-laravel/vendor/laravel/framework/src/Illuminate/Routing/AbstractRouteCollection.php&quot;,
+                    &quot;message&quot;: &quot;\&quot;\&quot;&quot;,
+                    &quot;status&quot;: &quot;404&quot;,
+                    &quot;user_agent_client&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:20:09.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;614163bf-50c2-48ed-9873-dc2e147f44be&quot;,
+                    &quot;line&quot;: &quot;44&quot;,
+                    &quot;code&quot;: &quot;0&quot;,
+                    &quot;file&quot;: &quot;/home/sina/workfiles/php/laravel/Test/apm-base-laravel/vendor/laravel/framework/src/Illuminate/Routing/AbstractRouteCollection.php&quot;,
+                    &quot;message&quot;: &quot;\&quot;\&quot;&quot;,
+                    &quot;status&quot;: &quot;404&quot;,
+                    &quot;user_agent_client&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:19:02.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;74b38fea-c5b0-40b7-b46d-5fb3fa4fa465&quot;,
+                    &quot;line&quot;: &quot;118&quot;,
+                    &quot;code&quot;: &quot;0&quot;,
+                    &quot;file&quot;: &quot;/home/sina/workfiles/php/laravel/Test/apm-base-laravel/vendor/laravel/framework/src/Illuminate/Routing/AbstractRouteCollection.php&quot;,
+                    &quot;message&quot;: &quot;\&quot;The GET method is not supported for this route. Supported methods: POST.\&quot;&quot;,
+                    &quot;status&quot;: &quot;405&quot;,
+                    &quot;user_agent_client&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:16:17.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;c19b22dc-4b27-4763-85ea-098c1d1134df&quot;,
+                    &quot;line&quot;: &quot;118&quot;,
+                    &quot;code&quot;: &quot;0&quot;,
+                    &quot;file&quot;: &quot;/home/sina/workfiles/php/laravel/Test/apm-base-laravel/vendor/laravel/framework/src/Illuminate/Routing/AbstractRouteCollection.php&quot;,
+                    &quot;message&quot;: &quot;\&quot;The GET method is not supported for this route. Supported methods: POST.\&quot;&quot;,
+                    &quot;status&quot;: &quot;405&quot;,
+                    &quot;user_agent_client&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-11-26T10:15:18.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
+                    &quot;id&quot;: &quot;b48fa7c5-d349-48d9-8ff6-f3d0e6be4cb8&quot;,
+                    &quot;line&quot;: &quot;44&quot;,
+                    &quot;code&quot;: &quot;0&quot;,
+                    &quot;file&quot;: &quot;/home/sina/workfiles/php/laravel/Test/apm-base-laravel/vendor/laravel/framework/src/Illuminate/Routing/AbstractRouteCollection.php&quot;,
+                    &quot;message&quot;: &quot;\&quot;\&quot;&quot;,
+                    &quot;status&quot;: &quot;404&quot;,
+                    &quot;user_agent_client&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-11-26T09:59:53.000000Z&quot;,
+                    &quot;sort&quot;: 9999,
+                    &quot;user_username&quot;: null,
+                    &quot;user_first_name&quot;: null,
+                    &quot;user_last_name&quot;: null
+                },
+                {
                     &quot;id&quot;: &quot;49fe8373-9ff6-4279-9850-1ac14b8f6d7f&quot;,
                     &quot;line&quot;: &quot;44&quot;,
                     &quot;code&quot;: &quot;0&quot;,
@@ -1956,12 +2333,12 @@ access-control-allow-origin: *
             &quot;path&quot;: &quot;http://localhost:8000/api/v1/exception-log&quot;,
             &quot;per_page&quot;: 20,
             &quot;prev_page_url&quot;: null,
-            &quot;to&quot;: 1,
-            &quot;total&quot;: 1
+            &quot;to&quot;: 15,
+            &quot;total&quot;: 15
         }
     },
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.585837Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.368683Z&quot;
 }</code>
  </pre>
     </span>
@@ -2149,7 +2526,7 @@ access-control-allow-origin: *
         }
     },
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.602179Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.386062Z&quot;
 }</code>
  </pre>
     </span>
@@ -2286,7 +2663,7 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;اطلاعات ارسالی ناقص یا اشتباه است&quot;,
     &quot;data&quot;: [],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.617174Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.408158Z&quot;
 }</code>
  </pre>
     </span>
@@ -2423,7 +2800,7 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;اطلاعات ارسالی ناقص یا اشتباه است&quot;,
     &quot;data&quot;: [],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.632490Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.419606Z&quot;
 }</code>
  </pre>
     </span>
@@ -2560,7 +2937,7 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;اطلاعات ارسالی ناقص یا اشتباه است&quot;,
     &quot;data&quot;: [],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.643566Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.429476Z&quot;
 }</code>
  </pre>
     </span>
@@ -2697,7 +3074,7 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;اطلاعات ارسالی ناقص یا اشتباه است&quot;,
     &quot;data&quot;: [],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.653168Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.439574Z&quot;
 }</code>
  </pre>
     </span>
@@ -2853,7 +3230,7 @@ access-control-allow-origin: *
         }
     },
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.664317Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.449529Z&quot;
 }</code>
  </pre>
     </span>
@@ -2990,7 +3367,7 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;اطلاعات ارسالی ناقص یا اشتباه است&quot;,
     &quot;data&quot;: [],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.676254Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.461752Z&quot;
 }</code>
  </pre>
     </span>
@@ -3127,7 +3504,7 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;اطلاعات ارسالی ناقص یا اشتباه است&quot;,
     &quot;data&quot;: [],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.688083Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.471780Z&quot;
 }</code>
  </pre>
     </span>
@@ -3311,7 +3688,7 @@ access-control-allow-origin: *
         }
     },
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.699041Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.482454Z&quot;
 }</code>
  </pre>
     </span>
@@ -3492,7 +3869,7 @@ access-control-allow-origin: *
         }
     },
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.722526Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.506963Z&quot;
 }</code>
  </pre>
     </span>
@@ -3629,7 +4006,7 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;اطلاعات ارسالی ناقص یا اشتباه است&quot;,
     &quot;data&quot;: [],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.741044Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.522075Z&quot;
 }</code>
  </pre>
     </span>
@@ -3798,7 +4175,7 @@ access-control-allow-origin: *
         }
     },
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.755730Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.540207Z&quot;
 }</code>
  </pre>
     </span>
@@ -3935,7 +4312,7 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;دسترسی غیر مجاز&quot;,
     &quot;data&quot;: [],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.776987Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.550619Z&quot;
 }</code>
  </pre>
     </span>
@@ -4072,7 +4449,7 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;دسترسی غیر مجاز&quot;,
     &quot;data&quot;: [],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.793246Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.562113Z&quot;
 }</code>
  </pre>
     </span>
@@ -4209,7 +4586,7 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;دسترسی غیر مجاز&quot;,
     &quot;data&quot;: [],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.806079Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.574906Z&quot;
 }</code>
  </pre>
     </span>
@@ -4346,7 +4723,7 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;دسترسی غیر مجاز&quot;,
     &quot;data&quot;: [],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.817427Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.597696Z&quot;
 }</code>
  </pre>
     </span>
@@ -4515,7 +4892,7 @@ access-control-allow-origin: *
         }
     },
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.830431Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.619986Z&quot;
 }</code>
  </pre>
     </span>
@@ -4652,7 +5029,7 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;اطلاعات ارسالی ناقص یا اشتباه است&quot;,
     &quot;data&quot;: [],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.841641Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.640654Z&quot;
 }</code>
  </pre>
     </span>
@@ -4789,7 +5166,7 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;اطلاعات ارسالی ناقص یا اشتباه است&quot;,
     &quot;data&quot;: [],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.859311Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.652882Z&quot;
 }</code>
  </pre>
     </span>
@@ -4926,7 +5303,7 @@ access-control-allow-origin: *
     &quot;message&quot;: &quot;اطلاعات ارسالی ناقص یا اشتباه است&quot;,
     &quot;data&quot;: [],
     &quot;patch&quot;: [],
-    &quot;date&quot;: &quot;2022-11-26T09:54:27.873103Z&quot;
+    &quot;date&quot;: &quot;2022-11-27T05:32:23.664380Z&quot;
 }</code>
  </pre>
     </span>

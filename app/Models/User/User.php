@@ -2,7 +2,6 @@
 
 namespace App\Models\User;
 
-use App\Models\Other\Car;
 use App\Models\BaseModel;
 use App\Models\BaseRelModel;
 use App\Exceptions\OtherException;

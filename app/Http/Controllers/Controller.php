@@ -87,6 +87,11 @@ class Controller extends BaseController
         }
     }
 
+    /**
+     * POST list
+     *       
+     * @bodyParam filters object No-example
+     */
     public function index(Request $request)
     {
         $this->checkCRUD();
@@ -111,6 +116,11 @@ class Controller extends BaseController
         return $this->response(200, $data);
     }
 
+    /**
+     * POST show
+     *       
+     * @bodyParam id string required No-example
+     */
     public function show(Request $request)
     {
         $this->checkCRUD();
@@ -136,6 +146,11 @@ class Controller extends BaseController
         return $this->response(200, $data);
     }
 
+    /**
+     * POST delete
+     *       
+     * @bodyParam id string required No-example
+     */
     public function destroy(Request $request)
     {
         $this->checkCRUD();

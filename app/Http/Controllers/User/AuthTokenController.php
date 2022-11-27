@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\User\AuthToken;
 use App\Http\Controllers\Controller;
 
+/**
+ * @group Auth
+ * @subgroup Token
+ */
 class AuthTokenController extends Controller
 {
     public $model = AuthToken::class;

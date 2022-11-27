@@ -6,12 +6,21 @@ use App\Models\Core\Upload;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+/**
+ * @group Core
+ * @subgroup Upload
+ */
 class UploadController extends Controller
 {
     public $model = Upload::class;
     public $permissionItem = "upload";
     public $validtionItem = [[], [], ["file" => "required|image"]];
 
+    /**
+     * POST insert
+     *       
+     * @bodyParam file file required No-example
+     */
     public function store(Request $request)
     {
         $this->validator($request, [], [], ["file" => "required|image"]);

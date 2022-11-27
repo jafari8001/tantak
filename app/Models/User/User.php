@@ -78,7 +78,7 @@ class User extends BaseModel  implements AuthenticatableContract
             $model->avatar = $request->avatar;
         }
         $model->save();
-        $model->roles()->sync([$request->role_id]);
+        $model->roles()->sync($request->role_id);
         return $model;
     }
 

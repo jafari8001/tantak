@@ -4,12 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Core\DocsController;
 
 Route::get('docs', function () {
-    return view('scribe.index');
+    return response()->file('public/docs/index.html');
 })
     ->middleware('DocsLogin');
 
 Route::get('docs/postman', function () {
-    return response()->file('upload/scribe/collection.json');
+    return response()->file('public/docs/collection.json');
 })
     ->name('scribe.postman')
     ->middleware('DocsLogin');

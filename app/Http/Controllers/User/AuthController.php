@@ -23,7 +23,7 @@ use App\Http\Controllers\Controller;
 class AuthController extends Controller
 {
     /**
-     * Send OTP code to user
+     * Post Send-OTP
      * 
      * @unauthenticated
      * 
@@ -39,7 +39,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Send OTP code to user
+     * Post Login-OTP
      * 
      * @unauthenticated
      * 
@@ -63,6 +63,14 @@ class AuthController extends Controller
         ]);
     }
 
+    /**
+     * POST login
+     * 
+     * @unauthenticated
+     * 
+     * @bodyParam username string required usally user phone is his/her username. Example: 09111111111
+     * @bodyParam password string required user password. Example: 123456
+     */
     public function login(Request $request)
     {
         $this->validator($request, ["username", "password"]);
@@ -78,6 +86,11 @@ class AuthController extends Controller
         ]);
     }
 
+    /**
+     * POST user
+     * 
+     * Shows current logged-in user info
+     */
     public function user(Request $request)
     {
         $user = $this->getUserInfo(auth()->user());
@@ -93,6 +106,11 @@ class AuthController extends Controller
         return $this->response(200, $data);
     }
 
+    /**
+     * POST refresh-token
+     * 
+     * Get new token
+     */
     public function refresh(Request $request)
     {
         $user = $this->getUserInfo(auth()->user());
@@ -104,6 +122,9 @@ class AuthController extends Controller
         ]);
     }
 
+    /**
+     * POST logout
+     */
     public function logout(Request $request)
     {
         AuthToken::expirToken($request->get("auth_token"), auth()->user()->id);

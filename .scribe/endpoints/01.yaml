@@ -1,4 +1,4 @@
-name: Endpoints
+name: Setting
 description: ''
 endpoints:
   -
@@ -6,12 +6,12 @@ endpoints:
       - POST
     uri: api/v1/country_division
     metadata:
-      groupName: Endpoints
+      groupName: Setting
       groupDescription: ''
-      subgroup: ''
+      subgroup: CountryDivision
       subgroupDescription: ''
-      title: ''
-      description: ''
+      title: 'POST list'
+      description: 'List of coutries and cities filtered by various options'
       authenticated: true
       custom: []
     headers:
@@ -22,58 +22,23 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":200,"error":"","message":"","data":{"model":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost:8000\/api\/v1\/country_division?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/api\/v1\/country_division?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/v1\/country_division?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/api\/v1\/country_division","per_page":20,"prev_page_url":null,"to":null,"total":0}},"patch":[],"date":"2022-11-27T05:32:23.254939Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '56'
-          access-control-allow-origin: '*'
-        description: null
+    bodyParameters:
+      filters:
+        name: filters
+        description: optional
+        required: false
+        example:
+          name: تهران
+        type: object
         custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/request-log
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    cleanBodyParameters:
+      filters:
+        name: تهران
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"status":200,"error":"","message":"","data":{"model":{"current_page":1,"data":[{"id":"3296f06a-4a83-49c5-8c7f-c619776075da","ip":"127.0.0.1","ulr":"\/api\/v1\/request-log","status":"200","method":"POST","user_agent":"Symfony","end_status":null,"user_agent_client":"Other","created_at":"2022-11-27T05:32:23.000000Z","sort":9999,"token":null,"request":null,"response":null,"message":null,"user_username":"09111111111","user_first_name":"\u0645\u062f\u06cc\u0631","user_last_name":"\u0633\u0627\u0645\u0627\u0646\u0647"},{"id":"1c23d7c8-302a-4cad-971f-64bf16148c41","ip":"127.0.0.1","ulr":"\/docs","status":"200","method":"GET","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"500","user_agent_client":"Other","created_at":"2022-11-26T10:39:42.000000Z","sort":9999,"token":null,"request":"","response":"{\"status\":500,\"error\":\"\",\"message\":\"Attempt to read property \\\"id\\\" on null\",\"data\":[\"Attempt to read property \\\"id\\\" on null\",\"\\\/home\\\/sina\\\/workfiles\\\/php\\\/laravel\\\/Test\\\/apm-base-laravel\\\/app\\\/Http\\\/Middleware\\\/DocsLogin.php\",15,0],\"patch\":[],\"date\":\"2022-11-26T10:39:42.643836Z\"}","message":"Attempt to read property \"id\" on null","user_username":null,"user_first_name":null,"user_last_name":null},{"id":"aae52899-d0b0-4987-a425-fff32dcebf8b","ip":"127.0.0.1","ulr":"\/docs","status":"200","method":"GET","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"","user_agent_client":"Other","created_at":"2022-11-26T10:39:28.000000Z","sort":9999,"token":null,"request":"","response":"","message":"","user_username":null,"user_first_name":null,"user_last_name":null},{"id":"4c248fdf-2e46-4d35-8732-c5db571fe428","ip":"127.0.0.1","ulr":"\/docs\/check","status":"200","method":"POST","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"","user_agent_client":"Other","created_at":"2022-11-26T10:39:28.000000Z","sort":9999,"token":null,"request":"_token=I126yaDO98LeLPdPlBBFf4EnQQrWt9hkBEbDJQgi&username=09111111111&password=123456","response":"<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" \/>\n        <meta http-equiv=\"refresh\" content=\"0;url=''http:\/\/localhost:8000\/docs''\" \/>\n\n        <title>Redirecting to http:\/\/localhost:8000\/docs<\/title>\n    <\/head>\n    <body>\n        Redirecting to <a href=\"http:\/\/localhost:8000\/docs\">http:\/\/localhost:8000\/docs<\/a>.\n    <\/body>\n<\/html>","message":"","user_username":"09111111111","user_first_name":"\u0645\u062f\u06cc\u0631","user_last_name":"\u0633\u0627\u0645\u0627\u0646\u0647"},{"id":"d8ad548c-2629-46c7-9169-f1c6cd21bd51","ip":"127.0.0.1","ulr":"\/docs","status":"200","method":"GET","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"","user_agent_client":"Other","created_at":"2022-11-26T10:37:29.000000Z","sort":9999,"token":null,"request":"","response":"<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" \/>\n        <meta http-equiv=\"refresh\" content=\"0;url=''http:\/\/localhost:8000\/docs\/login''\" \/>\n\n        <title>Redirecting to http:\/\/localhost:8000\/docs\/login<\/title>\n    <\/head>\n    <body>\n        Redirecting to <a href=\"http:\/\/localhost:8000\/docs\/login\">http:\/\/localhost:8000\/docs\/login<\/a>.\n    <\/body>\n<\/html>","message":"","user_username":null,"user_first_name":null,"user_last_name":null},{"id":"5a978862-517e-4c2e-ab36-4c005e27dcd0","ip":"127.0.0.1","ulr":"\/docs\/login","status":"200","method":"GET","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"","user_agent_client":"Other","created_at":"2022-11-26T10:37:29.000000Z","sort":9999,"token":null,"request":"","response":"<html>\n    <head>\n        <title>Docs login<\/title>\n        <link href=\"http:\/\/localhost:8000\/vendor\/auth\/login.css\" rel=\"stylesheet\">\n    <\/head>\n    <body>\n        <div class=\"wrapper fadeInDown\">\n          <div id=\"formContent\">\n            <!-- Tabs Titles -->\n            <h2 class=\"active\"> Sign In <\/h2>       \n        \n            <!-- Login Form -->\n            <form action=\"\/docs\/check\" method=\"POST\">\n                <input type=\"hidden\" name=\"_token\" value=\"I126yaDO98LeLPdPlBBFf4EnQQrWt9hkBEbDJQgi\">                <input type=\"text\" id=\"login\" class=\"fadeIn second\" name=\"username\" placeholder=\"user name\">\n                <input type=\"text\" id=\"password\" class=\"fadeIn third\" name=\"password\" placeholder=\"password\">\n                <input type=\"submit\" class=\"fadeIn fourth\" value=\"Log In\">\n            <\/form>\n        \n            <!-- Message -->\n                    \n          <\/div>\n        <\/div>\n    <\/body>\n<\/html>\n\n","message":"","user_username":"09111111111","user_first_name":"\u0645\u062f\u06cc\u0631","user_last_name":"\u0633\u0627\u0645\u0627\u0646\u0647"},{"id":"1d7fdca1-7eb6-4b43-a4a5-7e9f393fd046","ip":"127.0.0.1","ulr":"\/docs\/check","status":"200","method":"POST","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"","user_agent_client":"Other","created_at":"2022-11-26T10:37:28.000000Z","sort":9999,"token":null,"request":"_token=I126yaDO98LeLPdPlBBFf4EnQQrWt9hkBEbDJQgi&username=09111111111&password=123456","response":"<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" \/>\n        <meta http-equiv=\"refresh\" content=\"0;url=''http:\/\/localhost:8000\/docs''\" \/>\n\n        <title>Redirecting to http:\/\/localhost:8000\/docs<\/title>\n    <\/head>\n    <body>\n        Redirecting to <a href=\"http:\/\/localhost:8000\/docs\">http:\/\/localhost:8000\/docs<\/a>.\n    <\/body>\n<\/html>","message":"","user_username":"09111111111","user_first_name":"\u0645\u062f\u06cc\u0631","user_last_name":"\u0633\u0627\u0645\u0627\u0646\u0647"},{"id":"e7f4ce76-63b3-4c79-a906-52cd42cad839","ip":"127.0.0.1","ulr":"\/docs\/check","status":"200","method":"POST","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"","user_agent_client":"Other","created_at":"2022-11-26T10:37:02.000000Z","sort":9999,"token":null,"request":"_token=I126yaDO98LeLPdPlBBFf4EnQQrWt9hkBEbDJQgi&username=09111111111&password=123456","response":"<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" \/>\n        <meta http-equiv=\"refresh\" content=\"0;url=''http:\/\/localhost:8000\/docs''\" \/>\n\n        <title>Redirecting to http:\/\/localhost:8000\/docs<\/title>\n    <\/head>\n    <body>\n        Redirecting to <a href=\"http:\/\/localhost:8000\/docs\">http:\/\/localhost:8000\/docs<\/a>.\n    <\/body>\n<\/html>","message":"","user_username":"09111111111","user_first_name":"\u0645\u062f\u06cc\u0631","user_last_name":"\u0633\u0627\u0645\u0627\u0646\u0647"},{"id":"86b41b0b-0bed-4b30-af92-a4379d2d2f37","ip":"127.0.0.1","ulr":"\/docs\/login","status":"200","method":"GET","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"","user_agent_client":"Other","created_at":"2022-11-26T10:37:02.000000Z","sort":9999,"token":null,"request":"","response":"<html>\n    <head>\n        <title>Docs login<\/title>\n        <link href=\"http:\/\/localhost:8000\/vendor\/auth\/login.css\" rel=\"stylesheet\">\n    <\/head>\n    <body>\n        <div class=\"wrapper fadeInDown\">\n          <div id=\"formContent\">\n            <!-- Tabs Titles -->\n            <h2 class=\"active\"> Sign In <\/h2>       \n        \n            <!-- Login Form -->\n            <form action=\"\/docs\/check\" method=\"POST\">\n                <input type=\"hidden\" name=\"_token\" value=\"I126yaDO98LeLPdPlBBFf4EnQQrWt9hkBEbDJQgi\">                <input type=\"text\" id=\"login\" class=\"fadeIn second\" name=\"username\" placeholder=\"user name\">\n                <input type=\"text\" id=\"password\" class=\"fadeIn third\" name=\"password\" placeholder=\"password\">\n                <input type=\"submit\" class=\"fadeIn fourth\" value=\"Log In\">\n            <\/form>\n        \n            <!-- Message -->\n                    \n          <\/div>\n        <\/div>\n    <\/body>\n<\/html>\n\n","message":"","user_username":"09111111111","user_first_name":"\u0645\u062f\u06cc\u0631","user_last_name":"\u0633\u0627\u0645\u0627\u0646\u0647"},{"id":"0f2c43d2-3446-40dd-b13f-5bb7248264f2","ip":"127.0.0.1","ulr":"\/docs","status":"200","method":"GET","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"","user_agent_client":"Other","created_at":"2022-11-26T10:37:02.000000Z","sort":9999,"token":null,"request":"","response":"<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" \/>\n        <meta http-equiv=\"refresh\" content=\"0;url=''http:\/\/localhost:8000\/docs\/login''\" \/>\n\n        <title>Redirecting to http:\/\/localhost:8000\/docs\/login<\/title>\n    <\/head>\n    <body>\n        Redirecting to <a href=\"http:\/\/localhost:8000\/docs\/login\">http:\/\/localhost:8000\/docs\/login<\/a>.\n    <\/body>\n<\/html>","message":"","user_username":null,"user_first_name":null,"user_last_name":null},{"id":"49d15692-5cee-4773-acfa-99bd7a19d9e7","ip":"127.0.0.1","ulr":"\/docs\/login","status":"200","method":"GET","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"","user_agent_client":"Other","created_at":"2022-11-26T10:35:04.000000Z","sort":9999,"token":null,"request":"","response":"<html>\n    <head>\n        <title>Docs login<\/title>\n        <link href=\"http:\/\/localhost:8000\/vendor\/auth\/login.css\" rel=\"stylesheet\">\n    <\/head>\n    <body>\n        <div class=\"wrapper fadeInDown\">\n          <div id=\"formContent\">\n            <!-- Tabs Titles -->\n            <h2 class=\"active\"> Sign In <\/h2>       \n        \n            <!-- Login Form -->\n            <form action=\"\/docs\/check\" method=\"POST\">\n                <input type=\"hidden\" name=\"_token\" value=\"I126yaDO98LeLPdPlBBFf4EnQQrWt9hkBEbDJQgi\">                <input type=\"text\" id=\"login\" class=\"fadeIn second\" name=\"username\" placeholder=\"user name\">\n                <input type=\"text\" id=\"password\" class=\"fadeIn third\" name=\"password\" placeholder=\"password\">\n                <input type=\"submit\" class=\"fadeIn fourth\" value=\"Log In\">\n            <\/form>\n        \n            <!-- Message -->\n                    \n          <\/div>\n        <\/div>\n    <\/body>\n<\/html>\n\n","message":"","user_username":"09111111111","user_first_name":"\u0645\u062f\u06cc\u0631","user_last_name":"\u0633\u0627\u0645\u0627\u0646\u0647"},{"id":"416aae47-fbdf-473d-99c4-fc3b8fd37940","ip":"127.0.0.1","ulr":"\/docs","status":"200","method":"GET","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"","user_agent_client":"Other","created_at":"2022-11-26T10:35:04.000000Z","sort":9999,"token":null,"request":"","response":"<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" \/>\n        <meta http-equiv=\"refresh\" content=\"0;url=''http:\/\/localhost:8000\/docs\/login''\" \/>\n\n        <title>Redirecting to http:\/\/localhost:8000\/docs\/login<\/title>\n    <\/head>\n    <body>\n        Redirecting to <a href=\"http:\/\/localhost:8000\/docs\/login\">http:\/\/localhost:8000\/docs\/login<\/a>.\n    <\/body>\n<\/html>","message":"","user_username":null,"user_first_name":null,"user_last_name":null},{"id":"1ac41774-f9e9-4974-9782-8d1fada71079","ip":"127.0.0.1","ulr":"\/docs\/check","status":"200","method":"POST","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"","user_agent_client":"Other","created_at":"2022-11-26T10:35:04.000000Z","sort":9999,"token":null,"request":"_token=I126yaDO98LeLPdPlBBFf4EnQQrWt9hkBEbDJQgi&username=09111111111&password=123456","response":"<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" \/>\n        <meta http-equiv=\"refresh\" content=\"0;url=''http:\/\/localhost:8000\/docs''\" \/>\n\n        <title>Redirecting to http:\/\/localhost:8000\/docs<\/title>\n    <\/head>\n    <body>\n        Redirecting to <a href=\"http:\/\/localhost:8000\/docs\">http:\/\/localhost:8000\/docs<\/a>.\n    <\/body>\n<\/html>","message":"","user_username":"09111111111","user_first_name":"\u0645\u062f\u06cc\u0631","user_last_name":"\u0633\u0627\u0645\u0627\u0646\u0647"},{"id":"e0af12f1-b4a3-44a1-a5b2-5a7869b3aae7","ip":"127.0.0.1","ulr":"\/docs\/login","status":"200","method":"GET","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"","user_agent_client":"Other","created_at":"2022-11-26T10:34:47.000000Z","sort":9999,"token":null,"request":"","response":"<html>\n    <head>\n        <title>Docs login<\/title>\n        <link href=\"http:\/\/localhost:8000\/vendor\/auth\/login.css\" rel=\"stylesheet\">\n    <\/head>\n    <body>\n        <div class=\"wrapper fadeInDown\">\n          <div id=\"formContent\">\n            <!-- Tabs Titles -->\n            <h2 class=\"active\"> Sign In <\/h2>       \n        \n            <!-- Login Form -->\n            <form action=\"\/docs\/check\" method=\"POST\">\n                <input type=\"hidden\" name=\"_token\" value=\"I126yaDO98LeLPdPlBBFf4EnQQrWt9hkBEbDJQgi\">                <input type=\"text\" id=\"login\" class=\"fadeIn second\" name=\"username\" placeholder=\"user name\">\n                <input type=\"text\" id=\"password\" class=\"fadeIn third\" name=\"password\" placeholder=\"password\">\n                <input type=\"submit\" class=\"fadeIn fourth\" value=\"Log In\">\n            <\/form>\n        \n            <!-- Message -->\n                    \n          <\/div>\n        <\/div>\n    <\/body>\n<\/html>\n\n","message":"","user_username":null,"user_first_name":null,"user_last_name":null},{"id":"d26c0330-58bd-4032-9ea5-a18f045ca39d","ip":"127.0.0.1","ulr":"\/docs\/check","status":"200","method":"POST","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"500","user_agent_client":"Other","created_at":"2022-11-26T10:34:22.000000Z","sort":9999,"token":null,"request":"username=09111111111&password=123456","response":"{\"status\":500,\"error\":\"\",\"message\":\"CSRF token mismatch.\",\"data\":[\"CSRF token mismatch.\",\"\\\/home\\\/sina\\\/workfiles\\\/php\\\/laravel\\\/Test\\\/apm-base-laravel\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Foundation\\\/Http\\\/Middleware\\\/VerifyCsrfToken.php\",85,0],\"patch\":[],\"date\":\"2022-11-26T10:34:22.377671Z\"}","message":"CSRF token mismatch.","user_username":null,"user_first_name":null,"user_last_name":null},{"id":"639bae76-dc98-4569-ad48-350bb7636a83","ip":"127.0.0.1","ulr":"\/docs\/login","status":"200","method":"GET","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"","user_agent_client":"Other","created_at":"2022-11-26T10:34:19.000000Z","sort":9999,"token":null,"request":"","response":"<html>\n    <head>\n        <title>Docs login<\/title>\n        <link href=\"http:\/\/localhost:8000\/vendor\/auth\/login.css\" rel=\"stylesheet\">\n    <\/head>\n    <body>\n        <div class=\"wrapper fadeInDown\">\n          <div id=\"formContent\">\n            <!-- Tabs Titles -->\n            <h2 class=\"active\"> Sign In <\/h2>       \n        \n            <!-- Login Form -->\n            <form action=\"\/docs\/check\" method=\"POST\">\n              <input type=\"text\" id=\"login\" class=\"fadeIn second\" name=\"username\" placeholder=\"user name\">\n              <input type=\"text\" id=\"password\" class=\"fadeIn third\" name=\"password\" placeholder=\"password\">\n              <input type=\"submit\" class=\"fadeIn fourth\" value=\"Log In\">\n            <\/form>\n        \n            <!-- Message -->\n                    \n          <\/div>\n        <\/div>\n    <\/body>\n<\/html>\n\n","message":"","user_username":null,"user_first_name":null,"user_last_name":null},{"id":"0a79c004-abe8-4184-9bbf-6dd16305496e","ip":"127.0.0.1","ulr":"\/docs\/login","status":"200","method":"GET","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"","user_agent_client":"Other","created_at":"2022-11-26T10:34:18.000000Z","sort":9999,"token":null,"request":"","response":"<html>\n    <head>\n        <title>Docs login<\/title>\n        <link href=\"http:\/\/localhost:8000\/vendor\/auth\/login.css\" rel=\"stylesheet\">\n    <\/head>\n    <body>\n        <div class=\"wrapper fadeInDown\">\n          <div id=\"formContent\">\n            <!-- Tabs Titles -->\n            <h2 class=\"active\"> Sign In <\/h2>       \n        \n            <!-- Login Form -->\n            <form action=\"\/docs\/check\" method=\"POST\">\n              <input type=\"text\" id=\"login\" class=\"fadeIn second\" name=\"username\" placeholder=\"user name\">\n              <input type=\"text\" id=\"password\" class=\"fadeIn third\" name=\"password\" placeholder=\"password\">\n              <input type=\"submit\" class=\"fadeIn fourth\" value=\"Log In\">\n            <\/form>\n        \n            <!-- Message -->\n                    \n          <\/div>\n        <\/div>\n    <\/body>\n<\/html>\n\n","message":"","user_username":null,"user_first_name":null,"user_last_name":null},{"id":"839f27a1-56bc-4a90-b1f1-01ea20ad3096","ip":"127.0.0.1","ulr":"\/docs\/login","status":"200","method":"POST","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"500","user_agent_client":"Other","created_at":"2022-11-26T10:33:46.000000Z","sort":9999,"token":null,"request":"username=09111111111&password=123456","response":"{\"status\":500,\"error\":\"\",\"message\":\"The POST method is not supported for this route. Supported methods: GET, HEAD.\",\"data\":[\"The POST method is not supported for this route. Supported methods: GET, HEAD.\",\"\\\/home\\\/sina\\\/workfiles\\\/php\\\/laravel\\\/Test\\\/apm-base-laravel\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/AbstractRouteCollection.php\",118,0],\"patch\":[],\"date\":\"2022-11-26T10:33:46.289363Z\"}","message":"The POST method is not supported for this route. Supported methods: GET, HEAD.","user_username":null,"user_first_name":null,"user_last_name":null},{"id":"a9fa9bc8-d419-498a-809a-a54c6ca93c5b","ip":"127.0.0.1","ulr":"\/docs\/login","status":"200","method":"GET","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"","user_agent_client":"Other","created_at":"2022-11-26T10:33:43.000000Z","sort":9999,"token":null,"request":"","response":"<html>\n    <head>\n        <title>Docs login<\/title>\n        <link href=\"http:\/\/localhost:8000\/vendor\/auth\/login.css\" rel=\"stylesheet\">\n    <\/head>\n    <body>\n        <div class=\"wrapper fadeInDown\">\n          <div id=\"formContent\">\n            <!-- Tabs Titles -->\n            <h2 class=\"active\"> Sign In <\/h2>       \n        \n            <!-- Login Form -->\n            <form action=\"\/docs\/login\" method=\"POST\">\n              <input type=\"text\" id=\"login\" class=\"fadeIn second\" name=\"username\" placeholder=\"user name\">\n              <input type=\"text\" id=\"password\" class=\"fadeIn third\" name=\"password\" placeholder=\"password\">\n              <input type=\"submit\" class=\"fadeIn fourth\" value=\"Log In\">\n            <\/form>\n        \n            <!-- Message -->\n                    \n          <\/div>\n        <\/div>\n    <\/body>\n<\/html>\n\n","message":"","user_username":null,"user_first_name":null,"user_last_name":null},{"id":"84321e5e-e1bb-48c6-a470-5c516b61c290","ip":"127.0.0.1","ulr":"\/auth\/login","status":"200","method":"POST","user_agent":"Mozilla\/5.0 (X11; Ubuntu; Linux x86_64; rv:107.0) Gecko\/20100101 Firefox\/107.0","end_status":"500","user_agent_client":"Other","created_at":"2022-11-26T10:33:24.000000Z","sort":9999,"token":null,"request":"username=09111111111&password=123456","response":"{\"status\":500,\"error\":\"\",\"message\":\"\",\"data\":[\"\",\"\\\/home\\\/sina\\\/workfiles\\\/php\\\/laravel\\\/Test\\\/apm-base-laravel\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Routing\\\/AbstractRouteCollection.php\",44,0],\"patch\":[],\"date\":\"2022-11-26T10:33:24.114574Z\"}","message":"","user_username":null,"user_first_name":null,"user_last_name":null}],"first_page_url":"http:\/\/localhost:8000\/api\/v1\/request-log?page=1","from":1,"last_page":3,"last_page_url":"http:\/\/localhost:8000\/api\/v1\/request-log?page=3","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/v1\/request-log?page=1","label":"1","active":true},{"url":"http:\/\/localhost:8000\/api\/v1\/request-log?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/api\/v1\/request-log?page=3","label":"3","active":false},{"url":"http:\/\/localhost:8000\/api\/v1\/request-log?page=2","label":"Next &raquo;","active":false}],"next_page_url":"http:\/\/localhost:8000\/api\/v1\/request-log?page=2","path":"http:\/\/localhost:8000\/api\/v1\/request-log","per_page":20,"prev_page_url":null,"to":20,"total":49}},"patch":[],"date":"2022-11-27T05:32:23.354634Z"}'
+        content: '{"status":200,"error":"","message":"","data":{"model":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost:8001\/api\/v1\/country_division?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost:8001\/api\/v1\/country_division?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8001\/api\/v1\/country_division?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8001\/api\/v1\/country_division","per_page":20,"prev_page_url":null,"to":null,"total":0}},"patch":[],"date":"2022-11-27T09:16:52.283590Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -94,598 +59,13 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/v1/exception-log
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":200,"error":"","message":"","data":{"model":{"current_page":1,"data":[{"id":"554d2355-bc3f-40e3-b52c-059b6fcbc73a","line":"15","code":"0","file":"\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/app\/Http\/Middleware\/DocsLogin.php","message":"\"Attempt to read property \\\"id\\\" on null\"","status":"No http status error","user_agent_client":null,"created_at":"2022-11-26T10:39:42.000000Z","sort":9999,"user_username":null,"user_first_name":null,"user_last_name":null},{"id":"65dd69f8-6b46-43f3-8ec5-a592d13ced5f","line":"85","code":"0","file":"\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/VerifyCsrfToken.php","message":"\"CSRF token mismatch.\"","status":"No http status error","user_agent_client":null,"created_at":"2022-11-26T10:34:22.000000Z","sort":9999,"user_username":null,"user_first_name":null,"user_last_name":null},{"id":"53c236b1-0e3d-4752-9320-3b203fce68cc","line":"118","code":"0","file":"\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/AbstractRouteCollection.php","message":"\"The POST method is not supported for this route. Supported methods: GET, HEAD.\"","status":"405","user_agent_client":null,"created_at":"2022-11-26T10:33:46.000000Z","sort":9999,"user_username":null,"user_first_name":null,"user_last_name":null},{"id":"d0cefb21-75b3-4abb-99ae-7f16ebba4bcd","line":"44","code":"0","file":"\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/AbstractRouteCollection.php","message":"\"\"","status":"404","user_agent_client":null,"created_at":"2022-11-26T10:33:24.000000Z","sort":9999,"user_username":null,"user_first_name":null,"user_last_name":null},{"id":"3cde66e2-21f4-456d-8dfc-2ebc22170f76","line":"44","code":"0","file":"\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/AbstractRouteCollection.php","message":"\"\"","status":"404","user_agent_client":null,"created_at":"2022-11-26T10:32:44.000000Z","sort":9999,"user_username":null,"user_first_name":null,"user_last_name":null},{"id":"3d092fef-6154-4831-8bf9-9069bb128c2f","line":"21","code":"0","file":"\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/storage\/framework\/views\/b83142a24bb9763dd32713aa271f11853bfda54e.php","message":"\"Undefined variable $message (View: \\\/home\\\/sina\\\/workfiles\\\/php\\\/laravel\\\/Test\\\/apm-base-laravel\\\/resources\\\/views\\\/auth\\\/login.blade.php)\"","status":"No http status error","user_agent_client":null,"created_at":"2022-11-26T10:23:45.000000Z","sort":9999,"user_username":null,"user_first_name":null,"user_last_name":null},{"id":"91bd3a7a-cbce-4e2b-babf-c9b3b61b8914","line":"21","code":"0","file":"\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/storage\/framework\/views\/b83142a24bb9763dd32713aa271f11853bfda54e.php","message":"\"Undefined variable $message (View: \\\/home\\\/sina\\\/workfiles\\\/php\\\/laravel\\\/Test\\\/apm-base-laravel\\\/resources\\\/views\\\/auth\\\/login.blade.php)\"","status":"No http status error","user_agent_client":null,"created_at":"2022-11-26T10:23:43.000000Z","sort":9999,"user_username":null,"user_first_name":null,"user_last_name":null},{"id":"835e5540-6250-41a9-8ae9-69195af7b9b9","line":"44","code":"0","file":"\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/AbstractRouteCollection.php","message":"\"\"","status":"404","user_agent_client":null,"created_at":"2022-11-26T10:23:18.000000Z","sort":9999,"user_username":null,"user_first_name":null,"user_last_name":null},{"id":"3789c9e3-ae4b-4ebf-a193-f831724e2262","line":"877","code":"0","file":"\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Container.php","message":"\"Target class [App\\\\Http\\\\Controllers\\\\DocsController] does not exist.\"","status":"No http status error","user_agent_client":null,"created_at":"2022-11-26T10:22:08.000000Z","sort":9999,"user_username":null,"user_first_name":null,"user_last_name":null},{"id":"09c4cdf2-356d-4767-b53d-c484e982eeea","line":"44","code":"0","file":"\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/AbstractRouteCollection.php","message":"\"\"","status":"404","user_agent_client":null,"created_at":"2022-11-26T10:20:09.000000Z","sort":9999,"user_username":null,"user_first_name":null,"user_last_name":null},{"id":"614163bf-50c2-48ed-9873-dc2e147f44be","line":"44","code":"0","file":"\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/AbstractRouteCollection.php","message":"\"\"","status":"404","user_agent_client":null,"created_at":"2022-11-26T10:19:02.000000Z","sort":9999,"user_username":null,"user_first_name":null,"user_last_name":null},{"id":"74b38fea-c5b0-40b7-b46d-5fb3fa4fa465","line":"118","code":"0","file":"\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/AbstractRouteCollection.php","message":"\"The GET method is not supported for this route. Supported methods: POST.\"","status":"405","user_agent_client":null,"created_at":"2022-11-26T10:16:17.000000Z","sort":9999,"user_username":null,"user_first_name":null,"user_last_name":null},{"id":"c19b22dc-4b27-4763-85ea-098c1d1134df","line":"118","code":"0","file":"\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/AbstractRouteCollection.php","message":"\"The GET method is not supported for this route. Supported methods: POST.\"","status":"405","user_agent_client":null,"created_at":"2022-11-26T10:15:18.000000Z","sort":9999,"user_username":null,"user_first_name":null,"user_last_name":null},{"id":"b48fa7c5-d349-48d9-8ff6-f3d0e6be4cb8","line":"44","code":"0","file":"\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/AbstractRouteCollection.php","message":"\"\"","status":"404","user_agent_client":null,"created_at":"2022-11-26T09:59:53.000000Z","sort":9999,"user_username":null,"user_first_name":null,"user_last_name":null},{"id":"49fe8373-9ff6-4279-9850-1ac14b8f6d7f","line":"44","code":"0","file":"\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/AbstractRouteCollection.php","message":"\"\"","status":"404","user_agent_client":null,"created_at":"2022-11-26T09:34:20.000000Z","sort":9999,"user_username":null,"user_first_name":null,"user_last_name":null}],"first_page_url":"http:\/\/localhost:8000\/api\/v1\/exception-log?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/api\/v1\/exception-log?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/v1\/exception-log?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/api\/v1\/exception-log","per_page":20,"prev_page_url":null,"to":15,"total":15}},"patch":[],"date":"2022-11-27T05:32:23.368683Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '56'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/user
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":200,"error":"","message":"","data":{"model":{"current_page":1,"data":[{"id":"56194f1c-1398-44f0-87cd-c34d2356eeaf","username":"09111111111","birth_date":null,"description":null,"last_name":"\u0633\u0627\u0645\u0627\u0646\u0647","first_name":"\u0645\u062f\u06cc\u0631","national_code":null,"country_division_id":null,"avatar":"upload\/baseUpload\/default.jpg","person_type":"real","status":"active","created_at":"2022-11-26T08:58:24.000000Z","updated_at":"2022-11-26T08:58:24.000000Z","deleted_at":null,"sort":9999,"created_by":"56194f1c-1398-44f0-87cd-c34d2356eeaf"}],"first_page_url":"http:\/\/localhost:8000\/api\/v1\/user?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/api\/v1\/user?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/v1\/user?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/api\/v1\/user","per_page":20,"prev_page_url":null,"to":1,"total":1}},"patch":[],"date":"2022-11-27T05:32:23.386062Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '55'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/user/show
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":412,"error":"","message":"\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0627\u0631\u0633\u0627\u0644\u06cc \u0646\u0627\u0642\u0635 \u06cc\u0627 \u0627\u0634\u062a\u0628\u0627\u0647 \u0627\u0633\u062a","data":[],"patch":[],"date":"2022-11-27T05:32:23.408158Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '54'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/user/insert
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":412,"error":"","message":"\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0627\u0631\u0633\u0627\u0644\u06cc \u0646\u0627\u0642\u0635 \u06cc\u0627 \u0627\u0634\u062a\u0628\u0627\u0647 \u0627\u0633\u062a","data":[],"patch":[],"date":"2022-11-27T05:32:23.419606Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '53'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/user/update
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":412,"error":"","message":"\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0627\u0631\u0633\u0627\u0644\u06cc \u0646\u0627\u0642\u0635 \u06cc\u0627 \u0627\u0634\u062a\u0628\u0627\u0647 \u0627\u0633\u062a","data":[],"patch":[],"date":"2022-11-27T05:32:23.429476Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '52'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/user/delete
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":412,"error":"","message":"\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0627\u0631\u0633\u0627\u0644\u06cc \u0646\u0627\u0642\u0635 \u06cc\u0627 \u0627\u0634\u062a\u0628\u0627\u0647 \u0627\u0633\u062a","data":[],"patch":[],"date":"2022-11-27T05:32:23.439574Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '51'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/user/profile
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":200,"error":"","message":"","data":{"user":{"id":"56194f1c-1398-44f0-87cd-c34d2356eeaf","username":"09111111111","birth_date":null,"description":null,"last_name":"\u0633\u0627\u0645\u0627\u0646\u0647","first_name":"\u0645\u062f\u06cc\u0631","national_code":null,"country_division_id":null,"avatar":"upload\/baseUpload\/default.jpg","person_type":"real","status":"active","created_at":"2022-11-26T08:58:24.000000Z","updated_at":"2022-11-26T08:58:24.000000Z","deleted_at":null,"sort":9999,"created_by":"56194f1c-1398-44f0-87cd-c34d2356eeaf"}},"patch":[],"date":"2022-11-27T05:32:23.449529Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '50'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/user/searchByRole
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":412,"error":"","message":"\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0627\u0631\u0633\u0627\u0644\u06cc \u0646\u0627\u0642\u0635 \u06cc\u0627 \u0627\u0634\u062a\u0628\u0627\u0647 \u0627\u0633\u062a","data":[],"patch":[],"date":"2022-11-27T05:32:23.461752Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '49'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/user/check-username
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":412,"error":"","message":"\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0627\u0631\u0633\u0627\u0644\u06cc \u0646\u0627\u0642\u0635 \u06cc\u0627 \u0627\u0634\u062a\u0628\u0627\u0647 \u0627\u0633\u062a","data":[],"patch":[],"date":"2022-11-27T05:32:23.471780Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '48'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/role
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":200,"error":"","message":"","data":{"model":{"current_page":1,"data":[{"id":"791d1b02-3610-4177-9051-eb7ae6b72def","name":"\u0645\u062f\u06cc\u0631 \u0633\u0627\u06cc\u062a","is_default":false,"created_at":"2022-11-26T07:00:35.000000Z","sort":9999},{"id":"5246f14d-1906-4e34-a412-8fb689d20f23","name":"\u06a9\u0627\u0631\u0628\u0631\u0627\u0646","is_default":false,"created_at":"2022-11-26T07:00:35.000000Z","sort":9999}],"first_page_url":"http:\/\/localhost:8000\/api\/v1\/role?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/api\/v1\/role?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/v1\/role?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/api\/v1\/role","per_page":20,"prev_page_url":null,"to":2,"total":2}},"patch":[],"date":"2022-11-27T05:32:23.482454Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '47'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/auth_token
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":200,"error":"","message":"","data":{"model":{"current_page":1,"data":[{"ip":"","created_at":"2022-11-26T08:58:24.000000Z","user_agent":"","expired_token_at":"2100-01-01","deleted":null,"username":"09111111111","last_name":"\u0633\u0627\u0645\u0627\u0646\u0647","first_name":"\u0645\u062f\u06cc\u0631","national_code":null}],"first_page_url":"http:\/\/localhost:8000\/api\/v1\/auth_token?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/api\/v1\/auth_token?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/v1\/auth_token?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/api\/v1\/auth_token","per_page":20,"prev_page_url":null,"to":1,"total":1}},"patch":[],"date":"2022-11-27T05:32:23.506963Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '46'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/upload/insert
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":412,"error":"","message":"\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0627\u0631\u0633\u0627\u0644\u06cc \u0646\u0627\u0642\u0635 \u06cc\u0627 \u0627\u0634\u062a\u0628\u0627\u0647 \u0627\u0633\u062a","data":[],"patch":[],"date":"2022-11-27T05:32:23.522075Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '45'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/upload/list
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":200,"error":"","message":"","data":{"model":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost:8000\/api\/v1\/upload\/list?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/api\/v1\/upload\/list?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/v1\/upload\/list?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/api\/v1\/upload\/list","per_page":20,"prev_page_url":null,"to":null,"total":0}},"patch":[],"date":"2022-11-27T05:32:23.540207Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '44'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
     uri: api/v1/country_division/show
     metadata:
-      groupName: Endpoints
+      groupName: Setting
       groupDescription: ''
-      subgroup: ''
+      subgroup: CountryDivision
       subgroupDescription: ''
-      title: ''
+      title: 'POST show'
       description: ''
       authenticated: true
       custom: []
@@ -697,148 +77,21 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":403,"error":"","message":"\u062f\u0633\u062a\u0631\u0633\u06cc \u063a\u06cc\u0631 \u0645\u062c\u0627\u0632","data":[],"patch":[],"date":"2022-11-27T05:32:23.550619Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '43'
-          access-control-allow-origin: '*'
-        description: null
+    bodyParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: null
+        type: string
         custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/country_division/insert
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    cleanBodyParameters:
+      id: null
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"status":403,"error":"","message":"\u062f\u0633\u062a\u0631\u0633\u06cc \u063a\u06cc\u0631 \u0645\u062c\u0627\u0632","data":[],"patch":[],"date":"2022-11-27T05:32:23.562113Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '42'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/country_division/update
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":403,"error":"","message":"\u062f\u0633\u062a\u0631\u0633\u06cc \u063a\u06cc\u0631 \u0645\u062c\u0627\u0632","data":[],"patch":[],"date":"2022-11-27T05:32:23.574906Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '41'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/country_division/delete
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":403,"error":"","message":"\u062f\u0633\u062a\u0631\u0633\u06cc \u063a\u06cc\u0631 \u0645\u062c\u0627\u0632","data":[],"patch":[],"date":"2022-11-27T05:32:23.597696Z"}'
+        content: '{"status":403,"error":"","message":"\u062f\u0633\u062a\u0631\u0633\u06cc \u063a\u06cc\u0631 \u0645\u062c\u0627\u0632","data":[],"patch":[],"date":"2022-11-27T09:16:52.777826Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -859,13 +112,13 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/v1/setting
+    uri: api/v1/country_division/insert
     metadata:
-      groupName: Endpoints
+      groupName: Setting
       groupDescription: ''
-      subgroup: ''
+      subgroup: CountryDivision
       subgroupDescription: ''
-      title: ''
+      title: insert
       description: ''
       authenticated: true
       custom: []
@@ -877,13 +130,34 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: قاین
+        type: string
+        custom: []
+      level:
+        name: level
+        description: 'values: [`province`, `township`, `district`, `city`, `rural_district`, `village`]'
+        required: true
+        example: city
+        type: string
+        custom: []
+      parent_id:
+        name: parent_id
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"status":200,"error":"","message":"","data":{"model":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost:8000\/api\/v1\/setting?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/api\/v1\/setting?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/v1\/setting?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/api\/v1\/setting","per_page":20,"prev_page_url":null,"to":null,"total":0}},"patch":[],"date":"2022-11-27T05:32:23.619986Z"}'
+        content: '{"status":403,"error":"","message":"\u062f\u0633\u062a\u0631\u0633\u06cc \u063a\u06cc\u0631 \u0645\u062c\u0627\u0632","data":[],"patch":[],"date":"2022-11-27T09:16:52.788558Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -904,13 +178,13 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/v1/setting/insert
+    uri: api/v1/country_division/update
     metadata:
-      groupName: Endpoints
+      groupName: Setting
       groupDescription: ''
-      subgroup: ''
+      subgroup: CountryDivision
       subgroupDescription: ''
-      title: ''
+      title: update
       description: ''
       authenticated: true
       custom: []
@@ -922,13 +196,41 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
+    bodyParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: null
+        type: string
+        custom: []
+      name:
+        name: name
+        description: ''
+        required: true
+        example: قاین
+        type: string
+        custom: []
+      level:
+        name: level
+        description: 'values: [`province`, `township`, `district`, `city`, `rural_district`, `village`]'
+        required: true
+        example: city
+        type: string
+        custom: []
+      parent_id:
+        name: parent_id
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"status":412,"error":"","message":"\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0627\u0631\u0633\u0627\u0644\u06cc \u0646\u0627\u0642\u0635 \u06cc\u0627 \u0627\u0634\u062a\u0628\u0627\u0647 \u0627\u0633\u062a","data":[],"patch":[],"date":"2022-11-27T05:32:23.640654Z"}'
+        content: '{"status":403,"error":"","message":"\u062f\u0633\u062a\u0631\u0633\u06cc \u063a\u06cc\u0631 \u0645\u062c\u0627\u0632","data":[],"patch":[],"date":"2022-11-27T09:16:52.798506Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -949,13 +251,13 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/v1/setting/update
+    uri: api/v1/country_division/delete
     metadata:
-      groupName: Endpoints
+      groupName: Setting
       groupDescription: ''
-      subgroup: ''
+      subgroup: CountryDivision
       subgroupDescription: ''
-      title: ''
+      title: 'POST delete'
       description: ''
       authenticated: true
       custom: []
@@ -967,13 +269,21 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: null
+        type: string
+        custom: []
+    cleanBodyParameters:
+      id: null
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"status":412,"error":"","message":"\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0627\u0631\u0633\u0627\u0644\u06cc \u0646\u0627\u0642\u0635 \u06cc\u0627 \u0627\u0634\u062a\u0628\u0627\u0647 \u0627\u0633\u062a","data":[],"patch":[],"date":"2022-11-27T05:32:23.652882Z"}'
+        content: '{"status":403,"error":"","message":"\u062f\u0633\u062a\u0631\u0633\u06cc \u063a\u06cc\u0631 \u0645\u062c\u0627\u0632","data":[],"patch":[],"date":"2022-11-27T09:16:52.808781Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -994,13 +304,13 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/v1/setting/delete
+    uri: api/v1/setting
     metadata:
-      groupName: Endpoints
+      groupName: Setting
       groupDescription: ''
-      subgroup: ''
+      subgroup: Setting
       subgroupDescription: ''
-      title: ''
+      title: 'POST list'
       description: ''
       authenticated: true
       custom: []
@@ -1012,18 +322,196 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
+    bodyParameters:
+      filters:
+        name: filters
+        description: ''
+        required: false
+        example: null
+        type: object
+        custom: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"status":412,"error":"","message":"\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0627\u0631\u0633\u0627\u0644\u06cc \u0646\u0627\u0642\u0635 \u06cc\u0627 \u0627\u0634\u062a\u0628\u0627\u0647 \u0627\u0633\u062a","data":[],"patch":[],"date":"2022-11-27T05:32:23.664380Z"}'
+        content: '{"status":200,"error":"","message":"","data":{"model":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost:8001\/api\/v1\/setting?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost:8001\/api\/v1\/setting?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8001\/api\/v1\/setting?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8001\/api\/v1\/setting","per_page":20,"prev_page_url":null,"to":null,"total":0}},"patch":[],"date":"2022-11-27T09:16:52.823453Z"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           x-ratelimit-limit: '60'
           x-ratelimit-remaining: '36'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/setting/insert
+    metadata:
+      groupName: Setting
+      groupDescription: ''
+      subgroup: Setting
+      subgroupDescription: ''
+      title: insert
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      key:
+        name: key
+        description: ''
+        required: true
+        example: logo
+        type: string
+        custom: []
+      value:
+        name: value
+        description: ''
+        required: true
+        example: /public/upload/logo.png
+        type: string
+        custom: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":412,"error":"","message":"\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0627\u0631\u0633\u0627\u0644\u06cc \u0646\u0627\u0642\u0635 \u06cc\u0627 \u0627\u0634\u062a\u0628\u0627\u0647 \u0627\u0633\u062a","data":[],"patch":[],"date":"2022-11-27T09:16:52.837401Z"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '35'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/setting/update
+    metadata:
+      groupName: Setting
+      groupDescription: ''
+      subgroup: Setting
+      subgroupDescription: ''
+      title: update
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      key:
+        name: key
+        description: ''
+        required: true
+        example: logo
+        type: string
+        custom: []
+      value:
+        name: value
+        description: ''
+        required: true
+        example: /public/upload/logo.png
+        type: string
+        custom: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":412,"error":"","message":"\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0627\u0631\u0633\u0627\u0644\u06cc \u0646\u0627\u0642\u0635 \u06cc\u0627 \u0627\u0634\u062a\u0628\u0627\u0647 \u0627\u0633\u062a","data":[],"patch":[],"date":"2022-11-27T09:16:52.853580Z"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '34'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/setting/delete
+    metadata:
+      groupName: Setting
+      groupDescription: ''
+      subgroup: Setting
+      subgroupDescription: ''
+      title: 'POST delete'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      id:
+        name: id
+        description: ''
+        required: true
+        example: null
+        type: string
+        custom: []
+    cleanBodyParameters:
+      id: null
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":412,"error":"","message":"\u0627\u0637\u0644\u0627\u0639\u0627\u062a \u0627\u0631\u0633\u0627\u0644\u06cc \u0646\u0627\u0642\u0635 \u06cc\u0627 \u0627\u0634\u062a\u0628\u0627\u0647 \u0627\u0633\u062a","data":[],"patch":[],"date":"2022-11-27T09:16:52.885931Z"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '33'
           access-control-allow-origin: '*'
         description: null
         custom: []

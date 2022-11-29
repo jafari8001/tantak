@@ -6,7 +6,10 @@ use App\Models\$MODULE_NAME$\$MODEL_NAME$;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-
+/**
+ * @group $MODULE_NAME$
+ * @subgroup $MODEL_NAME$
+ */
 class $MODEL_NAME$Controller extends Controller
 {
     public $default_show = true;
@@ -14,6 +17,28 @@ class $MODEL_NAME$Controller extends Controller
     public $model = $MODEL_NAME$::class;
     public $permissionItem = "$TABLE_NAME$";
     public $validtionItem = [];
+
+    public static function inheritedDocsOverrides()
+    {
+        return [
+            "store" => [
+                "metadata" => [
+                    "title" => "insert"
+                ],
+                "bodyParameters" => [
+$SCRIBE_DESC$
+                ]
+            ],
+            "update" => [
+                "metadata" => [
+                    "title" => "update"
+                ],
+                "bodyParameters" => [
+$SCRIBE_DESC$
+                ]
+            ]
+        ];
+    }
 
     public function store(Request $request)
     {

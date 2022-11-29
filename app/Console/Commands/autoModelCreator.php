@@ -193,6 +193,7 @@ class autoModelCreator extends Command
                 str_contains($field,'timestamps') ||
                 str_contains($field,'created_by') ||
                 str_contains($field,'sort') ||
+                str_contains($field,'foreign') ||
                 str_contains($field,'primary')
             ){
                 continue;
@@ -229,7 +230,7 @@ class autoModelCreator extends Command
         $insert_and_update = "";
         foreach($migration_fields as $field){
             $columns .= "\t\t'$field' => '$table_name.$field',".PHP_EOL;
-            $insert_and_update .= "\t\t".'$model->'.$field.' = $request->'.$field.';'.PHP_EOL;
+            $insert_and_update .= "\t\t".'if(isset($request->'.$field.'))$model->'.$field.' = $request->'.$field.';'.PHP_EOL;
         }
 
         $columns = substr($columns, 2,strlen($columns)-3);

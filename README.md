@@ -26,11 +26,11 @@ php artisan auto:crud --module=<module name> --migration=<relative migration pat
 ## Todo
 - &check; Update `Exceptions\Handler.php` and `Middlewares\LogRequest.php` files with last changes
 - &cross; Handle joins and preventing to overwrite search method most of the times
-- &cross; Utilize update method not to set as `null` where field is not passed
-- &cross; Auto add crud routes to `api.php` file
-- &cross; Create a command to create services
-- &cross; Add `swagger` to project
-- &cross; Auto create swagger annotations for crud apis
+- &check; Utilize update method not to set as `null` where field is not passed
+- &check; Auto add crud routes to `api.php` file
+- &check; Create a command to create services
+- &check; Add `scribe` to project
+- &check; Auto create scribe annotations for crud apis
 - &cross; Auto update `ActionTableSeeder` actions
 - &cross; Auto create new actions and role-actions in database (sql output)
 

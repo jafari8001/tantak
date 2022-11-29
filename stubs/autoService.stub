@@ -1,0 +1,11 @@
+<?php
+
+namespace App\Services\$MODULE_NAME$\$MODEL_NAME$;
+
+use App\Models\$MODULE_NAME$\$MODEL_NAME$;
+
+
+class $SERVICE_NAME$
+{
+
+}

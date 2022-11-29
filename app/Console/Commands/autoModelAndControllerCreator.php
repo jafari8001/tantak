@@ -16,6 +16,7 @@ class autoModelAndControllerCreator extends Command
      * @var string
      */
     protected $signature = 'auto:crud
+                            {--route=}
                             {--module=}
                             {--migration=}';
 
@@ -62,11 +63,30 @@ class autoModelAndControllerCreator extends Command
         $this->call('auto:controller', [
             '--module' => $this->option('module'),
             '--model'  => $model_name,
-            '--table'  => $table_name
+            '--table'  => $table_name,
+            '--migration'  => $this->option('migration')
+        ]);
+        $this->call('auto:service', [
+            '--module' => $this->option('module'),
+            '--model'  => $model_name,
+        ]);
+        $this->call('auto:route', [
+            '--module' => $this->option('module'),
+            '--controller'  => $this->getSingularClassName($model_name) . 'Controller',
+            '--type'  => $this->option('route')
         ]);
         return 0;
     }
 
+    /**
+     * Return the Singular Capitalize Name
+     * @param $name
+     * @return string
+     */
+    public function getSingularClassName($name)
+    {
+        return ucwords(Pluralizer::singular($name));
+    }
 
     /**
      * Read migration file and extracts table name

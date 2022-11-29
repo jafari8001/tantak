@@ -10,7 +10,8 @@ use App\Http\Controllers\Setting\SettingController;
 use App\Http\Controllers\Setting\CountryDivisionController;
 use App\Http\Controllers\Core\RequestLogController;
 use App\Http\Controllers\Core\ExceptionLogController;
-
+use App\Http\Controllers\Test\CountryDivisionController;
+/* Auto-Use */
 
 Route::prefix('v1')->group(function () {
     Route::post('auth/login', [AuthController::class, 'login']);
@@ -50,6 +51,19 @@ Route::prefix('v1')->group(function () {
         Route::post('setting/insert', [SettingController::class, 'store']);
         Route::post('setting/update', [SettingController::class, 'update']);
         Route::post('setting/delete', [SettingController::class, 'destroy']);
-        
+
+		Route::post('countrydivision', [CountryDivisionController::class, 'index']);
+		Route::post('countrydivision/show', [CountryDivisionController::class, 'show']);
+		Route::post('countrydivision/insert', [CountryDivisionController::class, 'store']);
+		Route::post('countrydivision/update', [CountryDivisionController::class, 'update']);
+		Route::post('countrydivision/delete', [CountryDivisionController::class, 'destroy']);
+
+		Route::post('countrydivision/insert', [CountryDivisionController::class, 'store']);
+		Route::post('countrydivision/update', [CountryDivisionController::class, 'update']);
+		Route::post('countrydivision/delete', [CountryDivisionController::class, 'destroy']);
+
+        /*
+        * Auto-Routes
+        */
     });
 });

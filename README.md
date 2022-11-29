@@ -14,13 +14,29 @@ php artisan db:seed
 This command will create :
 - model with relative name filled with `$columns` and `insert` and `updateItem` functions
 - controller with relative name and permissions and connected to the model
+- Service with relative name
+- Routes in api.php file
 hint : 
     - module : Directory name which you would like your model be created in => app/Models/`module`/your-model<br />
                 and your controller be created in => app/Http/Controllers/`module`/your-controller
     - migration : relative path to your desired migration file 
+    - route : creates needed routes in api.php file
+              c : store function route
+              r : list and show function route
+              u : update function route
+              d : delete function route
 ```
-php artisan auto:crud --module=<module name> --migration=<relative migration path>
+php artisan auto:crud --module=<module name> --migration=<relative migration path> -route=<combination of c r u d letters>
 ```
+
+## How to create a module
+1. create proper migration file
+2. run migration
+3. use `auto:crud` to create model and controller and service and routes
+4. add permissions to `ActionTableSeeder`
+5. replace the permissions in `TempActionsRolesSeeder` to just create new permissions
+6. run `db:seed --path=TempActionsRolesSeeder` to create new permission in database
+7. fill proper description for fields in controller `inheritedDocsOverrides` function
 
 
 ## Todo

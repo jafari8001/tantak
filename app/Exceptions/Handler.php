@@ -41,15 +41,6 @@ class Handler extends ExceptionHandler
         if ($exception instanceof NotFindException) {
             return responseSend(404, [], "", __('http.404'));
         }
-        if (env('APP_DEBUG')) {
-            $this->insertException($exception, $request);
-            return responseSend(500, [
-                $exception->getMessage(),
-                $exception->getFile(),
-                $exception->getLine(),
-                $exception->getCode()
-            ], "", $exception->getMessage());
-        }
         if ($exception instanceof OtherException) {
             return responseSend(400, [], "", $exception->getMessage());
         }
@@ -61,6 +52,15 @@ class Handler extends ExceptionHandler
                 $this->insertException($exception, $request);
                 return responseSend(500, [], "", __('http.500'));
             }
+        }
+        if (env('APP_DEBUG')) {
+            $this->insertException($exception, $request);
+            return responseSend(500, [
+                $exception->getMessage(),
+                $exception->getFile(),
+                $exception->getLine(),
+                $exception->getCode()
+            ], "", $exception->getMessage());
         }
         $this->insertException($exception, $request);
         return responseSend(500, [], "", __('http.500'));

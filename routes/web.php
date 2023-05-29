@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Core\DocsController;
 
+Route::fallback(function () {
+    abort(404);
+});
+
 Route::get('docs', function () {
     return response()->file('public/docs/index.html');
 })

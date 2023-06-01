@@ -16,14 +16,21 @@ class RoleActionTableSeeder extends Seeder
 
         $actions = Action::whereNotIn('alias', $exclude)->get();
         foreach ($actions as $action) {
-            DB::table('action_role')
-                ->insert([
-                    'action_id' => $action->id,
-                    'id' => (string) Str::uuid(),
-                    'role_id' => env("ROLE_ADMIN_ID"),
-                    'created_at' => Carbon::now(),
-                    'updated_at' => Carbon::now()
-                ]);
+            $role_action_exists = DB::table('action_role')
+                ->where('action_id' , $action->id)
+                ->where('role_id' , env("ROLE_ADMIN_ID"))
+                ->exists();
+
+            if(!$role_action_exists){
+                DB::table('action_role')
+                    ->insert([
+                        'action_id' => $action->id,
+                        'id' => (string) Str::uuid(),
+                        'role_id' => env("ROLE_ADMIN_ID"),
+                        'created_at' => Carbon::now(),
+                        'updated_at' => Carbon::now()
+                    ]);
+            }
         }
     }
 }

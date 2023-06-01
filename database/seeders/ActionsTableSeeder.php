@@ -187,29 +187,39 @@ class ActionsTableSeeder extends Seeder
 
     private function save($parent, $childs = [])
     {
-        $parent["fa_id"] = new Action();
-        $parent["fa_id"]->type = 'web';
-        $parent["fa_id"]->parent = null;
-        $parent["fa_id"]->is_menu = '1';
-        $parent["fa_id"]->icon = 'menu';
-        $parent["fa_id"]->sort = $this->sort;
-        $parent["fa_id"]->name = $parent["name"];
-        $parent["fa_id"]->alias = $parent["alias"];
-        $parent["fa_id"]->created_by = env('USER_ADMIN_ID');
-        $parent["fa_id"]->save();
+        $parent_exists = Action::where('alias',$parent["alias"])->exists();
 
-        $this->sort += 1;
-
-        foreach ($childs as $item) {
-            $action = new Action();
-            $action->sort = -1;
-            $action->type = 'web';
-            $action->is_menu = '0';
-            $action->name = $item["name"];
-            $action->alias = $item["alias"];
-            $action->parent = $parent["fa_id"]->id;
-            $action->created_by = env('USER_ADMIN_ID');
-            $action->save();
+        if(!$parent_exists){
+            $parent["fa_id"] = new Action();
+            $parent["fa_id"]->type = 'web';
+            $parent["fa_id"]->parent = null;
+            $parent["fa_id"]->is_menu = '1';
+            $parent["fa_id"]->icon = 'menu';
+            $parent["fa_id"]->sort = $this->sort;
+            $parent["fa_id"]->name = $parent["name"];
+            $parent["fa_id"]->alias = $parent["alias"];
+            $parent["fa_id"]->created_by = env('USER_ADMIN_ID');
+            $parent["fa_id"]->save();
+            
+            $this->sort += 1;
+    
+            foreach ($childs as $item) {
+                $item_exists = Action::where('alias',$item["alias"])
+                    ->where('parent',$parent["fa_id"]->id)
+                    ->exists();
+                if(!$item_exists){
+                    $action = new Action();
+                    $action->sort = -1;
+                    $action->type = 'web';
+                    $action->is_menu = '0';
+                    $action->name = $item["name"];
+                    $action->alias = $item["alias"];
+                    $action->parent = $parent["fa_id"]->id;
+                    $action->created_by = env('USER_ADMIN_ID');
+                    $action->save();
+                }
+            }
         }
+
     }
 }

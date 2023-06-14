@@ -35,10 +35,6 @@ class User extends BaseModel  implements AuthenticatableContract
         return $this->manyToMany("App\Models\User\Role", RoleUser::class, RoleUser::getTableName());
     }
 
-    public function blog_posts(){
-        return $this->hasMany('App\Models\Blog\BlogPost','author_id');
-    }
-
     public static function searchByRole($request, $roles = [])
     {
         $search = BaseModel::beforeSearch($request, User::class);

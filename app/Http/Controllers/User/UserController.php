@@ -49,7 +49,6 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-
         $this->permission('user/insert');
         $this->validator($request, ["username", "password", "first_name", "last_name", "role_id", "status", "person_type"]);
 

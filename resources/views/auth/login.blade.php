@@ -10,7 +10,7 @@
             <h2 class="active"> مشاهده مستندات </h2>       
         
             <!-- Login Form -->
-            <form action="/docs/check" method="POST">
+            <form action="/doc/check" method="POST">
                 @csrf
                 <input type="text" id="login" class="fadeIn second" name="username" placeholder="نام کاربری">
                 <input type="text" id="password" class="fadeIn third" name="password" placeholder="رمز عبور">

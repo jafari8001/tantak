@@ -15,7 +15,7 @@ class DocsLogin
         ){
             return $next($request);
         }else{
-            return redirect('docs/login');
+            return redirect('doc/login');
         }
     }
 }

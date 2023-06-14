@@ -7,16 +7,16 @@ Route::fallback(function () {
     abort(404);
 });
 
-Route::get('docs', function () {
+Route::get('doc', function () {
     return response()->file('public/docs/index.html');
 })
     ->middleware('DocsLogin');
 
-Route::get('docs/postman', function () {
+Route::get('doc/postman', function () {
     return response()->file('public/docs/collection.json');
 })
     ->name('scribe.postman')
     ->middleware('DocsLogin');
 
-Route::get('docs/login', [DocsController::class, 'uiBasedAuthentication']);
-Route::post('docs/check', [DocsController::class, 'uiBasedLogin']);
+Route::get('doc/login', [DocsController::class, 'uiBasedAuthentication']);
+Route::post('doc/check', [DocsController::class, 'uiBasedLogin']);

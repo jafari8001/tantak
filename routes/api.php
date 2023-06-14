@@ -10,7 +10,6 @@ use App\Http\Controllers\Setting\SettingController;
 use App\Http\Controllers\Setting\CountryDivisionController;
 use App\Http\Controllers\Core\RequestLogController;
 use App\Http\Controllers\Core\ExceptionLogController;
-use App\Http\Controllers\Test\CountryDivisionController;
 /* Auto-Use */
 
 Route::prefix('v1')->group(function () {

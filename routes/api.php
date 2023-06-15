@@ -16,7 +16,7 @@ Route::prefix('v1')->group(function () {
     Route::post('auth/login', [AuthController::class, 'login']);
     Route::post('auth/otp/send', [AuthController::class, 'sendOtp']);
     Route::post('auth/otp/login', [AuthController::class, 'otpLogin']);
-    Route::post('country_division', [CountryDivisionController::class, 'index']);
+    Route::post('country-division', [CountryDivisionController::class, 'index']);
 
 
     Route::group(['middleware' => 'tokenLogin'], function () {

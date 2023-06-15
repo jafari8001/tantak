@@ -1,0 +1,185 @@
+<?php
+
+namespace Tests\Feature;
+
+use App\Models\$MODULE_NAME$\$MODEL_NAME$;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Testing\Fluent\AssertableJson;
+use Tests\TestCase;
+
+class $MODEL_NAME$Test extends TestCase
+{
+    use RefreshDatabase;
+
+    protected $test_data = [
+        $NULL_VALUE_COLUMNS$
+    ];
+    protected $updated_test_data = [];
+
+    /**
+     * insert
+     */
+    
+     public function test_anonymus_should_not_insert_$LOWER_MODEL_NAME$()
+    {
+        $response = $this->postJson('api/v1/$LOWER_MODEL_NAME$/insert',[]);
+
+        $response->assertJson([
+            'status' => 401
+        ]);
+    }
+    
+    public function test_admin_empty_data_insert_$LOWER_MODEL_NAME$()
+    {
+        $response = $this->sendAdminAuthenticatedPost('api/v1/$LOWER_MODEL_NAME$/insert',[]);
+
+        $response->assertJson([
+            'status' => 412
+        ]);
+    }
+    
+    public function test_data_insert_$LOWER_MODEL_NAME$()
+    {
+        $data = $this->test_data;
+
+        $response = $this->sendAdminAuthenticatedPost('api/v1/$LOWER_MODEL_NAME$/insert',$data);
+
+        // unset($data['some_field']);
+
+        $response->assertJson([
+            'status' => 200,
+            'data' => $data
+        ]);
+    }
+
+    /**
+     * update
+     */
+    
+    public function test_anonymus_should_not_update_$LOWER_MODEL_NAME$()
+    {
+        $response = $this->postJson('api/v1/$LOWER_MODEL_NAME$/update',[]);
+
+        $response->assertJson([
+            'status' => 401
+        ]);
+    }
+    
+    public function test_admin_empty_data_update_$LOWER_MODEL_NAME$()
+    {
+        $response = $this->sendAdminAuthenticatedPost('api/v1/$LOWER_MODEL_NAME$/update',[]);
+
+        $response->assertJson([
+            'status' => 412
+        ]);
+    }
+    
+    public function test_data_update_$LOWER_MODEL_NAME$()
+    {
+        $new_data = $MODEL_NAME$::insert((object)$this->test_data);
+
+        $data = $this->updated_test_data;
+        $data['id'] = $new_data->id;
+
+        $response = $this->sendAdminAuthenticatedPost('api/v1/$LOWER_MODEL_NAME$/update',$data);
+
+        // unset($data['some_fields']);
+
+        $response->assertJson([
+            'status' => 200,
+            'data' => $data
+        ]);
+    }
+    
+    /**
+     * lists
+     */
+
+    public function test_anonymus_should_not_list_$LOWER_MODEL_NAME$s()
+    {
+        $response = $this->postJson('api/v1/$LOWER_MODEL_NAME$',[]);
+
+        $response->assertJson([
+            'status' => 401
+        ]);
+    }
+
+    public function test_list_$LOWER_MODEL_NAME$s()
+    {
+        $new_data = $MODEL_NAME$::insert((object)$this->test_data);
+
+        $data = [
+            'filters' => [
+                'id' => $new_data->id
+            ]
+        ];
+
+        $response = $this->sendAdminAuthenticatedPost('api/v1/$LOWER_MODEL_NAME$',$data);
+
+        $response->assertJson(fn (AssertableJson $json) =>
+            $json->where('status',200)
+                ->where('data.model.data.0.id',$new_data->id)
+                ->etc()
+        );
+    }
+    
+
+    /**
+     * show
+     */
+    
+    public function test_anonymus_should_not_show_$LOWER_MODEL_NAME$()
+    {
+        $response = $this->postJson('api/v1/$LOWER_MODEL_NAME$/show',[]);
+
+        $response->assertJson([
+            'status' => 401
+        ]);
+    }
+
+    public function test_show_$LOWER_MODEL_NAME$()
+    {
+        $new_data = $MODEL_NAME$::insert((object)$this->test_data);
+
+        $data = [
+            'id' => $new_data->id,
+        ];
+
+        $response = $this->sendAdminAuthenticatedPost('api/v1/$LOWER_MODEL_NAME$/show',$data);
+
+        $response->assertJson(fn (AssertableJson $json) =>
+            $json->where('status',200)
+                ->where('data.model.id',$new_data->id)
+                ->etc()
+        );
+    }
+    
+    /**
+     * delete
+     */
+    
+    public function test_anonymus_should_not_delete_$LOWER_MODEL_NAME$()
+    {
+        $response = $this->postJson('api/v1/$LOWER_MODEL_NAME$/delete',[]);
+        
+        $response->assertJson([
+            'status' => 401
+        ]);
+    }
+
+    public function test_data_delete_$MODEL_NAME$()
+    {
+        $new_data = $MODEL_NAME$::insert((object)$this->test_data);
+
+        $data = [
+            'id' => $new_data->id,
+        ];
+
+        $response = $this->sendAdminAuthenticatedPost('api/v1/$LOWER_MODEL_NAME$/delete',$data);
+
+        $response->assertJson([
+            'status' => 200
+        ]);
+    }
+}

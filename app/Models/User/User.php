@@ -85,7 +85,7 @@ class User extends BaseModel  implements AuthenticatableContract
         $model->country_division;
 
         return [
-            'data' => $model
+            'model' => $model
         ];
     }
 
@@ -116,7 +116,7 @@ class User extends BaseModel  implements AuthenticatableContract
 
         $model->save();
         if (isset($request->role_id)) {
-            $model->roles()->sync([$request->role_id]);
+            $model->roles()->sync($request->role_id);
         }
 
         return $model;

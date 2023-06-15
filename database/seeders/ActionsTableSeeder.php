@@ -17,8 +17,36 @@ class ActionsTableSeeder extends Seeder
         $this->exception_log();
         $this->request_log();
         $this->settings();
+        $this->country_division();
     }
 
+    private function country_division()
+    {
+        $parent = [
+            "alias" => "country_division/index",
+            "name" => "شهر و روستاها",
+        ];
+        $childs = [
+            [
+                "alias" => "country_division/insert",
+                "name" => 'ثبت',
+            ],
+            [
+                "alias" => "country_division/update",
+                "name" => 'ویرایش',
+            ],
+            [
+                "alias" => "country_division/delete",
+                "name" => 'حذف',
+            ],
+            [
+                "alias" => "country_division/root",
+                "name" => 'دسترسی سطح بالا',
+            ]
+        ];
+        $this->save($parent, $childs);
+    }
+    
     private function request_log()
     {
         $parent = [

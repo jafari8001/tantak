@@ -50,7 +50,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $this->permission('user/insert');
-        $this->validator($request, ["username", "password", "first_name", "last_name", "role_id", "status", "person_type"]);
+        $this->validator($request, ["username", "password", "first_name", "last_name", "status", "person_type"],[],["role_id" => "array|required"]);
 
         $model = User::insert($request);
 
@@ -72,7 +72,7 @@ class UserController extends Controller
     public function update(Request $request)
     {
         $this->permission('user/update');
-        $this->validator($request, ["username", "first_name", "last_name", "role_id", "status", "person_type", "id"]);
+        $this->validator($request, ["username", "first_name", "last_name", "status", "person_type", "id"],[],["role_id" => "array|required"]);
 
         $data = User::updateItem($request, $request->id);
         return $this->response(200, $data);
@@ -81,10 +81,9 @@ class UserController extends Controller
     /**
      * POST profile
      *      
-     * Get user profile or update it
+     * Get current user profile or update it
      * fields are all optional
      *  
-     * @bodyParam id string required id of user in database Example: '56194f1c-1398-44f0-87cd-c34d2356eeaf'
      * @bodyParam avatar string  Example: '/upload/default.jpg'
      * @bodyParam password string  Example: '123456'
      * @bodyParam first_name string  Example: 'test'

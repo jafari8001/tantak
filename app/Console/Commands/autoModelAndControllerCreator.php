@@ -75,6 +75,11 @@ class autoModelAndControllerCreator extends Command
             '--controller'  => $this->getSingularClassName($model_name) . 'Controller',
             '--type'  => $this->option('route')
         ]);
+        $this->call('auto:test', [
+            '--module' => $this->option('module'),
+            '--model'  => $model_name,
+            '--migration'  => $this->option('migration')
+        ]);
         return 0;
     }
 

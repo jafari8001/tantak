@@ -34,32 +34,21 @@ Route::prefix('v1')->group(function () {
         Route::post('user/delete', [UserController::class, 'destroy']);
         Route::post('user/profile', [UserController::class, 'profile']);
         Route::post('user/searchByRole', [UserController::class, 'searchByRole']);
-        Route::post('user/check-username', [UserController::class, 'checkUsername']);
 
         Route::post('role', [RoleController::class, 'index']);
         Route::post('auth_token', [AuthTokenController::class, 'index']);
         Route::post('upload/insert', [UploadController::class, 'store']);
         Route::post('upload/list', [UploadController::class, 'index']);
-
-        Route::post('country_division/show', [CountryDivisionController::class, 'show']);
-        Route::post('country_division/insert', [CountryDivisionController::class, 'store']);
-        Route::post('country_division/update', [CountryDivisionController::class, 'update']);
-        Route::post('country_division/delete', [CountryDivisionController::class, 'destroy']);
         
         Route::post('setting', [SettingController::class, 'index']);
         Route::post('setting/insert', [SettingController::class, 'store']);
         Route::post('setting/update', [SettingController::class, 'update']);
         Route::post('setting/delete', [SettingController::class, 'destroy']);
 
-		Route::post('countrydivision', [CountryDivisionController::class, 'index']);
-		Route::post('countrydivision/show', [CountryDivisionController::class, 'show']);
-		Route::post('countrydivision/insert', [CountryDivisionController::class, 'store']);
-		Route::post('countrydivision/update', [CountryDivisionController::class, 'update']);
-		Route::post('countrydivision/delete', [CountryDivisionController::class, 'destroy']);
-
-		Route::post('countrydivision/insert', [CountryDivisionController::class, 'store']);
-		Route::post('countrydivision/update', [CountryDivisionController::class, 'update']);
-		Route::post('countrydivision/delete', [CountryDivisionController::class, 'destroy']);
+		Route::post('country-division/show', [CountryDivisionController::class, 'show']);
+		Route::post('country-division/insert', [CountryDivisionController::class, 'store']);
+		Route::post('country-division/update', [CountryDivisionController::class, 'update']);
+		Route::post('country-division/delete', [CountryDivisionController::class, 'destroy']);
 
         /*
         * Auto-Routes

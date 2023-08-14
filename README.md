@@ -34,8 +34,8 @@ php artisan auto:crud --module=<module name> --migration=<relative migration pat
 2. run migration
 3. use `auto:crud` to create model and controller and service and routes
 4. add permissions to `ActionTableSeeder`
-5. replace the permissions in `TempActionsRolesSeeder` to just create new permissions
-6. run `db:seed --path=TempActionsRolesSeeder` to create new permission in database
+5. run `db:seed --path=ActionsTableSeeder` to create new permission in database
+6. run `db:seed --path=RoleActionTableSeeder` to connect new permissions to admin user
 7. fill proper description for fields in controller `inheritedDocsOverrides` function
 
 

@@ -2,6 +2,7 @@
 
 use Carbon\Carbon;
 use App\Exceptions\ValidatorException;
+use App\Services\SMS\sendSMS;
 
 function toGregorian($in_date, $time = false, $sendTime = false, $explode_by = "/", $return_by = "-")
 {
@@ -213,13 +214,13 @@ function checkIsEmail($email, $exception = false)
     return false;
 }
 
-function sendOtp($username, $message)
+function sendOtp($username, $message, $template = null)
 {
     if (checkIsPhone($username)) {
-        return sendSMS($username, env("SMS_TEMP_CODE"), ["VerificationCode" => $message]);
+        sendSMS($username, $message, $template);
     }
     if (checkIsEmail($username)) {
-        return $username;
+        
     }
 }
 
@@ -243,14 +244,14 @@ function sendTelegram($message, $channel = null, $botKey = null)
     }
 }
 
-function sendSMS($username, $template_id, $params)
+function sendSMS($phone, $message, $template = null , $token1 = null , $token2 = null , $token3 = null , $token4 = null)
 {
     if (env('APP_DEBUG')) {
         return;
     }
-    try {
-    } catch (\Throwable $th) {
-    }
+    
+    $sms_service = new sendSMS();
+    return $sms_service->send($phone,$message,$template,$token1,$token2,$token3,$token4);
 }
 
 function getAdditionalErrorMessage()

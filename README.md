@@ -33,10 +33,26 @@ php artisan auto:crud --module=<module name> --migration=<relative migration pat
 1. create proper migration file
 2. run migration
 3. use `auto:crud` to create model and controller and service and routes
-4. add permissions to `ActionTableSeeder`
-5. replace the permissions in `TempActionsRolesSeeder` to just create new permissions
-6. run `db:seed --path=TempActionsRolesSeeder` to create new permission in database
+4. add permissions to `ActionsTableSeeder`
+5. run `db:seed --path=ActionsTableSeeder` to create new permission in database
+6. run `db:seed --path=RoleActionTableSeeder` to attach new permission to admin role
 7. fill proper description for fields in controller `inheritedDocsOverrides` function
+
+## Auto-document command
+```
+    php artisan scribe:generate
+```
+- scribe config file is placed in `config` folder
+- document url is `/doc`
+
+
+## .env
+- `SMS_PANEL` : sms panel which messages are sent trough
+    1. `MelliPayamak`
+    2. `Kavenegar`
+    3. `NikSms`
+- `SMS_TEMPLATE` : default sms template only for mellipayamak and kavenegar
+- `SCRIBE_TOKEN` : token which auto-document uses to call APIs
 
 
 ## Todo
@@ -49,4 +65,3 @@ php artisan auto:crud --module=<module name> --migration=<relative migration pat
 - &check; Auto create scribe annotations for crud apis
 - &cross; Auto update `ActionTableSeeder` actions
 - &cross; Auto create new actions and role-actions in database (sql output)
-

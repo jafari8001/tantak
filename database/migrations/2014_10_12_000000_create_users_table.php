@@ -13,14 +13,14 @@ return new class extends Migration
 
             $table->string('username');
             $table->string('password');
+            $table->string('phone_number');
             $table->date('birth_date')->nullable();
             $table->text('description')->nullable();
-            $table->string('last_name')->nullable();
             $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
             $table->string('national_code')->nullable();
-            $table->uuid('country_division_id')->nullable();
             $table->string('avatar')->default('upload/baseUpload/default.jpg');
-            $table->enum('person_type', ['real', 'legal', 'none'])->default('real')->nullable();
+            $table->enum('person_type', ['real','legal'])->default('real')->nullable();
             $table->enum('status', ['active', 'hidden', 'inactive', 'registering', 'suspended']);
 
             $table->timestamps();

@@ -5,6 +5,8 @@ namespace App\Models\User;
 use App\Models\BaseModel;
 use App\Models\BaseRelModel;
 use App\Exceptions\OtherException;
+use App\product\Models\Comments;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Foundation\Auth\Access\Authorizable;
@@ -30,13 +32,14 @@ class User extends BaseModel  implements AuthenticatableContract
         "updated_at" => "users.updated_at"
     ];
 
-    public function roles()
-    {
+    public function roles(){
         return $this->manyToMany("App\Models\User\Role", RoleUser::class, RoleUser::getTableName());
     }
+    public function comments(): HasMany{
+        return $this->hasMany(Comments::class);
+    }
 
-    public static function searchByRole($request, $roles = [])
-    {
+    public static function searchByRole($request, $roles = []){
         $search = BaseModel::beforeSearch($request, User::class);
         $query = $search['query']
             ->whereHas('roles', function ($query) use ($roles) {
@@ -48,7 +51,6 @@ class User extends BaseModel  implements AuthenticatableContract
 
         return BaseModel::afterSearch($query, $search['paginate_num']);
     }
-
     public static function insert($request)
     {
         User::checkInsert($request->username, $request->national_code);

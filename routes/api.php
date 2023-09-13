@@ -10,6 +10,7 @@ use App\Http\Controllers\Setting\SettingController;
 use App\Http\Controllers\Setting\CountryDivisionController;
 use App\Http\Controllers\Core\RequestLogController;
 use App\Http\Controllers\Core\ExceptionLogController;
+use App\Http\Controllers\Product\ProductController;
 /* Auto-Use */
 
 Route::prefix('v1')->group(function () {
@@ -49,6 +50,12 @@ Route::prefix('v1')->group(function () {
 		Route::post('country-division/insert', [CountryDivisionController::class, 'store']);
 		Route::post('country-division/update', [CountryDivisionController::class, 'update']);
 		Route::post('country-division/delete', [CountryDivisionController::class, 'destroy']);
+
+		Route::post('product', [ProductController::class, 'index']);
+		Route::post('product/show', [ProductController::class, 'show']);
+		Route::post('product/insert', [ProductController::class, 'store']);
+		Route::post('product/update', [ProductController::class, 'update']);
+		Route::post('product/delete', [ProductController::class, 'destroy']);
 
         /*
         * Auto-Routes

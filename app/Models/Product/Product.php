@@ -3,6 +3,7 @@
 namespace App\Models\Product;
 
 use App\Models\BaseModel;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 
 class Product extends BaseModel
@@ -12,23 +13,54 @@ class Product extends BaseModel
         "id" => "products.id",
         'name' => 'products.name',
 		'slug' => 'products.slug',
+		'barcode' => 'products.barcode',
+		'base_price' => 'products.base_price',
+		'base_wholesale_price' => 'products.base_wholesale_price',
+		'wholesale_unit' => 'products.wholesale_unit',
+		'main_image' => 'products.main_image',
 		'star' => 'products.star',
 		'like' => 'products.like',
 		'view' => 'products.view',
-		'barcode' => 'products.barcode',
-		'base_price' => 'products.base_price',
-		'main_image' => 'products.main_image',
 		'publish_status' => 'products.publish_status',
-		'wholesale_unit' => 'products.wholesale_unit',
-		'base_wholesale_price' => 'products.base_wholesale_price',
-        
-		"created_at" => "products.created_at",
+
+        "created_at" => "products.created_at",
         "created_by" => "products.created_by",
         "updated_at" => "products.updated_at"
     ];
+	protected $fillable = [
+        'name',
+        'slag',
+        'main_image',
+        'base_price',
+        'base_wholesale_price',
+        'wholesale_unit',
+        'publish_staus',
+        'barcode',
+        'score',
+        'like',
+        'view',
+        'user_id'
+    ];
+    public function categories(): HasMany{
+        return $this->hasMany(Category::class);
+    }
+    public function productVariation(): HasMany{
+        return $this->hasMany(ProductVariation::class);
+    }
+    public function product_info(): HasMany{
+        return $this->hasMany(ProductInfo::class);
+    }
+    public function comments(): HasMany{
+        return $this->hasMany(Comments::class);
+    }
+    public function tags(): HasMany{
+        return $this->hasMany(Tag::class);
+    }
+    public function logPrice(): HasMany{
+        return $this->hasMany(LogPrice::class);
+    }
 
-    public static function insert($request)
-    {
+    public static function insert($request){
         $model = new Product();
 
         $model->sort = $request->sort;
@@ -44,12 +76,12 @@ class Product extends BaseModel
 		if(isset($request->view))$model->view = $request->view;
 		if(isset($request->publish_status))$model->publish_status = $request->publish_status;
 
+
         $model->save();
         return $model;
     }
 
-    public static function updateItem($request)
-    {
+    public static function updateItem($request){
         $model = Product::find($request->id);
 
         $model->sort = $request->sort;
@@ -64,6 +96,7 @@ class Product extends BaseModel
 		if(isset($request->like))$model->like = $request->like;
 		if(isset($request->view))$model->view = $request->view;
 		if(isset($request->publish_status))$model->publish_status = $request->publish_status;
+
 
         $model->save();
         return $model;

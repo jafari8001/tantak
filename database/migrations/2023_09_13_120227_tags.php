@@ -16,15 +16,13 @@ return new class extends Migration
         Schema::create('tags', function(Blueprint $table){
             $table->uuid('id')->primary();
 
-            $table->string('name');
+            $table->string('name')->index();
 
             $table->timestamps();
             $table->softDeletes();
             $table->integer('sort')->default(9999);
             $table->uuid('created_by')->nullable();
             $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
-        
-            $table->index('name');
         });
     }
 

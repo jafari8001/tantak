@@ -171,13 +171,14 @@ class User extends BaseModel  implements AuthenticatableContract
 
     public static function login($username, $password)
     {
+        
         $model = User::where([
             ['username', '=', checkUsername($username)],
             ["status", "=", 'active']
-        ])->first();
-
-        if (isset($model->id)) {
-            if (Hash::check($password, $model->password)) {
+            ])->first();
+            
+            if (isset($model->id)) {
+                if (Hash::check($password, $model->password)) {
                 return $model;
             }
             throw new OtherException(__('user.error_password'));

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Product\CommentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\AuthController;
 use App\Http\Controllers\User\UserController;
@@ -11,6 +12,16 @@ use App\Http\Controllers\Setting\CountryDivisionController;
 use App\Http\Controllers\Core\RequestLogController;
 use App\Http\Controllers\Core\ExceptionLogController;
 use App\Http\Controllers\Product\ProductController;
+use App\Http\Controllers\Product\ProductVariationController;
+use App\Http\Controllers\Product\ProductVariationCombinationController;
+use App\Http\Controllers\Product\AddressController;
+use App\Http\Controllers\Product\CategoryController;
+use App\Http\Controllers\Product\CategoryProductController;
+use App\Http\Controllers\Product\ProductInfoController;
+use App\Http\Controllers\Product\ProductTagController;
+use App\Http\Controllers\Product\LogPriceController;
+use App\Http\Controllers\Product\ProductImageController;
+use App\Http\Controllers\Product\TagController;
 /* Auto-Use */
 
 Route::prefix('v1')->group(function () {
@@ -56,6 +67,73 @@ Route::prefix('v1')->group(function () {
 		Route::post('product/insert', [ProductController::class, 'store']);
 		Route::post('product/update', [ProductController::class, 'update']);
 		Route::post('product/delete', [ProductController::class, 'destroy']);
+
+		Route::post('productvariation', [ProductVariationController::class, 'index']);
+		Route::post('productvariation/show', [ProductVariationController::class, 'show']);
+		Route::post('productvariation/insert', [ProductVariationController::class, 'store']);
+		Route::post('productvariation/update', [ProductVariationController::class, 'update']);
+		Route::post('productvariation/delete', [ProductVariationController::class, 'destroy']);
+
+		Route::post('productvariationcombination', [ProductVariationCombinationController::class, 'index']);
+		Route::post('productvariationcombination/show', [ProductVariationCombinationController::class, 'show']);
+		Route::post('productvariationcombination/insert', [ProductVariationCombinationController::class, 'store']);
+		Route::post('productvariationcombination/update', [ProductVariationCombinationController::class, 'update']);
+		Route::post('productvariationcombination/delete', [ProductVariationCombinationController::class, 'destroy']);
+
+		Route::post('address', [AddressController::class, 'index']);
+		Route::post('address/show', [AddressController::class, 'show']);
+		Route::post('address/insert', [AddressController::class, 'store']);
+		Route::post('address/update', [AddressController::class, 'update']);
+		Route::post('address/delete', [AddressController::class, 'destroy']);
+
+		Route::post('category', [CategoryController::class, 'index']);
+		Route::post('category/show', [CategoryController::class, 'show']);
+		Route::post('category/insert', [CategoryController::class, 'store']);
+		Route::post('category/update', [CategoryController::class, 'update']);
+		Route::post('category/delete', [CategoryController::class, 'destroy']);
+
+		Route::post('categoryproduct', [CategoryProductController::class, 'index']);
+		Route::post('categoryproduct/show', [CategoryProductController::class, 'show']);
+		Route::post('categoryproduct/insert', [CategoryProductController::class, 'store']);
+		Route::post('categoryproduct/update', [CategoryProductController::class, 'update']);
+		Route::post('categoryproduct/delete', [CategoryProductController::class, 'destroy']);
+
+		Route::post('productinfo', [ProductInfoController::class, 'index']);
+		Route::post('productinfo/show', [ProductInfoController::class, 'show']);
+		Route::post('productinfo/insert', [ProductInfoController::class, 'store']);
+		Route::post('productinfo/update', [ProductInfoController::class, 'update']);
+		Route::post('productinfo/delete', [ProductInfoController::class, 'destroy']);
+
+
+		Route::post('comment', [CommentController::class, 'index']);
+		Route::post('comment/show', [CommentController::class, 'show']);
+		Route::post('comment/insert', [CommentController::class, 'store']);
+		Route::post('comment/update', [CommentController::class, 'update']);
+		Route::post('comment/delete', [CommentController::class, 'destroy']);
+
+		Route::post('producttag', [ProductTagController::class, 'index']);
+		Route::post('producttag/show', [ProductTagController::class, 'show']);
+		Route::post('producttag/insert', [ProductTagController::class, 'store']);
+		Route::post('producttag/update', [ProductTagController::class, 'update']);
+		Route::post('producttag/delete', [ProductTagController::class, 'destroy']);
+
+		Route::post('logprice', [LogPriceController::class, 'index']);
+		Route::post('logprice/show', [LogPriceController::class, 'show']);
+		Route::post('logprice/insert', [LogPriceController::class, 'store']);
+		Route::post('logprice/update', [LogPriceController::class, 'update']);
+		Route::post('logprice/delete', [LogPriceController::class, 'destroy']);
+
+		Route::post('productimage', [ProductImageController::class, 'index']);
+		Route::post('productimage/show', [ProductImageController::class, 'show']);
+		Route::post('productimage/insert', [ProductImageController::class, 'store']);
+		Route::post('productimage/update', [ProductImageController::class, 'update']);
+		Route::post('productimage/delete', [ProductImageController::class, 'destroy']);
+
+		Route::post('tag', [TagController::class, 'index']);
+		Route::post('tag/show', [TagController::class, 'show']);
+		Route::post('tag/insert', [TagController::class, 'store']);
+		Route::post('tag/update', [TagController::class, 'update']);
+		Route::post('tag/delete', [TagController::class, 'destroy']);
 
         /*
         * Auto-Routes

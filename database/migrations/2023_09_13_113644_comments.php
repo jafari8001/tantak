@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::crate('comments', function(Blueprint $table){
-            $table->uuid()->primary();
+        Schema::create('comments', function(Blueprint $table){
+            $table->uuid('id')->primary();
 
             $table->uuid('user_id');
             $table->foreign('user_id')->references('id')->on('users');
@@ -24,8 +24,9 @@ return new class extends Migration
 
             $table->text('text');
             $table->integer('star')->default(0);
-            $table->uuid('parent_id')->nullable();
-            $table->foreign('parent_id')->references('id')->on('comments');
+
+            $table->uuid('parent_id')->nullable()->index();
+            
             $table->boolean('is_owner')->default(false);
             $table->enum('status',['active','hidden'])->default('active');
 

@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "http:\/\/localhost:8001"
+            "value": "http:\/\/127.0.0.1:8000"
         }
     ],
     "info": {
         "name": "laravel",
-        "_postman_id": "40f1132a-2ea3-4401-9cef-5a9e4621f3e2",
+        "_postman_id": "ca5287a9-6f05-4a82-b878-a9b9fd1ad7bb",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json",
         "version": "2.1.0"
@@ -38,6 +38,14 @@
                             {
                                 "key": "Accept",
                                 "value": "application\/json"
+                            },
+                            {
+                                "key": "User-Agent",
+                                "value": "Auto-Doc"
+                            },
+                            {
+                                "key": "User-Agent-Client",
+                                "value": "Auto-Doc"
                             }
                         ],
                         "body": {
@@ -49,35 +57,7 @@
                             "type": "noauth"
                         }
                     },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "59"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"status\":200,\"error\":\"\",\"message\":\"\",\"data\":{\"Authorization\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9OWfkCnovAF.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRM7msD0lPu6fvttc.7B4g7Ffr9IogcTCsukqSysWcM202211w74JTIImQUD7uWs2712tN3rqCuRFUxL57we2grc5w8uZWQ4OjiyAk21152W7Try7UWfoQmr1def5ezHA4lyrrSemdFUZGYwz9V5cz5q45gjb1c03e\",\"user\":{\"id\":\"56194f1c-1398-44f0-87cd-c34d2356eeaf\",\"username\":\"09111111111\",\"birth_date\":null,\"description\":null,\"last_name\":\"\\u0633\\u0627\\u0645\\u0627\\u0646\\u0647\",\"first_name\":\"\\u0645\\u062f\\u06cc\\u0631\",\"national_code\":null,\"country_division_id\":null,\"avatar\":\"upload\\\/baseUpload\\\/default.jpg\",\"person_type\":\"real\",\"status\":\"active\",\"created_at\":\"2022-11-27T07:50:42.000000Z\",\"updated_at\":\"2022-11-27T07:50:42.000000Z\",\"deleted_at\":null,\"sort\":9999,\"created_by\":\"56194f1c-1398-44f0-87cd-c34d2356eeaf\",\"roles\":[{\"name\":\"\\u0645\\u062f\\u06cc\\u0631 \\u0633\\u0627\\u06cc\\u062a\",\"id\":\"791d1b02-3610-4177-9051-eb7ae6b72def\",\"actions\":[{\"alias\":\"user\\\/index\"},{\"alias\":\"user\\\/insert\"},{\"alias\":\"user\\\/update\"},{\"alias\":\"user\\\/delete\"},{\"alias\":\"user\\\/root\"},{\"alias\":\"role\\\/index\"},{\"alias\":\"role\\\/insert\"},{\"alias\":\"role\\\/update\"},{\"alias\":\"role\\\/delete\"},{\"alias\":\"role\\\/assign\"},{\"alias\":\"role\\\/root\"},{\"alias\":\"upload\\\/index\"},{\"alias\":\"upload\\\/insert\"},{\"alias\":\"upload\\\/update\"},{\"alias\":\"upload\\\/delete\"},{\"alias\":\"upload\\\/root\"},{\"alias\":\"exception_log\\\/index\"},{\"alias\":\"exception_log\\\/insert\"},{\"alias\":\"exception_log\\\/update\"},{\"alias\":\"exception_log\\\/delete\"},{\"alias\":\"exception_log\\\/root\"},{\"alias\":\"request_log\\\/index\"},{\"alias\":\"request_log\\\/insert\"},{\"alias\":\"request_log\\\/update\"},{\"alias\":\"request_log\\\/delete\"},{\"alias\":\"request_log\\\/root\"},{\"alias\":\"settings\\\/index\"},{\"alias\":\"settings\\\/insert\"},{\"alias\":\"settings\\\/update\"},{\"alias\":\"settings\\\/delete\"},{\"alias\":\"settings\\\/root\"}]}]}},\"patch\":[],\"date\":\"2022-11-27T09:16:52.178679Z\"}",
-                            "name": ""
-                        }
-                    ]
+                    "response": []
                 },
                 {
                     "name": "Post Send-OTP",
@@ -97,6 +77,14 @@
                             {
                                 "key": "Accept",
                                 "value": "application\/json"
+                            },
+                            {
+                                "key": "User-Agent",
+                                "value": "Auto-Doc"
+                            },
+                            {
+                                "key": "User-Agent-Client",
+                                "value": "Auto-Doc"
                             }
                         ],
                         "body": {
@@ -108,35 +96,7 @@
                             "type": "noauth"
                         }
                     },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "59"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"status\":500,\"error\":\"\",\"message\":\"SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block (SQL: insert into \\\"tr00-otp_codes\\\" (\\\"ip\\\", \\\"code\\\", \\\"username\\\", \\\"id\\\", \\\"created_by\\\", \\\"updated_at\\\", \\\"created_at\\\") values (127.0.0.1, 4405, 09111111111, e3e06e0f-eee4-4695-af58-27212cf9eb26, 56194f1c-1398-44f0-87cd-c34d2356eeaf, 2022-11-27 12:46:52, 2022-11-27 12:46:52))\",\"data\":[\"SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block (SQL: insert into \\\"tr00-otp_codes\\\" (\\\"ip\\\", \\\"code\\\", \\\"username\\\", \\\"id\\\", \\\"created_by\\\", \\\"updated_at\\\", \\\"created_at\\\") values (127.0.0.1, 4405, 09111111111, e3e06e0f-eee4-4695-af58-27212cf9eb26, 56194f1c-1398-44f0-87cd-c34d2356eeaf, 2022-11-27 12:46:52, 2022-11-27 12:46:52))\",\"\\\/home\\\/sina\\\/workfiles\\\/php\\\/laravel\\\/Test\\\/apm-base-laravel\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Database\\\/Connection.php\",759,\"25P02\"],\"patch\":[],\"date\":\"2022-11-27T09:16:52.219579Z\"}",
-                            "name": ""
-                        }
-                    ]
+                    "response": []
                 },
                 {
                     "name": "Post Login-OTP",
@@ -156,6 +116,14 @@
                             {
                                 "key": "Accept",
                                 "value": "application\/json"
+                            },
+                            {
+                                "key": "User-Agent",
+                                "value": "Auto-Doc"
+                            },
+                            {
+                                "key": "User-Agent-Client",
+                                "value": "Auto-Doc"
                             }
                         ],
                         "body": {
@@ -167,35 +135,7 @@
                             "type": "noauth"
                         }
                     },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "58"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"status\":500,\"error\":\"\",\"message\":\"\\u06a9\\u062f \\u062a\\u0627\\u06cc\\u06cc\\u062f \\u0645\\u0646\\u0642\\u0636\\u06cc \\u0634\\u062f\\u0647 \\u06cc\\u0627 \\u0646\\u0627\\u0645\\u0639\\u062a\\u0628\\u0631 \\u0627\\u0633\\u062a\",\"data\":[\"\\u06a9\\u062f \\u062a\\u0627\\u06cc\\u06cc\\u062f \\u0645\\u0646\\u0642\\u0636\\u06cc \\u0634\\u062f\\u0647 \\u06cc\\u0627 \\u0646\\u0627\\u0645\\u0639\\u062a\\u0628\\u0631 \\u0627\\u0633\\u062a\",\"\\\/home\\\/sina\\\/workfiles\\\/php\\\/laravel\\\/Test\\\/apm-base-laravel\\\/app\\\/Models\\\/User\\\/OtpCode.php\",39,0],\"patch\":[],\"date\":\"2022-11-27T09:16:52.233417Z\"}",
-                            "name": ""
-                        }
-                    ]
+                    "response": []
                 },
                 {
                     "name": "POST user",
@@ -215,40 +155,20 @@
                             {
                                 "key": "Accept",
                                 "value": "application\/json"
+                            },
+                            {
+                                "key": "User-Agent",
+                                "value": "Auto-Doc"
+                            },
+                            {
+                                "key": "User-Agent-Client",
+                                "value": "Auto-Doc"
                             }
                         ],
                         "body": null,
                         "description": "Shows current logged-in user info"
                     },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "56"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"status\":200,\"error\":\"\",\"message\":\"\",\"data\":{\"user\":{\"id\":\"56194f1c-1398-44f0-87cd-c34d2356eeaf\",\"username\":\"09111111111\",\"birth_date\":null,\"description\":null,\"last_name\":\"\\u0633\\u0627\\u0645\\u0627\\u0646\\u0647\",\"first_name\":\"\\u0645\\u062f\\u06cc\\u0631\",\"national_code\":null,\"country_division_id\":null,\"avatar\":\"upload\\\/baseUpload\\\/default.jpg\",\"person_type\":\"real\",\"status\":\"active\",\"created_at\":\"2022-11-27T07:50:42.000000Z\",\"updated_at\":\"2022-11-27T07:50:42.000000Z\",\"deleted_at\":null,\"sort\":9999,\"created_by\":\"56194f1c-1398-44f0-87cd-c34d2356eeaf\",\"roles\":[{\"name\":\"\\u0645\\u062f\\u06cc\\u0631 \\u0633\\u0627\\u06cc\\u062a\",\"id\":\"791d1b02-3610-4177-9051-eb7ae6b72def\",\"actions\":[{\"alias\":\"user\\\/index\"},{\"alias\":\"user\\\/insert\"},{\"alias\":\"user\\\/update\"},{\"alias\":\"user\\\/delete\"},{\"alias\":\"user\\\/root\"},{\"alias\":\"role\\\/index\"},{\"alias\":\"role\\\/insert\"},{\"alias\":\"role\\\/update\"},{\"alias\":\"role\\\/delete\"},{\"alias\":\"role\\\/assign\"},{\"alias\":\"role\\\/root\"},{\"alias\":\"upload\\\/index\"},{\"alias\":\"upload\\\/insert\"},{\"alias\":\"upload\\\/update\"},{\"alias\":\"upload\\\/delete\"},{\"alias\":\"upload\\\/root\"},{\"alias\":\"exception_log\\\/index\"},{\"alias\":\"exception_log\\\/insert\"},{\"alias\":\"exception_log\\\/update\"},{\"alias\":\"exception_log\\\/delete\"},{\"alias\":\"exception_log\\\/root\"},{\"alias\":\"request_log\\\/index\"},{\"alias\":\"request_log\\\/insert\"},{\"alias\":\"request_log\\\/update\"},{\"alias\":\"request_log\\\/delete\"},{\"alias\":\"request_log\\\/root\"},{\"alias\":\"settings\\\/index\"},{\"alias\":\"settings\\\/insert\"},{\"alias\":\"settings\\\/update\"},{\"alias\":\"settings\\\/delete\"},{\"alias\":\"settings\\\/root\"}]}]}},\"patch\":[],\"date\":\"2022-11-27T09:16:52.298596Z\"}",
-                            "name": ""
-                        }
-                    ]
+                    "response": []
                 },
                 {
                     "name": "POST logout",
@@ -268,40 +188,20 @@
                             {
                                 "key": "Accept",
                                 "value": "application\/json"
+                            },
+                            {
+                                "key": "User-Agent",
+                                "value": "Auto-Doc"
+                            },
+                            {
+                                "key": "User-Agent-Client",
+                                "value": "Auto-Doc"
                             }
                         ],
                         "body": null,
                         "description": ""
                     },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "55"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"status\":200,\"error\":\"\",\"message\":\"\",\"data\":[],\"patch\":[],\"date\":\"2022-11-27T09:16:52.308929Z\"}",
-                            "name": ""
-                        }
-                    ]
+                    "response": []
                 },
                 {
                     "name": "POST refresh-token",
@@ -321,40 +221,20 @@
                             {
                                 "key": "Accept",
                                 "value": "application\/json"
+                            },
+                            {
+                                "key": "User-Agent",
+                                "value": "Auto-Doc"
+                            },
+                            {
+                                "key": "User-Agent-Client",
+                                "value": "Auto-Doc"
                             }
                         ],
                         "body": null,
                         "description": "Get new token"
                     },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "x-ratelimit-limit",
-                                    "value": "60"
-                                },
-                                {
-                                    "key": "x-ratelimit-remaining",
-                                    "value": "54"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 200,
-                            "body": "{\"status\":200,\"error\":\"\",\"message\":\"\",\"data\":{\"Authorization\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9Drnfyvufns.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRRapjngUInHtwX8k.QfeejrN1g2yvetUpz7ke4uwfs202211f77R81O4zk1p7O22712oa5E5edpkFg7l1jX67e7fJ1dgV2orQ40sye11527NOr04jMuu8yFtTg7IepL2o7rc3Plipds9qMf0lDewxYgvsWuQXBrRS\",\"user\":{\"id\":\"56194f1c-1398-44f0-87cd-c34d2356eeaf\",\"username\":\"09111111111\",\"birth_date\":null,\"description\":null,\"last_name\":\"\\u0633\\u0627\\u0645\\u0627\\u0646\\u0647\",\"first_name\":\"\\u0645\\u062f\\u06cc\\u0631\",\"national_code\":null,\"country_division_id\":null,\"avatar\":\"upload\\\/baseUpload\\\/default.jpg\",\"person_type\":\"real\",\"status\":\"active\",\"created_at\":\"2022-11-27T07:50:42.000000Z\",\"updated_at\":\"2022-11-27T07:50:42.000000Z\",\"deleted_at\":null,\"sort\":9999,\"created_by\":\"56194f1c-1398-44f0-87cd-c34d2356eeaf\",\"roles\":[{\"name\":\"\\u0645\\u062f\\u06cc\\u0631 \\u0633\\u0627\\u06cc\\u062a\",\"id\":\"791d1b02-3610-4177-9051-eb7ae6b72def\",\"actions\":[{\"alias\":\"user\\\/index\"},{\"alias\":\"user\\\/insert\"},{\"alias\":\"user\\\/update\"},{\"alias\":\"user\\\/delete\"},{\"alias\":\"user\\\/root\"},{\"alias\":\"role\\\/index\"},{\"alias\":\"role\\\/insert\"},{\"alias\":\"role\\\/update\"},{\"alias\":\"role\\\/delete\"},{\"alias\":\"role\\\/assign\"},{\"alias\":\"role\\\/root\"},{\"alias\":\"upload\\\/index\"},{\"alias\":\"upload\\\/insert\"},{\"alias\":\"upload\\\/update\"},{\"alias\":\"upload\\\/delete\"},{\"alias\":\"upload\\\/root\"},{\"alias\":\"exception_log\\\/index\"},{\"alias\":\"exception_log\\\/insert\"},{\"alias\":\"exception_log\\\/update\"},{\"alias\":\"exception_log\\\/delete\"},{\"alias\":\"exception_log\\\/root\"},{\"alias\":\"request_log\\\/index\"},{\"alias\":\"request_log\\\/insert\"},{\"alias\":\"request_log\\\/update\"},{\"alias\":\"request_log\\\/delete\"},{\"alias\":\"request_log\\\/root\"},{\"alias\":\"settings\\\/index\"},{\"alias\":\"settings\\\/insert\"},{\"alias\":\"settings\\\/update\"},{\"alias\":\"settings\\\/delete\"},{\"alias\":\"settings\\\/root\"}]}]}},\"patch\":[],\"date\":\"2022-11-27T09:16:52.326048Z\"}",
-                            "name": ""
-                        }
-                    ]
+                    "response": []
                 },
                 {
                     "name": "Token",
@@ -378,40 +258,20 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": null,
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "43"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":200,\"error\":\"\",\"message\":\"\",\"data\":{\"model\":{\"current_page\":1,\"data\":[{\"ip\":\"\",\"created_at\":\"2022-11-27T07:50:42.000000Z\",\"user_agent\":\"\",\"expired_token_at\":\"2100-01-01\",\"deleted\":null,\"username\":\"09111111111\",\"last_name\":\"\\u0633\\u0627\\u0645\\u0627\\u0646\\u0647\",\"first_name\":\"\\u0645\\u062f\\u06cc\\u0631\",\"national_code\":null}],\"first_page_url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/auth_token?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/auth_token?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/auth_token?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/auth_token\",\"per_page\":20,\"prev_page_url\":null,\"to\":1,\"total\":1}},\"patch\":[],\"date\":\"2022-11-27T09:16:52.686987Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         }
                     ]
                 }
@@ -443,6 +303,14 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
@@ -457,35 +325,7 @@
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "42"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":500,\"error\":\"\",\"message\":\"SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block (SQL: insert into \\\"tr00-uploads\\\" (\\\"size\\\", \\\"type\\\", \\\"path\\\", \\\"old_name\\\", \\\"new_name\\\", \\\"alt\\\", \\\"title\\\", \\\"description\\\", \\\"id\\\", \\\"created_by\\\", \\\"updated_at\\\", \\\"created_at\\\") values (10240, jpg, upload\\\/126223\\\/iEyujT4Pl7i7j0MM0Kr2x9NpGt50e2CxaGAhNGvQ.jpg, test.jpg, iEyujT4Pl7i7j0MM0Kr2x9NpGt50e2CxaGAhNGvQ.jpg, ?, ?, ?, 4885e99c-d07f-410c-aa1f-542fa7da59db, 56194f1c-1398-44f0-87cd-c34d2356eeaf, 2022-11-27 12:46:52, 2022-11-27 12:46:52))\",\"data\":[\"SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block (SQL: insert into \\\"tr00-uploads\\\" (\\\"size\\\", \\\"type\\\", \\\"path\\\", \\\"old_name\\\", \\\"new_name\\\", \\\"alt\\\", \\\"title\\\", \\\"description\\\", \\\"id\\\", \\\"created_by\\\", \\\"updated_at\\\", \\\"created_at\\\") values (10240, jpg, upload\\\/126223\\\/iEyujT4Pl7i7j0MM0Kr2x9NpGt50e2CxaGAhNGvQ.jpg, test.jpg, iEyujT4Pl7i7j0MM0Kr2x9NpGt50e2CxaGAhNGvQ.jpg, ?, ?, ?, 4885e99c-d07f-410c-aa1f-542fa7da59db, 56194f1c-1398-44f0-87cd-c34d2356eeaf, 2022-11-27 12:46:52, 2022-11-27 12:46:52))\",\"\\\/home\\\/sina\\\/workfiles\\\/php\\\/laravel\\\/Test\\\/apm-base-laravel\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Database\\\/Connection.php\",759,\"25P02\"],\"patch\":[],\"date\":\"2022-11-27T09:16:52.751488Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         },
                         {
                             "name": "POST list",
@@ -505,6 +345,14 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
@@ -513,35 +361,7 @@
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "41"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":200,\"error\":\"\",\"message\":\"\",\"data\":{\"model\":{\"current_page\":1,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/upload\\\/list?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/upload\\\/list?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/upload\\\/list?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/upload\\\/list\",\"per_page\":20,\"prev_page_url\":null,\"to\":null,\"total\":0}},\"patch\":[],\"date\":\"2022-11-27T09:16:52.764646Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         }
                     ]
                 }
@@ -573,6 +393,14 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
@@ -581,35 +409,7 @@
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "53"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":200,\"error\":\"\",\"message\":\"\",\"data\":{\"model\":{\"current_page\":1,\"data\":[{\"id\":\"604f3f59-bb92-4726-a324-23a7b8046522\",\"ip\":\"127.0.0.1\",\"ulr\":\"\\\/api\\\/v1\\\/request-log\",\"status\":\"200\",\"method\":\"POST\",\"user_agent\":\"Symfony\",\"end_status\":null,\"user_agent_client\":\"Other\",\"created_at\":\"2022-11-27T09:16:52.000000Z\",\"sort\":9999,\"token\":null,\"request\":null,\"response\":null,\"message\":null,\"user_username\":\"09111111111\",\"user_first_name\":\"\\u0645\\u062f\\u06cc\\u0631\",\"user_last_name\":\"\\u0633\\u0627\\u0645\\u0627\\u0646\\u0647\"}],\"first_page_url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/request-log?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/request-log?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/request-log?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/request-log\",\"per_page\":20,\"prev_page_url\":null,\"to\":1,\"total\":1}},\"patch\":[],\"date\":\"2022-11-27T09:16:52.350378Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         }
                     ]
                 },
@@ -635,6 +435,14 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
@@ -643,35 +451,2059 @@
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "52"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":200,\"error\":\"\",\"message\":\"\",\"data\":{\"model\":{\"current_page\":1,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/exception-log?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/exception-log?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/exception-log?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/exception-log\",\"per_page\":20,\"prev_page_url\":null,\"to\":null,\"total\":0}},\"patch\":[],\"date\":\"2022-11-27T09:16:52.388414Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Product",
+            "description": "",
+            "item": [
+                {
+                    "name": "Product",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "POST list",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/product",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/product"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "[]"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST show",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/product\/show",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/product\/show"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "insert",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/product\/insert",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/product\/insert"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"name\":\"\",\"slug\":\"\",\"barcode\":\"\",\"base_price\":\"\",\"base_wholesale_price\":\"\",\"wholesale_unit\":\"\",\"main_image\":\"\",\"star\":\"\",\"like\":\"\",\"view\":\"\",\"publish_status\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "update",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/product\/update",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/product\/update"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"name\":\"\",\"slug\":\"\",\"barcode\":\"\",\"base_price\":\"\",\"base_wholesale_price\":\"\",\"wholesale_unit\":\"\",\"main_image\":\"\",\"star\":\"\",\"like\":\"\",\"view\":\"\",\"publish_status\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST delete",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/product\/delete",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/product\/delete"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "ProductVariation",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "POST list",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productvariation",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productvariation"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "[]"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST show",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productvariation\/show",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productvariation\/show"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "insert",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productvariation\/insert",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productvariation\/insert"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"product_id\":\"\",\"variation_type_id\":\"\",\"value\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "update",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productvariation\/update",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productvariation\/update"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"product_id\":\"\",\"variation_type_id\":\"\",\"value\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST delete",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productvariation\/delete",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productvariation\/delete"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "ProductVariationCombination",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "POST list",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productvariationcombination",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productvariationcombination"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "[]"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST show",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productvariationcombination\/show",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productvariationcombination\/show"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "insert",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productvariationcombination\/insert",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productvariationcombination\/insert"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"variation_1_id\":\"\",\"variation_2_id\":\"\",\"variation_3_id\":\"\",\"sell_type\":\"\",\"stock\":\"\",\"discount\":\"\",\"minimum\":\"\",\"maximum\":\"\",\"price\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "update",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productvariationcombination\/update",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productvariationcombination\/update"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"variation_1_id\":\"\",\"variation_2_id\":\"\",\"variation_3_id\":\"\",\"sell_type\":\"\",\"stock\":\"\",\"discount\":\"\",\"minimum\":\"\",\"maximum\":\"\",\"price\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST delete",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productvariationcombination\/delete",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productvariationcombination\/delete"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Address",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "POST list",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/address",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/address"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "[]"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST show",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/address\/show",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/address\/show"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "insert",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/address\/insert",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/address\/insert"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"user_id\":\"\",\"postal_code\":\"\",\"address\":\"\",\"country_division_id\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "update",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/address\/update",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/address\/update"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"user_id\":\"\",\"postal_code\":\"\",\"address\":\"\",\"country_division_id\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST delete",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/address\/delete",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/address\/delete"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Category",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "POST list",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/category",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/category"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "[]"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST show",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/category\/show",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/category\/show"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "insert",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/category\/insert",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/category\/insert"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"name\":\"\",\"slug\":\"\",\"barcode\":\"\",\"parent_id\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "update",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/category\/update",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/category\/update"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"name\":\"\",\"slug\":\"\",\"barcode\":\"\",\"parent_id\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST delete",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/category\/delete",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/category\/delete"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "CategoryProduct",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "POST list",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/categoryproduct",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/categoryproduct"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "[]"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST show",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/categoryproduct\/show",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/categoryproduct\/show"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "insert",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/categoryproduct\/insert",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/categoryproduct\/insert"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"product_id\":\"\",\"category_id\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "update",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/categoryproduct\/update",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/categoryproduct\/update"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"product_id\":\"\",\"category_id\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST delete",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/categoryproduct\/delete",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/categoryproduct\/delete"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "ProductInfo",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "POST list",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productinfo",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productinfo"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "[]"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST show",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productinfo\/show",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productinfo\/show"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "insert",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productinfo\/insert",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productinfo\/insert"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"product_id\":\"\",\"type\":\"\",\"ability\":\"\",\"description\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "update",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productinfo\/update",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productinfo\/update"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"product_id\":\"\",\"type\":\"\",\"ability\":\"\",\"description\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST delete",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productinfo\/delete",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productinfo\/delete"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Comment",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "POST list",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/comment",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/comment"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "[]"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST show",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/comment\/show",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/comment\/show"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "insert",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/comment\/insert",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/comment\/insert"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"user_id\":\"\",\"product_id\":\"\",\"text\":\"\",\"star\":\"\",\"parent_id\":\"\",\"is_owner\":\"\",\"status\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "update",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/comment\/update",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/comment\/update"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"user_id\":\"\",\"product_id\":\"\",\"text\":\"\",\"star\":\"\",\"parent_id\":\"\",\"is_owner\":\"\",\"status\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST delete",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/comment\/delete",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/comment\/delete"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "ProductTag",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "POST list",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/producttag",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/producttag"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "[]"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST show",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/producttag\/show",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/producttag\/show"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "insert",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/producttag\/insert",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/producttag\/insert"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"product_id\":\"\",\"tag_id\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "update",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/producttag\/update",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/producttag\/update"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"product_id\":\"\",\"tag_id\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST delete",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/producttag\/delete",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/producttag\/delete"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "LogPrice",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "POST list",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/logprice",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/logprice"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "[]"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST show",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/logprice\/show",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/logprice\/show"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "insert",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/logprice\/insert",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/logprice\/insert"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"varcomb_id\":\"\",\"product_id\":\"\",\"price\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "update",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/logprice\/update",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/logprice\/update"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"varcomb_id\":\"\",\"product_id\":\"\",\"price\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST delete",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/logprice\/delete",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/logprice\/delete"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "ProductImage",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "POST list",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productimage",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productimage"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "[]"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST show",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productimage\/show",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productimage\/show"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "insert",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productimage\/insert",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productimage\/insert"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"product_variation_id\":\"\",\"product_id\":\"\",\"alt\":\"\",\"height\":\"\",\"width\":\"\",\"size\":\"\",\"path\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "update",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productimage\/update",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productimage\/update"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"product_variation_id\":\"\",\"product_id\":\"\",\"alt\":\"\",\"height\":\"\",\"width\":\"\",\"size\":\"\",\"path\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST delete",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/productimage\/delete",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/productimage\/delete"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
                         }
                     ]
                 }
@@ -690,9 +2522,9 @@
                             "request": {
                                 "url": {
                                     "host": "{{baseUrl}}",
-                                    "path": "api\/v1\/country_division",
+                                    "path": "api\/v1\/country-division",
                                     "query": [],
-                                    "raw": "{{baseUrl}}\/api\/v1\/country_division"
+                                    "raw": "{{baseUrl}}\/api\/v1\/country-division"
                                 },
                                 "method": "POST",
                                 "header": [
@@ -703,6 +2535,14 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
@@ -711,44 +2551,16 @@
                                 },
                                 "description": "List of coutries and cities filtered by various options"
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "57"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":200,\"error\":\"\",\"message\":\"\",\"data\":{\"model\":{\"current_page\":1,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/country_division?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/country_division?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/country_division?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/country_division\",\"per_page\":20,\"prev_page_url\":null,\"to\":null,\"total\":0}},\"patch\":[],\"date\":\"2022-11-27T09:16:52.283590Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         },
                         {
                             "name": "POST show",
                             "request": {
                                 "url": {
                                     "host": "{{baseUrl}}",
-                                    "path": "api\/v1\/country_division\/show",
+                                    "path": "api\/v1\/country-division\/show",
                                     "query": [],
-                                    "raw": "{{baseUrl}}\/api\/v1\/country_division\/show"
+                                    "raw": "{{baseUrl}}\/api\/v1\/country-division\/show"
                                 },
                                 "method": "POST",
                                 "header": [
@@ -759,6 +2571,14 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
@@ -767,44 +2587,16 @@
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "40"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":403,\"error\":\"\",\"message\":\"\\u062f\\u0633\\u062a\\u0631\\u0633\\u06cc \\u063a\\u06cc\\u0631 \\u0645\\u062c\\u0627\\u0632\",\"data\":[],\"patch\":[],\"date\":\"2022-11-27T09:16:52.777826Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         },
                         {
                             "name": "insert",
                             "request": {
                                 "url": {
                                     "host": "{{baseUrl}}",
-                                    "path": "api\/v1\/country_division\/insert",
+                                    "path": "api\/v1\/country-division\/insert",
                                     "query": [],
-                                    "raw": "{{baseUrl}}\/api\/v1\/country_division\/insert"
+                                    "raw": "{{baseUrl}}\/api\/v1\/country-division\/insert"
                                 },
                                 "method": "POST",
                                 "header": [
@@ -815,6 +2607,14 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
@@ -823,44 +2623,16 @@
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "39"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":403,\"error\":\"\",\"message\":\"\\u062f\\u0633\\u062a\\u0631\\u0633\\u06cc \\u063a\\u06cc\\u0631 \\u0645\\u062c\\u0627\\u0632\",\"data\":[],\"patch\":[],\"date\":\"2022-11-27T09:16:52.788558Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         },
                         {
                             "name": "update",
                             "request": {
                                 "url": {
                                     "host": "{{baseUrl}}",
-                                    "path": "api\/v1\/country_division\/update",
+                                    "path": "api\/v1\/country-division\/update",
                                     "query": [],
-                                    "raw": "{{baseUrl}}\/api\/v1\/country_division\/update"
+                                    "raw": "{{baseUrl}}\/api\/v1\/country-division\/update"
                                 },
                                 "method": "POST",
                                 "header": [
@@ -871,6 +2643,14 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
@@ -879,44 +2659,16 @@
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "38"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":403,\"error\":\"\",\"message\":\"\\u062f\\u0633\\u062a\\u0631\\u0633\\u06cc \\u063a\\u06cc\\u0631 \\u0645\\u062c\\u0627\\u0632\",\"data\":[],\"patch\":[],\"date\":\"2022-11-27T09:16:52.798506Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         },
                         {
                             "name": "POST delete",
                             "request": {
                                 "url": {
                                     "host": "{{baseUrl}}",
-                                    "path": "api\/v1\/country_division\/delete",
+                                    "path": "api\/v1\/country-division\/delete",
                                     "query": [],
-                                    "raw": "{{baseUrl}}\/api\/v1\/country_division\/delete"
+                                    "raw": "{{baseUrl}}\/api\/v1\/country-division\/delete"
                                 },
                                 "method": "POST",
                                 "header": [
@@ -927,6 +2679,14 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
@@ -935,35 +2695,7 @@
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "37"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":403,\"error\":\"\",\"message\":\"\\u062f\\u0633\\u062a\\u0631\\u0633\\u06cc \\u063a\\u06cc\\u0631 \\u0645\\u062c\\u0627\\u0632\",\"data\":[],\"patch\":[],\"date\":\"2022-11-27T09:16:52.808781Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         }
                     ]
                 },
@@ -989,6 +2721,14 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
@@ -997,35 +2737,7 @@
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "36"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":200,\"error\":\"\",\"message\":\"\",\"data\":{\"model\":{\"current_page\":1,\"data\":[],\"first_page_url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/setting?page=1\",\"from\":null,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/setting?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/setting?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/setting\",\"per_page\":20,\"prev_page_url\":null,\"to\":null,\"total\":0}},\"patch\":[],\"date\":\"2022-11-27T09:16:52.823453Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         },
                         {
                             "name": "insert",
@@ -1045,6 +2757,14 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
@@ -1053,35 +2773,7 @@
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "35"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":412,\"error\":\"\",\"message\":\"\\u0627\\u0637\\u0644\\u0627\\u0639\\u0627\\u062a \\u0627\\u0631\\u0633\\u0627\\u0644\\u06cc \\u0646\\u0627\\u0642\\u0635 \\u06cc\\u0627 \\u0627\\u0634\\u062a\\u0628\\u0627\\u0647 \\u0627\\u0633\\u062a\",\"data\":[],\"patch\":[],\"date\":\"2022-11-27T09:16:52.837401Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         },
                         {
                             "name": "update",
@@ -1101,6 +2793,14 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
@@ -1109,35 +2809,7 @@
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "34"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":412,\"error\":\"\",\"message\":\"\\u0627\\u0637\\u0644\\u0627\\u0639\\u0627\\u062a \\u0627\\u0631\\u0633\\u0627\\u0644\\u06cc \\u0646\\u0627\\u0642\\u0635 \\u06cc\\u0627 \\u0627\\u0634\\u062a\\u0628\\u0627\\u0647 \\u0627\\u0633\\u062a\",\"data\":[],\"patch\":[],\"date\":\"2022-11-27T09:16:52.853580Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         },
                         {
                             "name": "POST delete",
@@ -1157,6 +2829,14 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
@@ -1165,35 +2845,7 @@
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "33"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":412,\"error\":\"\",\"message\":\"\\u0627\\u0637\\u0644\\u0627\\u0639\\u0627\\u062a \\u0627\\u0631\\u0633\\u0627\\u0644\\u06cc \\u0646\\u0627\\u0642\\u0635 \\u06cc\\u0627 \\u0627\\u0634\\u062a\\u0628\\u0627\\u0647 \\u0627\\u0633\\u062a\",\"data\":[],\"patch\":[],\"date\":\"2022-11-27T09:16:52.885931Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         }
                     ]
                 }
@@ -1225,6 +2877,14 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
@@ -1233,35 +2893,7 @@
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "51"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":200,\"error\":\"\",\"message\":\"\",\"data\":{\"model\":{\"current_page\":1,\"data\":[{\"id\":\"56194f1c-1398-44f0-87cd-c34d2356eeaf\",\"username\":\"09111111111\",\"birth_date\":null,\"description\":null,\"last_name\":\"\\u0633\\u0627\\u0645\\u0627\\u0646\\u0647\",\"first_name\":\"\\u0645\\u062f\\u06cc\\u0631\",\"national_code\":null,\"country_division_id\":null,\"avatar\":\"upload\\\/baseUpload\\\/default.jpg\",\"person_type\":\"real\",\"status\":\"active\",\"created_at\":\"2022-11-27T07:50:42.000000Z\",\"updated_at\":\"2022-11-27T07:50:42.000000Z\",\"deleted_at\":null,\"sort\":9999,\"created_by\":\"56194f1c-1398-44f0-87cd-c34d2356eeaf\"}],\"first_page_url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/user?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/user?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/user?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/user\",\"per_page\":20,\"prev_page_url\":null,\"to\":1,\"total\":1}},\"patch\":[],\"date\":\"2022-11-27T09:16:52.402445Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         },
                         {
                             "name": "POST show",
@@ -1281,6 +2913,14 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
@@ -1289,35 +2929,7 @@
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "50"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":412,\"error\":\"\",\"message\":\"\\u0627\\u0637\\u0644\\u0627\\u0639\\u0627\\u062a \\u0627\\u0631\\u0633\\u0627\\u0644\\u06cc \\u0646\\u0627\\u0642\\u0635 \\u06cc\\u0627 \\u0627\\u0634\\u062a\\u0628\\u0627\\u0647 \\u0627\\u0633\\u062a\",\"data\":[],\"patch\":[],\"date\":\"2022-11-27T09:16:52.415920Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         },
                         {
                             "name": "POST insert",
@@ -1337,43 +2949,23 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"username\":\"'09159654199'\",\"password\":\"'123456'\",\"first_name\":\"'test'\",\"last_name\":\"'test'\",\"role_id\":[\"rerum\"],\"status\":\"'active'\",\"person_type\":\"'real'\"}"
+                                    "raw": "{\"username\":\"'09159654199'\",\"password\":\"'123456'\",\"first_name\":\"'test'\",\"last_name\":\"'test'\",\"role_id\":[\"quae\"],\"status\":\"'active'\",\"person_type\":\"'real'\"}"
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "49"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":412,\"error\":\"\",\"message\":\"\\u0627\\u0637\\u0644\\u0627\\u0639\\u0627\\u062a \\u0627\\u0631\\u0633\\u0627\\u0644\\u06cc \\u0646\\u0627\\u0642\\u0635 \\u06cc\\u0627 \\u0627\\u0634\\u062a\\u0628\\u0627\\u0647 \\u0627\\u0633\\u062a\",\"data\":[],\"patch\":[],\"date\":\"2022-11-27T09:16:52.503983Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         },
                         {
                             "name": "POST update",
@@ -1393,43 +2985,23 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"id\":\"'56194f1c-1398-44f0-87cd-c34d2356eeaf'\",\"username\":\"'09159654199'\",\"password\":\"'123456'\",\"first_name\":\"'test'\",\"last_name\":\"'test'\",\"role_id\":[\"impedit\"],\"status\":\"'active'\",\"person_type\":\"'real'\"}"
+                                    "raw": "{\"id\":\"'56194f1c-1398-44f0-87cd-c34d2356eeaf'\",\"username\":\"'09159654199'\",\"password\":\"'123456'\",\"first_name\":\"'test'\",\"last_name\":\"'test'\",\"role_id\":[\"eligendi\"],\"status\":\"'active'\",\"person_type\":\"'real'\"}"
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "48"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":500,\"error\":\"\",\"message\":\"SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for type uuid: \\\"'56194f1c-1398-44f0-87cd-c34d2356eeaf'\\\"\\nCONTEXT:  unnamed portal parameter $2 = '...' (SQL: select count(*) as aggregate from \\\"tr00-users\\\" where \\\"username\\\" = '09159654199' and \\\"id\\\" != '56194f1c-1398-44f0-87cd-c34d2356eeaf' and \\\"tr00-users\\\".\\\"deleted_at\\\" is null)\",\"data\":[\"SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for type uuid: \\\"'56194f1c-1398-44f0-87cd-c34d2356eeaf'\\\"\\nCONTEXT:  unnamed portal parameter $2 = '...' (SQL: select count(*) as aggregate from \\\"tr00-users\\\" where \\\"username\\\" = '09159654199' and \\\"id\\\" != '56194f1c-1398-44f0-87cd-c34d2356eeaf' and \\\"tr00-users\\\".\\\"deleted_at\\\" is null)\",\"\\\/home\\\/sina\\\/workfiles\\\/php\\\/laravel\\\/Test\\\/apm-base-laravel\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Database\\\/Connection.php\",759,\"22P02\"],\"patch\":[],\"date\":\"2022-11-27T09:16:52.516712Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         },
                         {
                             "name": "POST delete",
@@ -1449,6 +3021,14 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
@@ -1457,35 +3037,7 @@
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "47"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":412,\"error\":\"\",\"message\":\"\\u0627\\u0637\\u0644\\u0627\\u0639\\u0627\\u062a \\u0627\\u0631\\u0633\\u0627\\u0644\\u06cc \\u0646\\u0627\\u0642\\u0635 \\u06cc\\u0627 \\u0627\\u0634\\u062a\\u0628\\u0627\\u0647 \\u0627\\u0633\\u062a\",\"data\":[],\"patch\":[],\"date\":\"2022-11-27T09:16:52.532929Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         },
                         {
                             "name": "POST profile",
@@ -1505,43 +3057,23 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"id\":\"'56194f1c-1398-44f0-87cd-c34d2356eeaf'\",\"avatar\":\"'\\\/upload\\\/default.jpg'\",\"password\":\"'123456'\",\"first_name\":\"'test'\",\"last_name\":\"'test'\",\"national_code\":\"'0880306319'\",\"birth_date\":\"'2022-10-01'\"}"
+                                    "raw": "{\"avatar\":\"'\\\/upload\\\/default.jpg'\",\"password\":\"'123456'\",\"first_name\":\"'test'\",\"last_name\":\"'test'\",\"national_code\":\"'0880306319'\",\"birth_date\":\"'2022-10-01'\"}"
                                 },
-                                "description": "Get user profile or update it\nfields are all optional"
+                                "description": "Get current user profile or update it\nfields are all optional"
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "46"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":500,\"error\":\"\",\"message\":\"SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block (SQL: update \\\"tr00-users\\\" set \\\"password\\\" = $2y$10$BKpoP\\\/I6Cp7JGwsNTj.DUuKKOXgTTN2U4DHfmFaiBk0ZSSa3vcpmK, \\\"last_name\\\" = 'test', \\\"first_name\\\" = 'test', \\\"national_code\\\" = '0880306319', \\\"avatar\\\" = '\\\/upload\\\/default.jpg', \\\"updated_at\\\" = 2022-11-27 12:46:52 where \\\"id\\\" = 56194f1c-1398-44f0-87cd-c34d2356eeaf)\",\"data\":[\"SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block (SQL: update \\\"tr00-users\\\" set \\\"password\\\" = $2y$10$BKpoP\\\/I6Cp7JGwsNTj.DUuKKOXgTTN2U4DHfmFaiBk0ZSSa3vcpmK, \\\"last_name\\\" = 'test', \\\"first_name\\\" = 'test', \\\"national_code\\\" = '0880306319', \\\"avatar\\\" = '\\\/upload\\\/default.jpg', \\\"updated_at\\\" = 2022-11-27 12:46:52 where \\\"id\\\" = 56194f1c-1398-44f0-87cd-c34d2356eeaf)\",\"\\\/home\\\/sina\\\/workfiles\\\/php\\\/laravel\\\/Test\\\/apm-base-laravel\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Database\\\/Connection.php\",759,\"25P02\"],\"patch\":[],\"date\":\"2022-11-27T09:16:52.636205Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         },
                         {
                             "name": "POST search-by-role",
@@ -1561,43 +3093,23 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"role_id\":[\"natus\"]}"
+                                    "raw": "{\"role_id\":[\"eius\"]}"
                                 },
                                 "description": "List of users searched by list of role ids"
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "45"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":500,\"error\":\"\",\"message\":\"SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for type uuid: \\\"natus\\\"\\nCONTEXT:  unnamed portal parameter $1 = '...' (SQL: select count(*) as aggregate from \\\"tr00-users\\\" where exists (select * from \\\"tr00-roles\\\" inner join \\\"tr00-role_user\\\" on \\\"tr00-roles\\\".\\\"id\\\" = \\\"tr00-role_user\\\".\\\"role_id\\\" where \\\"tr00-users\\\".\\\"id\\\" = \\\"tr00-role_user\\\".\\\"user_id\\\" and \\\"tr00-roles\\\".\\\"id\\\" in (natus) and \\\"tr00-role_user\\\".\\\"deleted_at\\\" is null and \\\"tr00-roles\\\".\\\"deleted_at\\\" is null) and \\\"tr00-users\\\".\\\"deleted_at\\\" is null)\",\"data\":[\"SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for type uuid: \\\"natus\\\"\\nCONTEXT:  unnamed portal parameter $1 = '...' (SQL: select count(*) as aggregate from \\\"tr00-users\\\" where exists (select * from \\\"tr00-roles\\\" inner join \\\"tr00-role_user\\\" on \\\"tr00-roles\\\".\\\"id\\\" = \\\"tr00-role_user\\\".\\\"role_id\\\" where \\\"tr00-users\\\".\\\"id\\\" = \\\"tr00-role_user\\\".\\\"user_id\\\" and \\\"tr00-roles\\\".\\\"id\\\" in (natus) and \\\"tr00-role_user\\\".\\\"deleted_at\\\" is null and \\\"tr00-roles\\\".\\\"deleted_at\\\" is null) and \\\"tr00-users\\\".\\\"deleted_at\\\" is null)\",\"\\\/home\\\/sina\\\/workfiles\\\/php\\\/laravel\\\/Test\\\/apm-base-laravel\\\/vendor\\\/laravel\\\/framework\\\/src\\\/Illuminate\\\/Database\\\/Connection.php\",759,\"22P02\"],\"patch\":[],\"date\":\"2022-11-27T09:16:52.654545Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         }
                     ]
                 },
@@ -1623,6 +3135,14 @@
                                     {
                                         "key": "Accept",
                                         "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
                                     }
                                 ],
                                 "body": {
@@ -1631,35 +3151,7 @@
                                 },
                                 "description": ""
                             },
-                            "response": [
-                                {
-                                    "header": [
-                                        {
-                                            "key": "cache-control",
-                                            "value": "no-cache, private"
-                                        },
-                                        {
-                                            "key": "content-type",
-                                            "value": "application\/json"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-limit",
-                                            "value": "60"
-                                        },
-                                        {
-                                            "key": "x-ratelimit-remaining",
-                                            "value": "44"
-                                        },
-                                        {
-                                            "key": "access-control-allow-origin",
-                                            "value": "*"
-                                        }
-                                    ],
-                                    "code": 200,
-                                    "body": "{\"status\":200,\"error\":\"\",\"message\":\"\",\"data\":{\"model\":{\"current_page\":1,\"data\":[{\"id\":\"791d1b02-3610-4177-9051-eb7ae6b72def\",\"name\":\"\\u0645\\u062f\\u06cc\\u0631 \\u0633\\u0627\\u06cc\\u062a\",\"is_default\":false,\"created_at\":\"2022-11-27T07:50:42.000000Z\",\"sort\":9999},{\"id\":\"5246f14d-1906-4e34-a412-8fb689d20f23\",\"name\":\"\\u06a9\\u0627\\u0631\\u0628\\u0631\\u0627\\u0646\",\"is_default\":false,\"created_at\":\"2022-11-27T07:50:42.000000Z\",\"sort\":9999}],\"first_page_url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/role?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/role?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/role?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/localhost:8001\\\/api\\\/v1\\\/role\",\"per_page\":20,\"prev_page_url\":null,\"to\":2,\"total\":2}},\"patch\":[],\"date\":\"2022-11-27T09:16:52.667867Z\"}",
-                                    "name": ""
-                                }
-                            ]
+                            "response": []
                         }
                     ]
                 }
@@ -1671,7 +3163,6 @@
         "bearer": [
             {
                 "key": "Authorization",
-                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi",
                 "type": "string"
             }
         ]

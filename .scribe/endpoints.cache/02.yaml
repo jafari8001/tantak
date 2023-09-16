@@ -20,6 +20,8 @@ endpoints:
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
       Content-Type: application/json
       Accept: application/json
+      User-Agent: Auto-Doc
+      User-Agent-Client: Auto-Doc
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -31,21 +33,11 @@ endpoints:
         required: false
         example: null
         type: object
+        enumValues: []
         custom: []
     cleanBodyParameters: []
     fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":200,"error":"","message":"","data":{"model":{"current_page":1,"data":[{"id":"604f3f59-bb92-4726-a324-23a7b8046522","ip":"127.0.0.1","ulr":"\/api\/v1\/request-log","status":"200","method":"POST","user_agent":"Symfony","end_status":null,"user_agent_client":"Other","created_at":"2022-11-27T09:16:52.000000Z","sort":9999,"token":null,"request":null,"response":null,"message":null,"user_username":"09111111111","user_first_name":"\u0645\u062f\u06cc\u0631","user_last_name":"\u0633\u0627\u0645\u0627\u0646\u0647"}],"first_page_url":"http:\/\/localhost:8001\/api\/v1\/request-log?page=1","from":1,"last_page":1,"last_page_url":"http:\/\/localhost:8001\/api\/v1\/request-log?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8001\/api\/v1\/request-log?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8001\/api\/v1\/request-log","per_page":20,"prev_page_url":null,"to":1,"total":1}},"patch":[],"date":"2022-11-27T09:16:52.350378Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '53'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
+    responses: []
     responseFields: []
     auth:
       - headers
@@ -72,6 +64,8 @@ endpoints:
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
       Content-Type: application/json
       Accept: application/json
+      User-Agent: Auto-Doc
+      User-Agent-Client: Auto-Doc
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -83,21 +77,11 @@ endpoints:
         required: false
         example: null
         type: object
+        enumValues: []
         custom: []
     cleanBodyParameters: []
     fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":200,"error":"","message":"","data":{"model":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost:8001\/api\/v1\/exception-log?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost:8001\/api\/v1\/exception-log?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8001\/api\/v1\/exception-log?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8001\/api\/v1\/exception-log","per_page":20,"prev_page_url":null,"to":null,"total":0}},"patch":[],"date":"2022-11-27T09:16:52.388414Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '52'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
+    responses: []
     responseFields: []
     auth:
       - headers

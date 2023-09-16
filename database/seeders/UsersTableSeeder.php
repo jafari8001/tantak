@@ -17,19 +17,27 @@ class UsersTableSeeder extends Seeder
                 "first_name" => "مدیر",
                 "last_name" => "سامانه",
                 "username" => "09111111111",
-                "id" => env('USER_ADMIN_ID'),
-                "role" => env('ROLE_ADMIN_ID'),
-            ],
+                "phone_number" => "09933861217",
+                "national_code" => "0880348119",
+                "person_type" => "real",
+                "status" => "active",
+                "id" => "56194f1c-1398-44f0-87cd-c34d2356eeaf",
+                "role" => "791d1b02-3610-4177-9051-eb7ae6b72def",
+            ]
         ];
 
         foreach ($items as $item) {
-            $model = new \App\Models\User\User();
-            $model->status = "active";
+            $model = new User();
+            $model->status = $item['status'];
             $model->username = $item['username'];
             $model->last_name = $item['last_name'];
             $model->first_name = $item['first_name'];
-            $model->created_by = env('USER_ADMIN_ID');
-            $model->password = Hash::make('123456');
+            $model->person_type = $item['person_type'];
+            $model->password = Hash::make('jafari8001');
+            $model->phone_number = $item['phone_number'];
+            $model->national_code = $item['national_code'];
+            $model->created_by = "56194f1c-1398-44f0-87cd-c34d2356eeaf";
+        
             if (isset($item['id'])) {
                 $model->id = $item['id'];
             } else {
@@ -44,8 +52,8 @@ class UsersTableSeeder extends Seeder
         */
         $model = new AuthToken();
         $model->ip = '';
-        $model->auth_token = env('SCRIBE_TOKEN');
-        $model->created_by = env('USER_ADMIN_ID');
+        $model->auth_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi";
+        $model->created_by = "56194f1c-1398-44f0-87cd-c34d2356eeaf";
         $model->user_agent = '';
         $model->user_agent_client = '';
         $model->expired_token_at = '2100-01-01';

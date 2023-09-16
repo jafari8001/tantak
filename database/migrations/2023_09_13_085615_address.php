@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('addresses', function(Blueprint $table){
             $table->uuid('id')->primary();
 
-            $table->uuid('user_id');
+            $table->uuid('user_id')->index();
             $table->foreign('user_id')->on('users')->references('id');
 
             $table->string('postal_code',20);
@@ -31,7 +31,6 @@ return new class extends Migration
             $table->uuid('created_by')->nullable();
             $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
         
-            $table->index('user_id');
         });
     }
 

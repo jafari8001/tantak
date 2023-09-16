@@ -49,14 +49,14 @@ class TempActionsRolesSeeder extends Seeder
         $parent["fa_id"]->sort = $this->sort;
         $parent["fa_id"]->name = $parent["name"];
         $parent["fa_id"]->alias = $parent["alias"];
-        $parent["fa_id"]->created_by = env('USER_ADMIN_ID');
+        $parent["fa_id"]->created_by = "56194f1c-1398-44f0-87cd-c34d2356eeaf";
         $parent["fa_id"]->save();
 
         DB::table('action_role')
             ->insert([
                 'action_id' => $parent["fa_id"]->id,
                 'id' => (string) Str::uuid(),
-                'role_id' => env("ROLE_ADMIN_ID"),
+                'role_id' => "791d1b02-3610-4177-9051-eb7ae6b72def",
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ]);
@@ -71,14 +71,14 @@ class TempActionsRolesSeeder extends Seeder
             $action->name = $item["name"];
             $action->alias = $item["alias"];
             $action->parent = $parent["fa_id"]->id;
-            $action->created_by = env('USER_ADMIN_ID');
+            $action->created_by = "56194f1c-1398-44f0-87cd-c34d2356eeaf";
             $action->save();
 
             DB::table('action_role')
                 ->insert([
                     'action_id' => $action->id,
                     'id' => (string) Str::uuid(),
-                    'role_id' => env("ROLE_ADMIN_ID"),
+                    'role_id' => "791d1b02-3610-4177-9051-eb7ae6b72def",
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now()
                 ]);

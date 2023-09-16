@@ -18,6 +18,8 @@ endpoints:
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
       Content-Type: multipart/form-data
       Accept: application/json
+      User-Agent: Auto-Doc
+      User-Agent-Client: Auto-Doc
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -29,22 +31,12 @@ endpoints:
         required: true
         example: null
         type: file
+        enumValues: []
         custom: []
     cleanBodyParameters: []
     fileParameters:
       file: null
-    responses:
-      -
-        status: 200
-        content: '{"status":500,"error":"","message":"SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block (SQL: insert into \"tr00-uploads\" (\"size\", \"type\", \"path\", \"old_name\", \"new_name\", \"alt\", \"title\", \"description\", \"id\", \"created_by\", \"updated_at\", \"created_at\") values (10240, jpg, upload\/126223\/iEyujT4Pl7i7j0MM0Kr2x9NpGt50e2CxaGAhNGvQ.jpg, test.jpg, iEyujT4Pl7i7j0MM0Kr2x9NpGt50e2CxaGAhNGvQ.jpg, ?, ?, ?, 4885e99c-d07f-410c-aa1f-542fa7da59db, 56194f1c-1398-44f0-87cd-c34d2356eeaf, 2022-11-27 12:46:52, 2022-11-27 12:46:52))","data":["SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block (SQL: insert into \"tr00-uploads\" (\"size\", \"type\", \"path\", \"old_name\", \"new_name\", \"alt\", \"title\", \"description\", \"id\", \"created_by\", \"updated_at\", \"created_at\") values (10240, jpg, upload\/126223\/iEyujT4Pl7i7j0MM0Kr2x9NpGt50e2CxaGAhNGvQ.jpg, test.jpg, iEyujT4Pl7i7j0MM0Kr2x9NpGt50e2CxaGAhNGvQ.jpg, ?, ?, ?, 4885e99c-d07f-410c-aa1f-542fa7da59db, 56194f1c-1398-44f0-87cd-c34d2356eeaf, 2022-11-27 12:46:52, 2022-11-27 12:46:52))","\/home\/sina\/workfiles\/php\/laravel\/Test\/apm-base-laravel\/vendor\/laravel\/framework\/src\/Illuminate\/Database\/Connection.php",759,"25P02"],"patch":[],"date":"2022-11-27T09:16:52.751488Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '42'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
+    responses: []
     responseFields: []
     auth:
       - headers
@@ -71,6 +63,8 @@ endpoints:
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ91iAVvZjwus.zdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRlAbjg3wped7eWZK.7SOmNVwhdducsM1rnSg962wjw2022111P5LurVbeLgatvA2611fjhj73Ae8riw4G1fQ1r2rI77LTN2r47NfvH1108frTh7PrfNg26dsSPHkjNiyxt7rFMW6pQWre72e51ePwYeQlltgVqVDi'
       Content-Type: application/json
       Accept: application/json
+      User-Agent: Auto-Doc
+      User-Agent-Client: Auto-Doc
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -82,21 +76,11 @@ endpoints:
         required: false
         example: null
         type: object
+        enumValues: []
         custom: []
     cleanBodyParameters: []
     fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"status":200,"error":"","message":"","data":{"model":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost:8001\/api\/v1\/upload\/list?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost:8001\/api\/v1\/upload\/list?page=1","links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8001\/api\/v1\/upload\/list?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"next_page_url":null,"path":"http:\/\/localhost:8001\/api\/v1\/upload\/list","per_page":20,"prev_page_url":null,"to":null,"total":0}},"patch":[],"date":"2022-11-27T09:16:52.764646Z"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '41'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
+    responses: []
     responseFields: []
     auth:
       - headers

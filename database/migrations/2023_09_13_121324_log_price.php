@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('log_prices', function(Blueprint $table){
             $table->uuid('id')->primary();
 
-            $table->uuid('varcomb_id')->nullable();
+            $table->uuid('varcomb_id')->nullable()->index();
             $table->foreign('varcomb_id')->references('id')->on('product_variation_combinations');
 
-            $table->uuid('product_id');
+            $table->uuid('product_id')->index();
             $table->foreign('product_id')->references('id')->on('products');
 
             $table->bigInteger('price');
@@ -30,8 +30,6 @@ return new class extends Migration
             $table->uuid('created_by')->nullable();
             $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
 
-            $table->index('varcomb_id');
-            $table->index('product_id');
         });
     }
 

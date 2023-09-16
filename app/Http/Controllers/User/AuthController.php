@@ -76,7 +76,6 @@ class AuthController extends Controller
         $this->validator($request, ["username", "password"]);
 
         $user = User::login($request->username, $request->password);
-
         Auth::login($user);
         $user = $this->getUserInfo(auth()->user());
         $token = AuthToken::setToken($request, auth()->user()->id);

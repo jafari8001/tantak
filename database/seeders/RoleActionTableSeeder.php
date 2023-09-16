@@ -18,7 +18,7 @@ class RoleActionTableSeeder extends Seeder
         foreach ($actions as $action) {
             $role_action_exists = DB::table('action_role')
                 ->where('action_id' , $action->id)
-                ->where('role_id' , env("ROLE_ADMIN_ID"))
+                ->where('role_id' , "791d1b02-3610-4177-9051-eb7ae6b72def")
                 ->exists();
 
             if(!$role_action_exists){
@@ -26,7 +26,7 @@ class RoleActionTableSeeder extends Seeder
                     ->insert([
                         'action_id' => $action->id,
                         'id' => (string) Str::uuid(),
-                        'role_id' => env("ROLE_ADMIN_ID"),
+                        'role_id' => "791d1b02-3610-4177-9051-eb7ae6b72def",
                         'created_at' => Carbon::now(),
                         'updated_at' => Carbon::now()
                     ]);

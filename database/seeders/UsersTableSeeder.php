@@ -33,10 +33,10 @@ class UsersTableSeeder extends Seeder
             $model->last_name = $item['last_name'];
             $model->first_name = $item['first_name'];
             $model->person_type = $item['person_type'];
-            $model->password = Hash::make('jafari8001');
+            $model->password = Hash::make('123456');
             $model->phone_number = $item['phone_number'];
             $model->national_code = $item['national_code'];
-            $model->created_by = "56194f1c-1398-44f0-87cd-c34d2356eeaf";
+            $model->created_by = env('USER_ADMIN_ID');
         
             if (isset($item['id'])) {
                 $model->id = $item['id'];

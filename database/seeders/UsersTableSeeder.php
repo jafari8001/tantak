@@ -21,8 +21,8 @@ class UsersTableSeeder extends Seeder
                 "national_code" => "0880348119",
                 "person_type" => "real",
                 "status" => "active",
-                "id" => "56194f1c-1398-44f0-87cd-c34d2356eeaf",
-                "role" => "791d1b02-3610-4177-9051-eb7ae6b72def",
+                "id" => env('USER_ADMIN_ID'),
+                "role" => env('ROLE_ADMIN_ID'),
             ]
         ];
 

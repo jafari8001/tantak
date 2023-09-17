@@ -11,10 +11,9 @@ class RolesTableSeeder extends Seeder
 {
     public function run()
     {
-        
         $roles = [
-            ["id" => "5246f14d-1906-4e34-a412-8fb689d20f23", "name" => "کاربران", "is_default" => false],
-            ["id" => "791d1b02-3610-4177-9051-eb7ae6b72def", "name" => "مدیر سایت", "is_default" => false],
+            ["id" => env('ROLE_USER_ID'), "name" => "کاربران", "is_default" => false],
+            ["id" => env('ROLE_ADMIN_ID'), "name" => "مدیر سایت", "is_default" => false],
         ];
         
         foreach ($roles as $role) {

@@ -21,7 +21,7 @@ class CreateActionsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
             $table->uuid('created_by');
-            $table->integer('sort')->default(9999);
+            $table->integer('sort')->nullable();
         });
     }
     public function down()

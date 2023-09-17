@@ -76,7 +76,6 @@ class Product extends BaseModel
 		if(isset($request->view))$model->view = $request->view;
 		if(isset($request->publish_status))$model->publish_status = $request->publish_status;
 
-
         $model->save();
         return $model;
     }

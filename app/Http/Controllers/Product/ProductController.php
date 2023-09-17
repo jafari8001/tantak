@@ -15,7 +15,7 @@ class ProductController extends Controller
     public $default_show = true;
     public $default_search = true;
     public $model = Product::class;
-    public $permissionItem = "products";
+    public $permissionItem = "product";
     public $validtionItem = [];
 
     public static function inheritedDocsOverrides()

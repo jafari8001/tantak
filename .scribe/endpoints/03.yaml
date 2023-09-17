@@ -151,7 +151,7 @@ endpoints:
         description: ''
         required: true
         example:
-          - quae
+          - eos
         type: 'string[]'
         enumValues: []
         custom: []
@@ -177,7 +177,7 @@ endpoints:
       first_name: "'test'"
       last_name: "'test'"
       role_id:
-        - quae
+        - eos
       status: "'active'"
       person_type: "'real'"
     fileParameters: []
@@ -260,7 +260,7 @@ endpoints:
         description: ''
         required: true
         example:
-          - eligendi
+          - vel
         type: 'string[]'
         enumValues: []
         custom: []
@@ -287,7 +287,7 @@ endpoints:
       first_name: "'test'"
       last_name: "'test'"
       role_id:
-        - eligendi
+        - vel
       status: "'active'"
       person_type: "'real'"
     fileParameters: []
@@ -467,13 +467,13 @@ endpoints:
         description: 'array of role ids.'
         required: true
         example:
-          - eius
+          - tempore
         type: 'string[]'
         enumValues: []
         custom: []
     cleanBodyParameters:
       role_id:
-        - eius
+        - tempore
     fileParameters: []
     responses: []
     responseFields: []

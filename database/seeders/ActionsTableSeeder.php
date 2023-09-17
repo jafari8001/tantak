@@ -12,6 +12,7 @@ class ActionsTableSeeder extends Seeder
     public function run()
     {
         $this->user();
+        $this->product();
         $this->role();
         $this->upload();
         $this->exception_log();
@@ -207,6 +208,32 @@ class ActionsTableSeeder extends Seeder
             ],
             [
                 "alias" => "user/root",
+                "name" => 'دسترسی سطح بالا',
+            ],
+        ];
+        $this->save($parent, $childs);
+    }
+private function product()
+    {
+        $parent = [
+            "alias" => "product/index",
+            "name" => "محصولات",
+        ];
+        $childs = [
+            [
+                "alias" => "product/insert",
+                "name" => 'ثبت',
+            ],
+            [
+                "alias" => "product/update",
+                "name" => 'ویرایش',
+            ],
+            [
+                "alias" => "product/delete",
+                "name" => 'حذف',
+            ],
+            [
+                "alias" => "product/root",
                 "name" => 'دسترسی سطح بالا',
             ],
         ];

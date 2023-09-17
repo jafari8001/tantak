@@ -23,7 +23,7 @@ class CreateUploadsTable extends Migration
 
             $table->timestamps();
             $table->softDeletes();
-            $table->integer('sort')->default(9999);
+            $table->integer('sort')->nullable();
             $table->uuid('created_by')->nullable();
             $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
         });

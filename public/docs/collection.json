@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "http:\/\/127.0.0.1:8000"
+            "value": "http:\/\/localhost:8000"
         }
     ],
     "info": {
-        "name": "laravel",
-        "_postman_id": "ca5287a9-6f05-4a82-b878-a9b9fd1ad7bb",
+        "name": "tantak",
+        "_postman_id": "4e53666a-cee7-4bca-b4bb-dfecfc5e6051",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json",
         "version": "2.1.0"
@@ -2506,6 +2506,192 @@
                             "response": []
                         }
                     ]
+                },
+                {
+                    "name": "Tag",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "POST list",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/tag",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/tag"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "[]"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST show",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/tag\/show",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/tag\/show"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "insert",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/tag\/insert",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/tag\/insert"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"name\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "update",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/tag\/update",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/tag\/update"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"name\":\"\"}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "POST delete",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/tag\/delete",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/tag\/delete"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "User-Agent",
+                                        "value": "Auto-Doc"
+                                    },
+                                    {
+                                        "key": "User-Agent-Client",
+                                        "value": "Auto-Doc"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"id\":null}"
+                                },
+                                "description": ""
+                            },
+                            "response": []
+                        }
+                    ]
                 }
             ]
         },
@@ -2961,7 +3147,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"username\":\"'09159654199'\",\"password\":\"'123456'\",\"first_name\":\"'test'\",\"last_name\":\"'test'\",\"role_id\":[\"quae\"],\"status\":\"'active'\",\"person_type\":\"'real'\"}"
+                                    "raw": "{\"username\":\"'09159654199'\",\"password\":\"'123456'\",\"first_name\":\"'test'\",\"last_name\":\"'test'\",\"role_id\":[\"eos\"],\"status\":\"'active'\",\"person_type\":\"'real'\"}"
                                 },
                                 "description": ""
                             },
@@ -2997,7 +3183,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"id\":\"'56194f1c-1398-44f0-87cd-c34d2356eeaf'\",\"username\":\"'09159654199'\",\"password\":\"'123456'\",\"first_name\":\"'test'\",\"last_name\":\"'test'\",\"role_id\":[\"eligendi\"],\"status\":\"'active'\",\"person_type\":\"'real'\"}"
+                                    "raw": "{\"id\":\"'56194f1c-1398-44f0-87cd-c34d2356eeaf'\",\"username\":\"'09159654199'\",\"password\":\"'123456'\",\"first_name\":\"'test'\",\"last_name\":\"'test'\",\"role_id\":[\"vel\"],\"status\":\"'active'\",\"person_type\":\"'real'\"}"
                                 },
                                 "description": ""
                             },
@@ -3105,7 +3291,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"role_id\":[\"eius\"]}"
+                                    "raw": "{\"role_id\":[\"tempore\"]}"
                                 },
                                 "description": "List of users searched by list of role ids"
                             },

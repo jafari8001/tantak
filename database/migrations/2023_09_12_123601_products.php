@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('barcode',16);
             $table->integer('base_price')->nullable()->index();
             $table->integer('base_wholesale_price')->nullable()->index();
-            $table->integer('wholesale_unit')->nullable();
+            $table->string('wholesale_unit')->nullable();
             $table->string('main_image')->nullable();
             $table->integer('star')->default(0)->index();
             $table->integer('like')->default(0);

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Product;
 
+use App\Models\Product\Product;
 use App\Models\Product\ProductInfo;
 use App\Http\Controllers\Controller;
+use Database\Factories\ProductFactory;
 use Illuminate\Http\Request;
 
 /**
@@ -90,6 +92,7 @@ class ProductInfoController extends Controller
 
     public function store(Request $request)
     {
+		Product::factory()->create(10);
         return parent::store($request);
     }
 

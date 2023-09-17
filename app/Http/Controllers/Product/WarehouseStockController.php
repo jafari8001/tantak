@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers\Product;
 
-use App\Models\Product\Address;
+use App\Models\Product\WarehouseStock;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 /**
  * @group Product
- * @subgroup Address
+ * @subgroup WarehouseStock
  */
-class AddressController extends Controller
+class WarehouseStockController extends Controller
 {
     public $default_show = true;
     public $default_search = true;
-    public $model = Address::class;
-    public $permissionItem = "addresses";
+    public $model = WarehouseStock::class;
+    public $permissionItem = "warehouse_stock";
     public $validtionItem = [];
 
     public static function inheritedDocsOverrides()
@@ -32,19 +32,19 @@ class AddressController extends Controller
 						"example" => "",
 						"required" => true,
 					],
-					"postal_code" => [
+					"varcomb_id" => [
 						"type" => "string",
 						"description" => "",
 						"example" => "",
 						"required" => true,
 					],
-					"address" => [
+					"stock" => [
 						"type" => "string",
 						"description" => "",
 						"example" => "",
 						"required" => true,
 					],
-					"country_division_id" => [
+					"saved_stock" => [
 						"type" => "string",
 						"description" => "",
 						"example" => "",
@@ -64,19 +64,19 @@ class AddressController extends Controller
 						"example" => "",
 						"required" => true,
 					],
-					"postal_code" => [
+					"varcomb_id" => [
 						"type" => "string",
 						"description" => "",
 						"example" => "",
 						"required" => true,
 					],
-					"address" => [
+					"stock" => [
 						"type" => "string",
 						"description" => "",
 						"example" => "",
 						"required" => true,
 					],
-					"country_division_id" => [
+					"saved_stock" => [
 						"type" => "string",
 						"description" => "",
 						"example" => "",

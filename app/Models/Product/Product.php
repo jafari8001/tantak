@@ -3,12 +3,32 @@
 namespace App\Models\Product;
 
 use App\Models\BaseModel;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Database\Factories\ProductFactory;
 
 
 class Product extends BaseModel
 {
-
+    use HasFactory;
+    public function categories(): HasMany{
+        return $this->hasMany(Category::class);
+    }
+    public function productVariation(): HasMany{
+        return $this->hasMany(ProductVariation::class);
+    }
+    public function product_info(): HasMany{
+        return $this->hasMany(ProductInfo::class);
+    }
+    public function comments(): HasMany{
+        return $this->hasMany(Comments::class);
+    }
+    public function tags(): HasMany{
+        return $this->hasMany(Tag::class);
+    }
+    public function logPrice(): HasMany{
+        return $this->hasMany(LogPrice::class);
+    }
     public static $columns = [
         "id" => "products.id",
         'name' => 'products.name',
@@ -41,24 +61,7 @@ class Product extends BaseModel
         'view',
         'user_id'
     ];
-    public function categories(): HasMany{
-        return $this->hasMany(Category::class);
-    }
-    public function productVariation(): HasMany{
-        return $this->hasMany(ProductVariation::class);
-    }
-    public function product_info(): HasMany{
-        return $this->hasMany(ProductInfo::class);
-    }
-    public function comments(): HasMany{
-        return $this->hasMany(Comments::class);
-    }
-    public function tags(): HasMany{
-        return $this->hasMany(Tag::class);
-    }
-    public function logPrice(): HasMany{
-        return $this->hasMany(LogPrice::class);
-    }
+    
 
     public static function insert($request){
         $model = new Product();

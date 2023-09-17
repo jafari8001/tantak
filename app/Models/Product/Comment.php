@@ -9,6 +9,18 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Comment extends BaseModel
 {
+    public function product(): BelongsTo{
+        return $this->belongsTo(Product::class);
+    }
+    public function user(): BelongsTo{
+        return $this->belongsTo(User::class);
+    }
+    public function children(): HasMany{
+        return $this->hasMany(Comments::class, 'parent_id');
+    }
+    public function parent(): BelongsTo{
+        return $this->belongsTo(Comments::class, 'parent_id');
+    }
 
     public static $columns = [
         "id" => "comments.id",
@@ -33,19 +45,6 @@ class Comment extends BaseModel
         'parent_id',
         'is_owner',
     ];
-
-    public function product(): BelongsTo{
-        return $this->belongsTo(Product::class);
-    }
-    public function user(): BelongsTo{
-        return $this->belongsTo(User::class);
-    }
-    public function children(): HasMany{
-        return $this->hasMany(Comments::class, 'parent_id');
-    }
-    public function parent(): BelongsTo{
-        return $this->belongsTo(Comments::class, 'parent_id');
-    }
 
     public static function insert($request){
         $model = new Comment();

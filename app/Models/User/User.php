@@ -5,7 +5,9 @@ namespace App\Models\User;
 use App\Models\BaseModel;
 use App\Models\BaseRelModel;
 use App\Exceptions\OtherException;
+use App\Models\Product\WarehouseStock;
 use App\product\Models\Comments;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Authenticatable;
@@ -14,7 +16,18 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 
 class User extends BaseModel  implements AuthenticatableContract
 {
+    use HasFactory;
     use Authenticatable, Authorizable;
+
+    public function roles(){
+        return $this->manyToMany("App\Models\User\Role", RoleUser::class, RoleUser::getTableName());
+    }
+    public function comments(): HasMany{
+        return $this->hasMany(Comments::class);
+    }
+    public function WarehouseStocks(): HasMany{
+        return $this->hasMany(WarehouseStock::class);
+    }
 
     protected $hidden = ['password'];
     public static $columns = [
@@ -31,13 +44,6 @@ class User extends BaseModel  implements AuthenticatableContract
         "created_by" => "users.created_by",
         "updated_at" => "users.updated_at"
     ];
-
-    public function roles(){
-        return $this->manyToMany("App\Models\User\Role", RoleUser::class, RoleUser::getTableName());
-    }
-    public function comments(): HasMany{
-        return $this->hasMany(Comments::class);
-    }
 
     public static function searchByRole($request, $roles = []){
         $search = BaseModel::beforeSearch($request, User::class);

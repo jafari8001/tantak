@@ -9,7 +9,15 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class ProductVariation extends BaseModel
 {
-
+    public function product(): BelongsTo{
+        return $this->belongsTo(Product::class);
+    }
+    public function productVariationCombination(): HasMany{
+        return $this->hasMany(ProductVariationCombination::class);
+    }
+    public function productImages():HasMany{
+        return  $this->hasMany(ProductImage::class);
+    }
     public static $columns = [
         "id" => "product_variations.id",
         'product_id' => 'product_variations.product_id',
@@ -26,15 +34,6 @@ class ProductVariation extends BaseModel
         'value',
     ];
 
-    public function product(): BelongsTo{
-        return $this->belongsTo(Product::class);
-    }
-    public function productVariationCombination(): HasMany{
-        return $this->hasMany(ProductVariationCombination::class);
-    }
-    public function productImages():HasMany{
-        return  $this->hasMany(ProductImage::class);
-    }
 
     public static function insert($request){
         $model = new ProductVariation();

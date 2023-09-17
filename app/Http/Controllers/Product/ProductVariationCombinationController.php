@@ -15,7 +15,7 @@ class ProductVariationCombinationController extends Controller
     public $default_show = true;
     public $default_search = true;
     public $model = ProductVariationCombination::class;
-    public $permissionItem = "product_variation_combinations";
+    public $permissionItem = "product_variation_combination";
     public $validtionItem = [];
 
     public static function inheritedDocsOverrides()

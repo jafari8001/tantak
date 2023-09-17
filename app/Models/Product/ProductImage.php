@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class ProductImage extends BaseModel
 {
-
+    public function productVariation(): BelongsTo{
+        return $this->belongsTo(ProductVariation::class);
+    }
     public static $columns = [
         "id" => "product_images.id",
         'product_variation_id' => 'product_images.product_variation_id',
@@ -29,9 +31,7 @@ class ProductImage extends BaseModel
         'path',
         'product_variation_id',
     ];
-    public function productVariation(): BelongsTo{
-        return $this->belongsTo(ProductVariation::class);
-    }
+    
     public static function insert($request){
         $model = new ProductImage();
 

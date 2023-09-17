@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Product;
 use App\Models\Product\Product;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use \Illuminate\Database\Eloquent\Factories;
 
 /**
  * @group Product

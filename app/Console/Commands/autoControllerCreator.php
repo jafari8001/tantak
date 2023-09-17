@@ -94,10 +94,11 @@ class autoControllerCreator extends Command
         $scribe = $this->createCombinationalVariables($migration_fields);
 
         return [
-            'MODULE_NAME'       => $this->option('module'),
-            'MODEL_NAME'        => $this->getSingularClassName($this->option('model')),
-            'TABLE_NAME'        => $this->option('table'),
-            'SCRIBE_DESC'       => $scribe,
+            'MODULE_NAME'         => $this->option('module'),
+            'MODEL_NAME'          => $this->getSingularClassName($this->option('model')),
+            'TABLE_NAME'          => $this->option('table'),
+            'SCRIBE_DESC'         => $scribe,
+            'SINGULAR_TABLE_NAME' => Pluralizer::singular($this->option('table')),
         ];
     }
 

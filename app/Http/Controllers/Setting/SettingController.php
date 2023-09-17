@@ -12,7 +12,7 @@ use App\Http\Controllers\Controller;
 class SettingController extends Controller
 {
     public $model = Setting::class;
-    public $permissionItem = "settings";
+    public $permissionItem = "setting";
     public $validtionItem = [["key", "value"]];
 
     public static function inheritedDocsOverrides()

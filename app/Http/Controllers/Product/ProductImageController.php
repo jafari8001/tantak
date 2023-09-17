@@ -15,7 +15,7 @@ class ProductImageController extends Controller
     public $default_show = true;
     public $default_search = true;
     public $model = ProductImage::class;
-    public $permissionItem = "product_images";
+    public $permissionItem = "product_image";
     public $validtionItem = [];
 
     public static function inheritedDocsOverrides()

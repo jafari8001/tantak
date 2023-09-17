@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class LogPrice extends BaseModel
 {
+    public function products(): BelongsTo{
+        return $this->belongsTo(Product::class);
+    }
 
     public static $columns = [
         "id" => "log_prices.id",
@@ -25,9 +28,7 @@ class LogPrice extends BaseModel
         'product_id',
         'price'
     ];
-    public function products(): BelongsTo{
-        return $this->belongsTo(Product::class);
-    }
+
     public static function insert($request){
         $model = new LogPrice();
 

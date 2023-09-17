@@ -15,7 +15,7 @@ class CommentController extends Controller
     public $default_show = true;
     public $default_search = true;
     public $model = Comment::class;
-    public $permissionItem = "comments";
+    public $permissionItem = "comment";
     public $validtionItem = [];
 
     public static function inheritedDocsOverrides()

@@ -10,6 +10,15 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Category extends BaseModel
 {
+    public function products(): BelongsToMany{
+        return $this->belongsToMany(Product::class);
+    }
+    public function children(): HasMany{
+        return $this->hasMany(Category::class, 'parent_id');
+    }
+    public function parent(): BelongsTo{
+        return $this->belongsTo(Category::class, 'parent_id');
+    }
     protected $fillable = [
         'name',
         'parent_id',
@@ -26,18 +35,6 @@ class Category extends BaseModel
         "created_by" => "categories.created_by",
         "updated_at" => "categories.updated_at"
     ];
-
-    public function products(): BelongsToMany{
-        return $this->belongsToMany(Product::class);
-    }
-    public function children(): HasMany{
-        return $this->hasMany(Category::class, 'parent_id');
-    }
-    public function parent(): BelongsTo{
-        return $this->belongsTo(Category::class, 'parent_id');
-    }
-
-
 
     public static function insert($request){
         $model = new Category();

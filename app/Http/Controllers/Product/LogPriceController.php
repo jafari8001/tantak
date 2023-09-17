@@ -15,7 +15,7 @@ class LogPriceController extends Controller
     public $default_show = true;
     public $default_search = true;
     public $model = LogPrice::class;
-    public $permissionItem = "log_prices";
+    public $permissionItem = "log_price";
     public $validtionItem = [];
 
     public static function inheritedDocsOverrides()

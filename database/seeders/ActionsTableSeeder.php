@@ -105,24 +105,24 @@ class ActionsTableSeeder extends Seeder
     private function settings()
     {
         $parent = [
-            "alias" => "settings/index",
+            "alias" => "setting/index",
             "name" => "تنظیمات",
         ];
         $childs = [
             [
-                "alias" => "settings/insert",
+                "alias" => "setting/insert",
                 "name" => 'ثبت',
             ],
             [
-                "alias" => "settings/update",
+                "alias" => "setting/update",
                 "name" => 'ویرایش',
             ],
             [
-                "alias" => "settings/delete",
+                "alias" => "setting/delete",
                 "name" => 'حذف',
             ],
             [
-                "alias" => "settings/root",
+                "alias" => "setting/root",
                 "name" => 'دسترسی سطح بالا',
             ]
         ];

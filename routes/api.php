@@ -22,6 +22,7 @@ use App\Http\Controllers\Product\ProductTagController;
 use App\Http\Controllers\Product\LogPriceController;
 use App\Http\Controllers\Product\ProductImageController;
 use App\Http\Controllers\Product\TagController;
+use App\Http\Controllers\Product\WarehouseStockController;
 /* Auto-Use */
 
 Route::prefix('v1')->group(function () {
@@ -134,6 +135,12 @@ Route::prefix('v1')->group(function () {
 		Route::post('tag/insert', [TagController::class, 'store']);
 		Route::post('tag/update', [TagController::class, 'update']);
 		Route::post('tag/delete', [TagController::class, 'destroy']);
+
+		Route::post('warehousestock', [WarehouseStockController::class, 'index']);
+		Route::post('warehousestock/show', [WarehouseStockController::class, 'show']);
+		Route::post('warehousestock/insert', [WarehouseStockController::class, 'store']);
+		Route::post('warehousestock/update', [WarehouseStockController::class, 'update']);
+		Route::post('warehousestock/delete', [WarehouseStockController::class, 'destroy']);
 
         /*
         * Auto-Routes

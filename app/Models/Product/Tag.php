@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Tag extends BaseModel
 {
 
+    public function products(): BelongsToMany{
+        return $this->belongsToMany(Product::class);
+    }
     public static $columns = [
         "id" => "tags.id",
         'name' => 'tags.name',
@@ -21,9 +24,6 @@ class Tag extends BaseModel
     protected $fillable = [
         'name',
     ];
-    public function products(): BelongsToMany{
-        return $this->belongsToMany(Product::class);
-    }
 
     public static function insert($request)
     {

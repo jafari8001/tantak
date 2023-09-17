@@ -4,10 +4,17 @@ namespace App\Models\Product;
 
 use App\Models\BaseModel;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 
 class ProductVariationCombination extends BaseModel
 {
+    public function WarehouseStocks(): HasMany{
+        return $this->hasMany(WarehouseStock::class);
+    }
+    public function productVariation(): BelongsTo{
+        return $this->belongsTo(ProductVariation::class);
+    }
 
     public static $columns = [
         "id" => "product_variation_combinations.id",
@@ -37,10 +44,6 @@ class ProductVariationCombination extends BaseModel
         'maximum',
         'price',
     ];
-
-    public function productVariation(): BelongsTo{
-        return $this->belongsTo(ProductVariation::class);
-    }
 
     public static function insert($request){
         $model = new ProductVariationCombination();

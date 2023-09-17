@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class ProductInfo extends BaseModel
 {
+    public function categories(): BelongsTo{
+        return $this->belongsTo(Product::class);
+    }
 
     public static $columns = [
         "id" => "product_info.id",
@@ -27,9 +30,6 @@ class ProductInfo extends BaseModel
         'ability',
         'description',
     ];
-    public function categories(): BelongsTo{
-        return $this->belongsTo(Product::class);
-    }
 
     public static function insert($request){
         $model = new ProductInfo();

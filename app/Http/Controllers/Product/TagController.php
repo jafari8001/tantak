@@ -15,7 +15,7 @@ class TagController extends Controller
     public $default_show = true;
     public $default_search = true;
     public $model = Tag::class;
-    public $permissionItem = "tags";
+    public $permissionItem = "tag";
     public $validtionItem = [];
 
     public static function inheritedDocsOverrides()

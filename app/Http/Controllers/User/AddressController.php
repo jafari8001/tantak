@@ -1,21 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\Product;
+namespace App\Http\Controllers\User;
 
-use App\Models\Product\Category;
+use App\Models\User\Address;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 /**
- * @group Product
- * @subgroup Category
+ * @group User
+ * @subgroup Address
  */
-class CategoryController extends Controller
+class AddressController extends Controller
 {
     public $default_show = true;
     public $default_search = true;
-    public $model = Category::class;
-    public $permissionItem = "category";
+    public $model = Address::class;
+    public $permissionItem = "address";
     public $validtionItem = [];
 
     public static function inheritedDocsOverrides()
@@ -26,25 +26,25 @@ class CategoryController extends Controller
                     "title" => "insert"
                 ],
                 "bodyParameters" => [
-					"name" => [
+					"user_id" => [
 						"type" => "string",
 						"description" => "",
 						"example" => "",
 						"required" => true,
 					],
-					"slug" => [
+					"postal_code" => [
 						"type" => "string",
 						"description" => "",
 						"example" => "",
 						"required" => true,
 					],
-					"barcode" => [
+					"address" => [
 						"type" => "string",
 						"description" => "",
 						"example" => "",
 						"required" => true,
 					],
-					"parent_id" => [
+					"country_division_id" => [
 						"type" => "string",
 						"description" => "",
 						"example" => "",
@@ -58,25 +58,25 @@ class CategoryController extends Controller
                     "title" => "update"
                 ],
                 "bodyParameters" => [
-					"name" => [
+					"user_id" => [
 						"type" => "string",
 						"description" => "",
 						"example" => "",
 						"required" => true,
 					],
-					"slug" => [
+					"postal_code" => [
 						"type" => "string",
 						"description" => "",
 						"example" => "",
 						"required" => true,
 					],
-					"barcode" => [
+					"address" => [
 						"type" => "string",
 						"description" => "",
 						"example" => "",
 						"required" => true,
 					],
-					"parent_id" => [
+					"country_division_id" => [
 						"type" => "string",
 						"description" => "",
 						"example" => "",

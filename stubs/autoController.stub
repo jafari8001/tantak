@@ -15,7 +15,7 @@ class $MODEL_NAME$Controller extends Controller
     public $default_show = true;
     public $default_search = true;
     public $model = $MODEL_NAME$::class;
-    public $permissionItem = "$TABLE_NAME$";
+    public $permissionItem = "$SINGULAR_TABLE_NAME$";
     public $validtionItem = [];
 
     public static function inheritedDocsOverrides()

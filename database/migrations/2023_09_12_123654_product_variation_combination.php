@@ -25,6 +25,8 @@ return new class extends Migration
             $table->uuid('variation_3_id')->nullable()->index(); 
             $table->foreign('variation_3_id')->references('id')->on('product_variations');
 
+            $table->string('barcode', 4);
+            $table->string('full_barcode', 16);
             $table->bigInteger('price')->index();
             $table->integer('maximum')->nullable();
             $table->integer('minimum')->nullable();

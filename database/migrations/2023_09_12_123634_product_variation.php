@@ -23,7 +23,7 @@ return new class extends Migration
             $table->foreign('variation_type_id')->references('id')->on('settings');
             
             $table->string('value');
-            $table->string('barcode',16);
+            $table->string('barcode', 2);
             
             $table->timestamps();
             $table->softDeletes();

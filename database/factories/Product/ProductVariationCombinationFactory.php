@@ -29,12 +29,14 @@ class ProductVariationCombinationFactory extends Factory
             'variation_1_id' => $variation1->id,
             'variation_2_id' => $variation2->id,
             'variation_3_id' => $variation3->id,
+            'barcode' => fake()->numerify('####'), 
             'sort' => fake()->numberBetween(1, 100),
             'stock' => fake()->numberBetween(0, 1000),
             'minimum' => fake()->numberBetween(1, 10),
             'discount' => fake()->numberBetween(0, 50),
             'maximum' => fake()->numberBetween(10, 100),
             'price' => fake()->numberBetween(1000, 10000),
+            'full_barcode' => fake()->numerify('################'), 
             'sell_type' => fake()->randomElement(['single', 'wholesale']),
         ];
     }

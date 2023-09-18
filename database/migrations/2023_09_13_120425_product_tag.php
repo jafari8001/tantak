@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('product_tag', function(Blueprint $table){
+        Schema::create('product_tags', function(Blueprint $table){
             $table->uuid('id')->primary();
 
             $table->uuid('product_id');

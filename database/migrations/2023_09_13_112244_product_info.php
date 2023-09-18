@@ -13,15 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('product_info', function(Blueprint $table){
-            $table->uuid()->primary();
+        Schema::create('product_infos', function(Blueprint $table){
+            $table->uuid('id')->primary();
 
             $table->uuid('product_id')->index();
             $table->foreign('product_id')->references('id')->on('products');
 
-            $table->enum('type',['table_item','description','seo_description','summerized_description'])->index();
             $table->string('ability');
             $table->text('description');
+            $table->enum('type',['table_item','description','seo_description','summerized_description'])->index();
 
             $table->timestamps();
             $table->softDeletes();

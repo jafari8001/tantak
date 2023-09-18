@@ -22,11 +22,11 @@ return new class extends Migration
             $table->uuid('product_id')->index();
             $table->foreign('product_id')->references('id')->on('products');
 
-            $table->string('alt')->nullable();
-            $table->integer('height')->nullable();
-            $table->integer('width')->nullable();
-            $table->integer('size')->nullable();
             $table->string('path');
+            $table->string('alt')->nullable();
+            $table->integer('size')->nullable();
+            $table->integer('width')->nullable();
+            $table->integer('height')->nullable();
 
             $table->timestamps();
             $table->softDeletes();

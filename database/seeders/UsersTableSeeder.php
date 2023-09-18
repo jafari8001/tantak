@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Product\Product;
 use App\Models\User\User;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
@@ -45,8 +44,8 @@ class UsersTableSeeder extends Seeder
                 $model->id = (string) Str::uuid();
             }
             $model->save();
-            User::find($model->id)->roles()->sync($item['role']);
-            User::factory()->count(1000)->create();
+            // User::find($model->id)->roles()->sync($item['role']);
+            // User::factory()->count(1000)->create();
         }
 
         /*
@@ -60,7 +59,5 @@ class UsersTableSeeder extends Seeder
         $model->user_agent_client = '';
         $model->expired_token_at = '2100-01-01';
         $model->save();
-
-        Product::factory()->count(1000)->create();
     }
 }

@@ -15,17 +15,17 @@ return new class extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table){
+            $table->string('barcode',16);
             $table->uuid('id')->primary();
             $table->string('name')->index();
+            $table->integer('like')->default(0);
+            $table->string('main_image')->nullable();
             $table->string('slug')->nullable()->index();
-            $table->string('barcode',16);
+            $table->string('wholesale_unit')->nullable();
+            $table->integer('star')->default(0)->index();
+            $table->integer('view')->default(0)->index();
             $table->integer('base_price')->nullable()->index();
             $table->integer('base_wholesale_price')->nullable()->index();
-            $table->string('wholesale_unit')->nullable();
-            $table->string('main_image')->nullable();
-            $table->integer('star')->default(0)->index();
-            $table->integer('like')->default(0);
-            $table->integer('view')->default(0)->index();
             $table->enum('publish_status',["published_online", "published_inplace", "published_everywhere", "draft"])->default('draft');
 
             $table->timestamps();

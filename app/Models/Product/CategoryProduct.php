@@ -3,10 +3,12 @@
 namespace App\Models\Product;
 
 use App\Models\BaseModel;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 
 class CategoryProduct extends BaseModel{
 
+    use HasFactory;
     public static $columns = [
         "id" => "category_product.id",
         'product_id' => 'category_product.product_id',

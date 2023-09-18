@@ -3,11 +3,13 @@
 namespace App\Models\Product;
 
 use App\Models\BaseModel;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 
 class ProductImage extends BaseModel
 {
+    use HasFactory;
     public function productVariation(): BelongsTo{
         return $this->belongsTo(ProductVariation::class);
     }

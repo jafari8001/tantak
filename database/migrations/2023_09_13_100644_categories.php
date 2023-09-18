@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('categories', function(Blueprint $table){
             $table->uuid('id')->primary();
             
+            $table->string('barcode', 16);
             $table->string('name')->index();
             $table->string('slug')->nullable()->index();
-            $table->string('barcode', 16);
-            $table->uuid('parent_id')->index();
+            $table->uuid('parent_id')->nullable()->index();
 
             $table->timestamps();
             $table->softDeletes();

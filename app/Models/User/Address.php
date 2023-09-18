@@ -3,10 +3,16 @@
 namespace App\Models\User;
 
 use App\Models\BaseModel;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 
 class Address extends BaseModel
 {
+    use HasFactory;
+    public function user():BelongsTo{
+        return $this->belongsTo(User::class);
+    }
     public static $columns = [
         "id" => "addresses.id",
 		'address' => 'addresses.address',

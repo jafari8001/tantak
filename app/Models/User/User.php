@@ -28,6 +28,9 @@ class User extends BaseModel  implements AuthenticatableContract
     public function WarehouseStocks(): HasMany{
         return $this->hasMany(WarehouseStock::class);
     }
+    public function addresses(): HasMany{
+        return $this->hasMany(Address::class);
+    }
 
     protected $hidden = ['password'];
     public static $columns = [

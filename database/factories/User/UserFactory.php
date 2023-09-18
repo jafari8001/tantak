@@ -14,19 +14,19 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'username' => fake()->userName,
-            'password' => bcrypt('password'), 
-            'phone_number' => fake()->phoneNumber,
+            'created_by' => null, 
             'birth_date' => fake()->date,
             'description' => fake()->text,
-            'first_name' => fake()->firstName,
+            'username' => fake()->userName,
             'last_name' => fake()->lastName,
-            'national_code' => fake()->numerify('##########'), 
+            'password' => bcrypt('password'), 
+            'first_name' => fake()->firstName,
+            'phone_number' => fake()->phoneNumber,
+            'sort' => fake()->numberBetween(1, 1000), 
             'avatar' => 'upload/baseUpload/default.jpg', 
+            'national_code' => fake()->numerify('##########'), 
             'person_type' => fake()->randomElement(['real', 'legal']), 
             'status' => fake()->randomElement(['active', 'hidden', 'inactive', 'registering', 'suspended']),
-            'sort' => fake()->numberBetween(1, 100), 
-            'created_by' => null, 
         ];
     }
 }

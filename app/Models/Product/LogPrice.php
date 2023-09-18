@@ -3,11 +3,13 @@
 namespace App\Models\Product;
 
 use App\Models\BaseModel;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 
 class LogPrice extends BaseModel
 {
+    use HasFactory;
     public function products(): BelongsTo{
         return $this->belongsTo(Product::class);
     }

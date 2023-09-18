@@ -3,12 +3,13 @@
 namespace App\Models\Product;
 
 use App\Models\BaseModel;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 
 class Tag extends BaseModel
 {
-
+    use HasFactory;
     public function products(): BelongsToMany{
         return $this->belongsToMany(Product::class);
     }

@@ -3,11 +3,13 @@
 namespace App\Models\Product;
 
 use App\Models\BaseModel;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 
 class WarehouseStock extends BaseModel
 {
+    use HasFactory;
     public function user(): BelongsTo{
         return $this->belongsTo(User::class);
     } 

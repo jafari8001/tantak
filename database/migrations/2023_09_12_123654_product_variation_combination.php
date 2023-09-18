@@ -25,12 +25,12 @@ return new class extends Migration
             $table->uuid('variation_3_id')->nullable()->index(); 
             $table->foreign('variation_3_id')->references('id')->on('product_variations');
 
-            $table->enum('sell_type', ['single','wholesale'])->default('single')->index();
-            $table->integer('stock')->default(0)->index();
-            $table->integer('discount')->nullable();
-            $table->integer('minimum')->nullable();
-            $table->integer('maximum')->nullable();
             $table->bigInteger('price')->index();
+            $table->integer('maximum')->nullable();
+            $table->integer('minimum')->nullable();
+            $table->integer('discount')->nullable();
+            $table->integer('stock')->default(0)->index();
+            $table->enum('sell_type', ['single','wholesale'])->default('single')->index();
 
             $table->timestamps();
             $table->softDeletes();

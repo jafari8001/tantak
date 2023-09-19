@@ -34,6 +34,6 @@ class FakeDataSeeder extends Seeder
         Comment::factory()->count(10000)->create();
         ProductInfo::factory()->count(1000)->create();
         WarehouseStock::factory()->count(1000)->create();
-        // Address::factory()->count(1000)->create();
+        Address::factory()->count(1000)->create();
     }
 }

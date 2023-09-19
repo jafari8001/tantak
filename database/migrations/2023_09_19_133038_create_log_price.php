@@ -13,14 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function(Blueprint $table){
+        Schema::create('log_prices', function (Blueprint $table) {
             $table->uuid('id')->primary();
             
-            $table->string('barcode', 16);
-            $table->string('name')->index();
-            $table->string('slug')->nullable()->index();
-            $table->tinyInteger('level')->default(0)->index();
-            $table->uuid('parent_id')->nullable()->index();
+            $table->uuid('varcomb_id');
+            $table->foreign('varcomb_id')->references('id')->on('product_variation_combinations');  
+
+            $table->uuid('product_id')->nullable();
+            $table->foreign('product_id')->references('id')->on('products');
+
+            $table->bigInteger('previous_price');
+            $table->bigInteger('current_price');
 
             $table->timestamps();
             $table->softDeletes();
@@ -37,6 +40,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('log_price');
     }
 };

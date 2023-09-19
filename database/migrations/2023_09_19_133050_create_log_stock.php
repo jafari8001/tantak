@@ -13,14 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function(Blueprint $table){
+        Schema::create('log_stocks', function (Blueprint $table) {
             $table->uuid('id')->primary();
             
-            $table->string('barcode', 16);
-            $table->string('name')->index();
-            $table->string('slug')->nullable()->index();
-            $table->tinyInteger('level')->default(0)->index();
-            $table->uuid('parent_id')->nullable()->index();
+            $table->uuid('warehouse_stock_id');
+            $table->foreign('warehouse_stock_id')->references('id')->on('warehouse_stocks');  
+
+            $table->uuid('product_id')->nullable();
+            $table->foreign('product_id')->references('id')->on('products');
+
+            $table->bigInteger('previous_stock');
+            $table->bigInteger('current_stock');
+            $table->enum('type', ['sell', 'update']);
 
             $table->timestamps();
             $table->softDeletes();
@@ -37,6 +41,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('log_stock');
     }
 };

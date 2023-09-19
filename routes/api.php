@@ -23,6 +23,9 @@ use App\Http\Controllers\Product\LogPriceController;
 use App\Http\Controllers\Product\ProductImageController;
 use App\Http\Controllers\Product\TagController;
 use App\Http\Controllers\Product\WarehouseStockController;
+use App\Http\Controllers\Product\BranchController;
+
+use App\Http\Controllers\Product\LogStockController;
 /* Auto-Use */
 
 Route::prefix('v1')->group(function () {
@@ -141,6 +144,24 @@ Route::prefix('v1')->group(function () {
 		Route::post('warehousestock/insert', [WarehouseStockController::class, 'store']);
 		Route::post('warehousestock/update', [WarehouseStockController::class, 'update']);
 		Route::post('warehousestock/delete', [WarehouseStockController::class, 'destroy']);
+
+		Route::post('branch', [BranchController::class, 'index']);
+		Route::post('branch/show', [BranchController::class, 'show']);
+		Route::post('branch/insert', [BranchController::class, 'store']);
+		Route::post('branch/update', [BranchController::class, 'update']);
+		Route::post('branch/delete', [BranchController::class, 'destroy']);
+
+		Route::post('branch', [BranchController::class, 'index']);
+		Route::post('branch/show', [BranchController::class, 'show']);
+		Route::post('branch/insert', [BranchController::class, 'store']);
+		Route::post('branch/update', [BranchController::class, 'update']);
+		Route::post('branch/delete', [BranchController::class, 'destroy']);
+
+		Route::post('logstock', [LogStockController::class, 'index']);
+		Route::post('logstock/show', [LogStockController::class, 'show']);
+		Route::post('logstock/insert', [LogStockController::class, 'store']);
+		Route::post('logstock/update', [LogStockController::class, 'update']);
+		Route::post('logstock/delete', [LogStockController::class, 'destroy']);
 
         /*
         * Auto-Routes

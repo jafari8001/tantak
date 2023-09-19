@@ -30,6 +30,7 @@ class Category extends BaseModel
         "id" => "categories.id",
         'name' => 'categories.name',
 		'slug' => 'categories.slug',
+		'level' => 'categories.level',
 		'barcode' => 'categories.barcode',
 		'parent_id' => 'categories.parent_id',
 
@@ -44,6 +45,7 @@ class Category extends BaseModel
         $model->sort = $request->sort;
         if(isset($request->name))$model->name = $request->name;
 		if(isset($request->slug))$model->slug = $request->slug;
+		if(isset($request->level))$model->level = $request->level;
 		if(isset($request->barcode))$model->barcode = $request->barcode;
 		if(isset($request->parent_id))$model->parent_id = $request->parent_id;
 
@@ -58,7 +60,8 @@ class Category extends BaseModel
         $model->sort = $request->sort;
         if(isset($request->name))$model->name = $request->name;
 		if(isset($request->slug))$model->slug = $request->slug;
-		if(isset($request->barcode))$model->barcode = $request->barcode;
+		if(isset($request->level))$model->level = $request->level;
+        if(isset($request->barcode))$model->barcode = $request->barcode;
 		if(isset($request->parent_id))$model->parent_id = $request->parent_id;
 
 
